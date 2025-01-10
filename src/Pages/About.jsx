@@ -5,14 +5,14 @@ export default function Profile() {
     <>
       <div className="main">
         {/* Block Left */}
-        <div className="ctf p-12 aspect-[3/4]">
+        <div className="ctf p-12 aspect-[3/4] fin">
           <img src="/src/assets/img/profile.jpg" alt="image_profile" />
         </div>
 
         {/* Block Right */}
-        <div className="primary rounded-[24px] text-white grid items-center gap-8 px-12 py-16">
+        <div className="primary rounded-[24px] text-white grid items-center gap-8 px-12 py-16 fr">
             <h3>SUPANAT CHAISRI</h3>
-            <h6 className="font-medium">Junior Frontend Developer </h6><hr />
+            <h6 className="font-medium">Junior Frontend Developer</h6><hr />
             <h5>ABOUT ME</h5>
             <p>
             I'm interested in working as a Frontend Developer. Currently, I keep
@@ -20,6 +20,7 @@ export default function Profile() {
              willing to guide or mentor me, I would be extremely grateful.
             </p>
             <h5>HOBBIES</h5>
+        
 
         {/* Icon */}
         <div className="grid gap-2 grid-cols-1 md:grid-cols-4">
@@ -72,8 +73,8 @@ export default function Profile() {
             Notion</a>
 
             {/* Githup  */}
-            <a className="text-red-500 contact hover:opacity-80"
-            href=""
+            <a className="contact hover:opacity-80"
+            href="https://github.com/untitlez/My-Portfolio.git"
             target="_blank">
             <img src="/src/assets/icon/github.png" alt="icon_githup" />
             GitHub 

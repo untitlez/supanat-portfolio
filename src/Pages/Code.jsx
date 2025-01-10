@@ -6,7 +6,7 @@ export default function Code() {
     <>
         <div className='main flex-col'>
         {/* Top  */}
-        <div className='head relative'>
+        <div className='head relative fu'>
         <Link to="/portfolio"
         className='back'>
         <img src="/src/assets/icon/arrow_circle_left.png" alt="Back" />
@@ -15,7 +15,7 @@ export default function Code() {
         </div>
 
         {/* Bottom  */}
-        <div className='content px-12 py-14 gap-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
+        <div className='content px-12 py-14 gap-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 fin'>
         
         {/* Block 1  */}
         <Link to="/codepage1">

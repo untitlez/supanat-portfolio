@@ -5,14 +5,14 @@ export default function Skills() {
     <>
         <div className='main'>
             {/* Block Left  */}
-            <div className='text-[#34659D] ctf py-12 px-20'>
+            <div className='text-[#34659D] ctf py-12 px-20 fin'>
               <h4>SKILLS</h4>
             </div>
 
             {/* Block Content  */}
             <div className='grid gap-2 sm:grid-cols-2 w-full'>
             {/* Block Single  */}
-            <div className='primary rounded-2xl ctg gap-8 text-white text-center px-12 py-16'>
+            <div className='primary rounded-2xl ctg gap-8 text-white text-center px-12 py-16 fl'>
             <h6>TECHNICAL SKILLS</h6>
 
               {/* Icon */}
@@ -68,15 +68,16 @@ export default function Skills() {
                   </div>
 
                   {/* Githup  */}
-                  <div className="flex items-center gap-4">
+                  <a className="contact hover:opacity-80"
+                  href="https://github.com/untitlez/My-Portfolio.git" target="_blank">
                   <img className="size-6" src="/src/assets/icon/github.png" alt="icon_location" />
                   <p>GitHub</p>
-                  </div>
+                  </a>
               </div>
             </div>
 
             {/* Block Double  */}
-            <div className='grid gap-2'>
+            <div className='grid gap-2 fr'>
             {/* Top */}
             <div className='primary rounded-[24px] text-white ctg px-12 py-16 gap-8 '>
               <h6>SOFT SKILLS</h6>

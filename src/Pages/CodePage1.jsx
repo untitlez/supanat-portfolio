@@ -30,7 +30,7 @@ export default function CodePage1() {
         </div>
 
         {/* Botttom */}
-        <div className="py-14 px-12 ctf">
+        <div className="py-14 px-12 ctf fin">
           <div className="shadow-xl rounded-b-md">
               <div className='primary text-white text-center rounded-t-md py-4 '>
                 <h6>To-Do List</h6>

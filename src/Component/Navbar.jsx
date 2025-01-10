@@ -14,28 +14,36 @@ export default function Navbar() {
             <Link to="/experience" className='submenu'>EXPERIENCE</Link>
             <Link to="/skills" className='submenu'>SKILLS</Link>
         </div> 
-        <img className='menu-icon rounded-full'src="/src/assets/icon/account_circle.png" alt="resume_file"/>
+        <Link to="https://drive.google.com/file/d/16B74JyQMgziL5SL5o3qAtGZZvxx-w-CT/view?usp=sharing" target="_blank">
+        <img className='menu-icon w-12 rounded-full'src="/src/assets/icon/account_circle.png" alt="resume_file"/>
+        </Link>
     </nav>
 
     {/* Mobile  */}
-    <nav className='nav px-4 ctf md:hidden'>
+    <nav className='nav px-4 ctf md:hidden z-50'>
       {/* Hamburger Menu  */}
       <div className="dropdown">
-          <button className='menu-icon rounded peer'
+          <button className='menu-icon w-10 rounded peer'
           aria-haspopup="true" 
           aria-expanded="false">
           <img src="/src/assets/icon/menu.png" alt="menu" />
           </button>
           <div className='dropdown-content rounded grid gap-1 p-1 bg-white mt-3 text-center text-sm font-medium shadow-md'>
-            <Link to="/about" className='submenu2 '>ABOUT</Link>
-            <Link to="/education" className='submenu2 '>EDUCATION</Link>
-            <Link to="/experience" className='submenu2 '>EXPERIENCE</Link>
-            <Link to="/skills" className='submenu2 '>SKILLS</Link>
+            <Link to="/portfolio" className='submenu2'>PORTFOLIO</Link>
+            <Link to="/about" className='submenu2'>ABOUT</Link>
+            <Link to="/education" className='submenu2'>EDUCATION</Link>
+            <Link to="/experience" className='submenu2'>EXPERIENCE</Link>
+            <Link to="/skills" className='submenu2'>SKILLS</Link>
+            <Link className='submenu2' target="_blank"
+            to="https://drive.google.com/file/d/16B74JyQMgziL5SL5o3qAtGZZvxx-w-CT/view?usp=sharing">RESUME</Link>
           </div>
       </div>
       
-      <Link to="/portfolio" className='head-menu ctf w-full'><h5>Portfolio</h5></Link>
-      <img className='menu-icon rounded-full' src="/src/assets/icon/account_circle.png" alt="resume_file"/>
+            <Link to="/portfolio" className='head-menu ctf w-full'><h5>Portfolio</h5></Link>
+        
+            <Link to="https://drive.google.com/file/d/16B74JyQMgziL5SL5o3qAtGZZvxx-w-CT/view?usp=sharing" target="_blank">
+            <img className='menu-icon w-14 rounded-full'src="/src/assets/icon/account_circle.png" alt="resume_file"/>
+            </Link>
       </nav>
       
     </>

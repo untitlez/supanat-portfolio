@@ -5,12 +5,12 @@ export default function Experience() {
     <>
     <div className="main">
         {/* Block Left */}
-        <div className="head">
+        <div className="head fl">
             <h4>EXPERIENCE</h4>
         </div>
 
         {/* Block Right */}
-        <div className="w-full px-12 py-16 grid gap-10">
+        <div className="w-full px-12 py-16 grid gap-10 fd">
             {/* Barista  */}
             <div>
                 <h6 className='flex justify-between mb-2'>PURCHASING <p><i>JAN 2017 - OCT 2019</i></p></h6>

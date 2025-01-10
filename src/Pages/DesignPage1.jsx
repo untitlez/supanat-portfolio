@@ -15,7 +15,7 @@ export default function DesignPage1() {
         </div> 
 
         {/* Bottom  */}
-        <div className='px-12 py-14 gap-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
+        <div className='px-12 py-14 gap-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 fin'>
         {/* Block 1  */}
         <div className='shadow-xl relative'>
             <img src="/src/assets/img/App Default.png" alt="Mobile app white theme" />

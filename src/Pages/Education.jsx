@@ -5,12 +5,12 @@ export default function Education() {
     <>
     <div className="main">
         {/* Block Left */}
-        <div className="head">
+        <div className="head fl">
             <h4>EDUCATION</h4>
         </div>
 
         {/* Block Right */}
-        <div className="w-full px-12 py-16 grid gap-10">
+        <div className="w-full px-12 py-16 grid gap-10 fd">
             {/* University  */}
             <div>
         

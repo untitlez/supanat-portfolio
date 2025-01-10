@@ -6,7 +6,7 @@ export default function Design() {
     <>
         <div className='main flex-col'>
         {/* Top  */}
-        <div className='head relative'>
+        <div className='head relative fu'>
         <Link to="/portfolio"
         className='back'>
         <img src="/src/assets/icon/arrow_circle_left.png" alt="Back" />
@@ -15,7 +15,7 @@ export default function Design() {
         </div>
 
         {/* Bottom  */}
-        <div className='content'>
+        <div className='content fin'>
         {/* Card 1  */}
         <Link to="/designpage1">
         <div className='card'>
