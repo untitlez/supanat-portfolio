@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body { background-color: #C2C7CC }
+body { background-color: #C2C7CC; }
 
 h1 {
   font-size: 76px;
