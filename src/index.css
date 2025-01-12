@@ -1,9 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'primeflex/primeflex.css';
 
 :root {
   font-family: "Inter", serif;
