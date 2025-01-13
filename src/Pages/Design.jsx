@@ -9,7 +9,7 @@ export default function Design() {
         <div className='head relative fu'>
         <Link to="/portfolio"
         className='back'>
-        <img src="/assets/icon/arrow_circle_left.png" alt="Back" />
+        <img src="/icon/arrow_circle_left.png" alt="Back" />
         </Link>
         <h4>DESIGN</h4>
         </div>
@@ -19,7 +19,7 @@ export default function Design() {
         {/* Card 1  */}
         <Link to="/designpage1">
         <div className='card'>
-            <img src="/assets/img/App Default.png" alt="Mobile app white theme" />
+            <img src="/img/App Default.png" alt="Mobile app white theme" />
             <div className='primary rounded-b-md text-white text-center py-4'>
             <h6>Wallet App</h6>
             ( White Theme )
@@ -30,7 +30,7 @@ export default function Design() {
         {/* Card 2  */}
         <Link to="/designpage2">
         <div className='card'>
-            <img src="/assets/img/App Dark.png" alt="Mobile app dark theme" />
+            <img src="/img/App Dark.png" alt="Mobile app dark theme" />
             <div className='primary rounded-b-md text-white text-center py-4'>
             <h6>Wallet App</h6>
             ( Dark Theme )
@@ -41,7 +41,7 @@ export default function Design() {
         {/* Card 3  */}
         <Link to="/designpage3">
         <div className='card'>
-            <img src="/assets/img/MacBook Air (15 inch).png" alt="Redesign desktop" />
+            <img src="/img/MacBook Air (15 inch).png" alt="Redesign desktop" />
             <div className='primary rounded-b-md text-white text-center py-4'>
             <h6>Redesign Brand - KFC</h6>
             ( Laptop )
@@ -52,7 +52,7 @@ export default function Design() {
          {/* Card 4  */}
         <Link to="/designpage4">
         <div className='card'>
-            <img src="/assets/img/iPad Pro 2020.png" alt="Redesign tablet" />
+            <img src="/img/iPad Pro 2020.png" alt="Redesign tablet" />
             <div className='primary rounded-b-md text-white text-center py-4'>
             <h6>Redesign Brand - KFC</h6>
             ( Tablet )

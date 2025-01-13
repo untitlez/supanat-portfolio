@@ -9,7 +9,7 @@ export default function DesignPage1() {
         <div className='head relative'>
         <Link to="/design"
         className='back'>
-        <img src="/assets/icon/arrow_circle_left.png" alt="Back" />
+        <img src="/icon/arrow_circle_left.png" alt="Back" />
         </Link>
         <h4>DESIGN</h4>
         </div> 
@@ -18,11 +18,11 @@ export default function DesignPage1() {
         <div className='px-12 py-14 gap-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 fin'>
         {/* Block 1  */}
         <div className='shadow-xl relative'>
-            <img src="/assets/img/App Default.png" alt="Mobile app white theme" />
+            <img src="/img/App Default.png" alt="Mobile app white theme" />
             <a href="https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=1028-4834&t=8TXMCEq6EmJGXjQ5-1"
             target="_black"
             className='absolute right-4 bottom-4 size-10 rounded-md hover:border-2'>
-            <img src="/assets/icon/figma-color.png" alt="Figma link" />
+            <img src="/icon/figma-color.png" alt="Figma link" />
             </a>
         </div>
 
@@ -37,14 +37,14 @@ export default function DesignPage1() {
             {/* Detail  */}
             <div className='grid p-12 gap-4'>
                 <div className='flex'>
-                <img className='size-6 mr-4' src="/assets/icon/schedule.png" alt="Timeframe" />
+                <img className='size-6 mr-4' src="/icon/schedule.png" alt="Timeframe" />
                 <p>Timeframe :</p>
                 <p className='flex-1 text-center' >1 Week (Nov 2024)</p>
                 </div>
                 
     
                 <div className='flex'>
-                <img className='size-6 mr-4' src="/assets/icon/contract.png" alt="Role" />
+                <img className='size-6 mr-4' src="/icon/contract.png" alt="Role" />
                 <p>Role :</p>
                 <p className='flex-1 text-center' >Practice</p>
                 </div>
