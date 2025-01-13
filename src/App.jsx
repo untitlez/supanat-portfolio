@@ -20,7 +20,7 @@ import Home from "./Component/Home";
 function App() {
   return (
     <>
-      <div className="home Relative" basename="/My-Portfolio/">
+      <div className="home Relative">
         <Router>
           <Navbar />
           <Routes>
