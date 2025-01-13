@@ -20,8 +20,8 @@ import Home from "./Component/Home";
 function App() {
   return (
     <>
-      <div className="home Relative">
-        <Router>
+      <div className="home Relative" >
+        <Router basename={process.env.PUBLIC_URL}>
           <Navbar />
           <Routes>
               <Route path="/" element={<Home />} />

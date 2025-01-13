@@ -9,7 +9,7 @@ export default function Code() {
         <div className='head relative fu'>
         <Link to="/portfolio"
         className='back'>
-        <img src="/src/assets/icon/arrow_circle_left.png" alt="Back" />
+        <img src="/assets/icon/arrow_circle_left.png" alt="Back" />
         </Link>
         <h4>CODE</h4>
         </div>
@@ -28,7 +28,7 @@ export default function Code() {
               {/* Detail  */}
               <div className='grid p-12 gap-4'>
                   <div className='flex'>
-                    <img className='size-6 mr-4' src="/src/assets/icon/build.png" alt="Timeframe" />
+                    <img className='size-6 mr-4' src="/assets/icon/build.png" alt="Timeframe" />
                     <p>Tools :</p>
                   <div className='flex-1 text-center'>
                     <p>React - useState</p>
@@ -50,7 +50,7 @@ export default function Code() {
               {/* Detail  */}
               <div className='grid p-12 gap-4'>
                   <div className='flex'>
-                    <img className='size-6 mr-4' src="/src/assets/icon/build.png" alt="Timeframe" />
+                    <img className='size-6 mr-4' src="/assets/icon/build.png" alt="Timeframe" />
                     <p>Tools :</p>
                   <div className='flex-1 text-center'>
                     <p>React - useState</p>

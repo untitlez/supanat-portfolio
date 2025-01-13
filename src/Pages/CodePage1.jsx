@@ -24,7 +24,7 @@ export default function CodePage1() {
         <div className="head relative"> 
         <Link to="/code"
         className='back'>
-        <img src="/src/assets/icon/arrow_circle_left.png" alt="Back" />
+        <img src="/assets/icon/arrow_circle_left.png" alt="Back" />
         </Link>
         <h4>CODE</h4>
         </div>
