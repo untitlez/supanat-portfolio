@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <div className="home Relative" >
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename="/My-Portfolio">
           <Navbar />
           <Routes>
               <Route path="/" element={<Home />} />
