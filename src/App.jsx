@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <div className="home Relative" >
-        <Router basename="/My-Portfolio">
+        <Router>
           <Navbar />
           <Routes>
               <Route path="/" element={<Home />} />
