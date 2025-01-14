@@ -15,7 +15,7 @@ export default function Navbar() {
             <Link to="/skills" className='submenu'>SKILLS</Link>
         </div> 
         <Link to="https://drive.google.com/file/d/16B74JyQMgziL5SL5o3qAtGZZvxx-w-CT/view?usp=sharing" target="_blank">
-        <img className='menu-icon w-12 rounded-full'src="/icon/account_circle.png" alt="resume_file"/>
+        <img className='menu-icon w-12 rounded-full'src="./icon/account_circle.png" alt="resume_file"/>
         </Link>
     </nav>
 
@@ -26,7 +26,7 @@ export default function Navbar() {
           <button className='menu-icon w-10 rounded peer'
           aria-haspopup="true" 
           aria-expanded="false">
-          <img src="/icon/menu.png" alt="menu" />
+          <img src="./icon/menu.png" alt="menu" />
           </button>
           <div className='dropdown-content rounded grid gap-1 p-1 bg-white mt-3 text-center text-sm font-medium shadow-md'>
             <Link to="/portfolio" className='submenu2'>PORTFOLIO</Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
             <Link to="/portfolio" className='head-menu ctf w-full'><h5>Portfolio</h5></Link>
         
             <Link to="https://drive.google.com/file/d/16B74JyQMgziL5SL5o3qAtGZZvxx-w-CT/view?usp=sharing" target="_blank">
-            <img className='menu-icon w-14 rounded-full'src="/icon/account_circle.png" alt="resume_file"/>
+            <img className='menu-icon w-14 rounded-full'src="./icon/account_circle.png" alt="resume_file"/>
             </Link>
       </nav>
       
