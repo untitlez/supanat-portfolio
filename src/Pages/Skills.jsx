@@ -69,7 +69,7 @@ export default function Skills() {
 
                   {/* Githup  */}
                   <a className="contact hover:opacity-80"
-                  href="https://github.com/untitlez/My-Portfolio.git" target="_blank">
+                  href="https://github.com/untitlez/supanat-portfolio.git" target="_blank">
                   <img className="size-6" src="./icon/github.png" alt="icon_location" />
                   <p>GitHub</p>
                   </a>
@@ -97,12 +97,12 @@ export default function Skills() {
               <h6>CERTIFICATIONS</h6>
               <div>
                   <a className='hover:opacity-80'
-                  href='https://file.notion.so/f/f/51f375cc-c4ec-44ff-90ab-f5e398d3ab10/aa45c7ab-87b6-4666-864c-1489df24bb9d/image.png?table=block&id=130cc06b-87d2-8143-9195-d6b7a52f38de&spaceId=51f375cc-c4ec-44ff-90ab-f5e398d3ab10&expirationTimestamp=1736006400000&signature=7cwVxUG-dethiL1zY0NlGz8vHJ_SLX2pystWMy_804s&downloadName=image.png'
+                  href='https://drive.google.com/file/d/1JHPjzT2qOy4_p9k0mdrKKoFED2APk_7W/view?usp=drive_link'
                   target='_blank'>
                   <u>Intro to User Experience Design</u></a><br />
 
                   <a className='hover:opacity-80'
-                  href='https://file.notion.so/f/f/51f375cc-c4ec-44ff-90ab-f5e398d3ab10/25389e2f-abc2-4934-bbb9-0701df4cb48b/image.png?table=block&id=130cc06b-87d2-815d-bc31-f25cf819918a&spaceId=51f375cc-c4ec-44ff-90ab-f5e398d3ab10&expirationTimestamp=1736006400000&signature=j7wGFqTwVGuv0VB4QJXcWKgnUAsOWv_GJHNWolL6PCQ&downloadName=image.png'
+                  href='https://drive.google.com/file/d/1nSM5l17htmYBUsL3Av8CTCYJp1rUYTYh/view?usp=sharing'
                   target='_blank'>
                   <u>UI Fundamentals</u></a>
                   

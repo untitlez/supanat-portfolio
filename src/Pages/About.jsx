@@ -74,7 +74,7 @@ export default function Profile() {
 
             {/* Githup  */}
             <a className="contact hover:opacity-80"
-            href="https://github.com/untitlez/My-Portfolio.git"
+            href="https://github.com/untitlez/supanat-portfolio.git"
             target="_blank">
             <img src="./icon/github.png" alt="icon_githup" />
             GitHub 
