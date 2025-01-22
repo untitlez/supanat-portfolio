@@ -21,56 +21,64 @@ export default function Skills() {
                   <a className="contact hover:opacity-80"
                   href="https://www.figma.com/design/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=954-3729&p=f&t=7yV4cSfWecJJxbmR-0"
                   target="_blank">
-                  <img src="./icon/figma.png" alt="icon_location" />
+                  <img src="./icon/figma.png" alt="icon figma" />
                   Figma
                   </a>
 
                   {/* VS Code  */}
                   <div className="flex items-center gap-4">
-                  <img className="size-6" src="./icon/vs code.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/vs code.png" alt="icon vscode" />
                   <p>VS Code</p>
                   </div>
 
                   {/* HTML  */}
                   <div className="contact">
-                  <img className="size-6" src="./icon/html.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/html.png" alt="icon html" />
                   <p>HTML</p>
                   </div>
 
                   {/* CSS  */}
                   <div className="flex items-center gap-4">
-                  <img className="size-6" src="./icon/css.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/css.png" alt="icon css" />
                   <p>CSS</p>
                   </div>
 
                   {/* JavaScript  */}
                   <div className="flex items-center gap-4">
-                  <img className="size-6" src="./icon/js.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/js.png" alt="icon javaScript" />
                   <p>JavaScript</p>
                   </div>
 
                   {/* React  */}
                   <div className="flex items-center gap-4">
-                  <img className="size-6" src="./icon/react.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/react.png" alt="icon react" />
                   <p>React</p>
+                  </div>                  
+                  
+                  {/* Next  */}
+                  <div className="flex items-center gap-4">
+                  <img className="size-6" src="./icon/next.png" alt="icon next" />
+                  <p>Next</p>
                   </div>
+
+                  
 
                   {/* Tailwindcss  */}
                   <div className="flex items-center gap-4">
-                  <img className="size-6" src="./icon/tailwind.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/tailwind.png" alt="icon tailwindcss" />
                   <p>Tailwind CSS</p>
                   </div>
 
                   {/* BootStrap  */}
                   <div className="flex items-center gap-4">
-                  <img className="size-6" src="./icon/bootstrap.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/bootstrap.png" alt="icon bootstrap" />
                   <p>Bootstrap</p>
                   </div>
 
                   {/* Githup  */}
                   <a className="contact hover:opacity-80"
                   href="https://github.com/untitlez/supanat-portfolio.git" target="_blank">
-                  <img className="size-6" src="./icon/github.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/github.png" alt="icon github" />
                   <p>GitHub</p>
                   </a>
               </div>
@@ -110,7 +118,7 @@ export default function Skills() {
                   <a className="flex gap-2 mt-4 justify-end hover:opacity-80"
                   href='https://www.skooldio.com/'
                   target='_blank'>
-                  <img className="size-6" src="./icon/skooldio.png" alt="icon_location" />
+                  <img className="size-6" src="./icon/skooldio.png" alt="icon skooldio" />
                   Skooldio
                   </a>
               </div>
