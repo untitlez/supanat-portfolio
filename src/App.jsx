@@ -16,13 +16,14 @@ import Code from "./Pages/Code";
 import CodePage1 from "./Pages/CodePage1";
 import CodePage2 from "./Pages/CodePage2";
 import Home from "./Component/Home";
+import CodePage3 from "./Pages/CodePage3";
 
 function App() {
   return (
     <>
       <div className="home Relative" >
         <Router>
-          <Navbar />
+            <Navbar />
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -33,6 +34,7 @@ function App() {
               <Route path="/code" element={<Code />} />
               <Route path="/codepage1" element={<CodePage1 />} />
               <Route path="/codepage2" element={<CodePage2 />} />
+              <Route path="/codepage3" element={<CodePage3 />} />
               <Route path="/design" element={<Design />} />
               <Route path="/designpage1" element={<DesignPage1 />} />
               <Route path="/designpage2" element={<DesignPage2 />} />

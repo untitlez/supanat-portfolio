@@ -62,6 +62,30 @@ export default function Code() {
         </div>
         </Link>
     
+        {/* Block 3  */}
+        <Link to="/codepage3">
+        <div className='card'>
+            {/* Topic  */}
+            <div className='primary text-white rounded-t-md text-center py-4'>
+            <h6>Example Website</h6>
+            </div>
+
+              {/* Detail  */}
+              <div className='grid p-12 gap-4'>
+                  <div className='flex'>
+                    <img className='size-6 mr-4' src="./icon/build.png" alt="Timeframe" />
+                    <p>Tools :</p>
+                  <div className='flex-1 text-center'>
+                    <p>Next.js</p>
+                    <p>Fetch API</p>
+                    <p>Tailwind CSS</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </Link>
+
+
         </div>
         </div>
 
