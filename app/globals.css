@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,9 +12,200 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  background:#2345A7;
+  /* url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: cover; */
+}
+
+@layer base {
+  h1 {
+    @apply text-[76px] leading-[120%] font-black;
+  }
+
+  h2 {
+    @apply text-[64px] leading-[120%] font-bold;
+  }
+
+  h3 {
+    @apply text-[48px] leading-[120%] font-bold;
+  }
+
+  h4 {
+    @apply text-[36px] leading-[120%] font-bold;
+  }
+
+  h5 {
+    @apply text-[24px] leading-[120%] font-bold;
+  }
+
+  p {
+    @apply text-[18px] leading-[140%];
+  }
+
+  ul, li {
+    @apply text-[16px] leading-[140%];
+  }
+}
+
+.text-primary {
+  @apply text-[#2345A7]
+}
+
+.bg-primary {
+  @apply bg-[#2345A7]
+}
+
+.bg-secondary {
+  @apply bg-[#FF7053] text-black
+}
+
+.action {
+  @apply bg-[#FED43D] text-[#2b2b2b]
+}
+
+
+.box {
+  border-width: 2px;
+  border-color: white;
+}
+
+.main {
+  @apply h-auto w-full flex flex-col p-8 gap-10 lg:flex-row justify-between
+}
+
+.main-reverse {
+  @apply lg:flex-row-reverse lg:bg-white lg:text-black lg:rounded-3xl
+}
+
+.content {
+  @apply flex justify-center items-center
+}
+
+.content-reverse {
+  @apply lg:basis-1/3 lg:h-auto lg:bg-[#2345A7] lg:text-white lg:rounded-3xl
+}
+
+.content-lg {
+  @apply lg:basis-1/3 lg:h-auto lg:rounded-3xl lg:bg-white lg:text-[#2345A7]
+}
+
+.contact {
+  @apply inline-flex items-center gap-3 my-1
+}
+
+.topic {
+  @apply border-b-2 border-[#2345A7] pb-4 text-center font-semibold
+}
+
+.card {
+  @apply bg-white w-full rounded-xl gap-8 px-8 py-12
+}
+
+.icon {
+  @apply p-1 rounded
+}
+
+
+
+
+
+.back {
+  @apply size-10 absolute left-10 rounded-full hover:bg-white/10;
+}
+
+.fade {
+  @apply transition duration-1000 ease-in-out;
+}
+
+.hide {
+  @apply opacity-0;
+}
+
+.show {
+  @apply group-hover:opacity-100;
+}
+
+/* Animations  */
+.fin {
+  animation: fadein 1s linear;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fl {
+  animation: fadeinleft 0.6s linear;
+}
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+    transition: transform 0.12s;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.fr {
+  animation: fadeinright 0.6s linear;
+}
+@keyframes fadeinright {
+  0% {
+    opacity: 0;
+    transform: translateX(40%);
+    transition: transform 0.12s;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.fd {
+  animation: fadeindown 0.6s linear;
+}
+@keyframes fadeindown {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+    transition: transform 0.12s;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.fu {
+  animation: fadeinup 0.6s linear;
+}
+@keyframes fadeinup {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+    transition: transform 0.12s;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }

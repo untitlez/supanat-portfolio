@@ -6,19 +6,21 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "SUPANAT-Portfolio",
+  title: "SUPANAT - Portfolio",
   description: "My Portfolio",
   icons: {
-    icon: "/shiba.jpg", 
-    apple: "/shiba.jpg",
-    shortcut: "/shiba.jpg",
+    icon: "/clover.png",
+    apple: "/clover.png",
+    shortcut: "/clover.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+          {children}
+      </body>
     </html>
   );
 }
