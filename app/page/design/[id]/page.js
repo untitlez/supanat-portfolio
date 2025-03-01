@@ -1,5 +1,4 @@
 import { designData } from "@/app/data/DesignData";
-import Link from "next/link";
 
 export default function DesignIdPage({ params }) {
   const { id } = params;
@@ -58,7 +57,7 @@ export default function DesignIdPage({ params }) {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <ul className={`size-palette bg-[${data.primary}]  text-white`}>
+            <ul className={`size-palette bg-[${data.primary}] text-white`}>
               <li>Primary Color</li>
               <li>{data.primary}</li>
             </ul>
