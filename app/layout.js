@@ -9,17 +9,17 @@ export const metadata = {
   title: "SUPANAT - Portfolio",
   description: "My Portfolio",
   icons: {
-    icon: "/clover.png",
-    apple: "/clover.png",
-    shortcut: "/clover.png",
+    icon: "/favicon/clover.png",
+    apple: "/favicon/clover.png",
+    shortcut: "/favicon/clover.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-          {children}
+      <body className={inter.className} data-theme="light">
+        {children}
       </body>
     </html>
   );

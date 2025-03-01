@@ -1,12 +1,38 @@
-export default function Code() {
+import { codeData } from "@/app/data/CodeData";
+import Link from "next/link";
+
+export default function CodePage() {
   return (
     <>
-<div className="mockup-browser bg-base-300 border">
-  <div className="mockup-browser-toolbar">
-    <div className="input">https://daisyui.com</div>
-  </div>
-  <div className="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
-</div>
+      <div className="flex flex-wrap justify-center gap-8">
+        {codeData.map((data) => (
+          <div
+            key={data.id}
+            className="mockup-browser bg-base-300 border w-80 shadow-xl"
+          >
+            <div className="mockup-browser-toolbar">
+              <p className="input">{data.title}</p>
+            </div>
+            <div className="bg-base-200">
+              <img
+                src={data.src}
+                alt="project image"
+                className="w-full h-48 object-cover"
+              />
+
+              <div className="flex flex-col gap-4 p-4">
+                <ul>
+                  <li className="list-disc ml-5">{data.tools}</li>
+                  <li className="list-disc ml-5">{data.description}</li>
+                </ul>
+                <Link href={data.link} target="_blank" className="btn btn-accent">
+                  View
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
-  )
+  );
 }
