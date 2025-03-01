@@ -1,5 +1,5 @@
 export const designData = [
-  {
+  { 
     id: "2",
     src: "/my-wallet.webp",
     title: "Wallet App",

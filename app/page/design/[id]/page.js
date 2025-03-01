@@ -57,28 +57,35 @@ export default function DesignIdPage({ params }) {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <ul className={`size-palette bg-[${data.primary}] text-white`}>
+            <ul
+              className="size-palette text-white"
+              style={{ backgroundColor: data.primary }}
+            >
               <li>Primary Color</li>
               <li>{data.primary}</li>
             </ul>
 
             <ul
-              className={
-                data.secondary
-                  ? `size-palette text-white bg-[${data.secondary}]`
-                  : "hidden"
-              }
+              className="size-palette text-white"
+              style={{
+                backgroundColor: data.secondary,
+                display: data.secondary ? "flex" : "none",
+              }}
             >
               <li>Secondary Color</li>
               <li>{data.secondary}</li>
             </ul>
             <ul
-              className={`size-palette bg-[${data.textColor01}] text-white border`}
+              className="size-palette text-white border"
+              style={{ backgroundColor: data.textColor01 }}
             >
               <li>Text Color</li>
               <li>{data.textColor01}</li>
             </ul>
-            <ul className={`size-palette bg-[${data.textColor02}] text-black `}>
+            <ul
+              className="size-palette text-black"
+              style={{ backgroundColor: data.textColor02 }}
+            >
               <li>Text Color</li>
               <li>{data.textColor02}</li>
             </ul>
