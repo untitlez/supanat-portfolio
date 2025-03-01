@@ -8,11 +8,10 @@ export default function About() {
             alt="image_profile"
             className="h-[200px] sm:h-full sm:w-[75%] md:h-[400px] md:w-full object-cover rounded-xl"
           />
-          
         </div>
 
         <div className="content gap-8">
-        <div className="grid gap-1">
+          <div className="grid gap-1">
             <h3>SUPANAT CHAISRI</h3>
             <h5>Frontend Developer</h5>
           </div>
@@ -137,7 +136,6 @@ export default function About() {
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>

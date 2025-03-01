@@ -108,6 +108,15 @@ export default function Skills() {
                     />
                     GitHub
                 </li>
+
+                <li className="contact">
+                    <img
+                      className="h-8 w-8 icon"
+                      src="/icons/postman.webp"
+                      alt="icon postman"
+                    />
+                    Postman
+                </li>
               </ul>
             </div>
 

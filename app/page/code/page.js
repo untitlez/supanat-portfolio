@@ -22,10 +22,28 @@ export default function CodePage() {
 
               <div className="flex flex-col gap-4 p-4">
                 <ul>
-                  <li className="list-disc ml-5">{data.tools}</li>
-                  <li className="list-disc ml-5">{data.description}</li>
+                  <li className="contact">
+                    <img
+                      className="h-6 w-6 icon"
+                      src="/icons/tools.png"
+                      alt="icon tools"
+                    />
+                    {data.tools}
+                  </li>
+                  <li className="contact">
+                    <img
+                      className="h-6 w-6 icon"
+                      src="/icons/detail.png"
+                      alt="icon tools"
+                    />
+                    {data.description}
+                  </li>
                 </ul>
-                <Link href={data.link} target="_blank" className="btn btn-accent">
+                <Link
+                  href={data.link}
+                  target="_blank"
+                  className="btn btn-accent"
+                >
                   View
                 </Link>
               </div>

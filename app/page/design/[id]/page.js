@@ -27,7 +27,6 @@ export default function DesignIdPage({ params }) {
 
         <div className="content bg-base-100 rounded-xl gap-12 p-8">
           <div className="flex gap-3 justify-end">
-          
             <a
               href={data.link01}
               target="_blank"
@@ -100,7 +99,7 @@ export default function DesignIdPage({ params }) {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 }
