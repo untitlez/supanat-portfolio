@@ -2,17 +2,17 @@ export default function Education() {
   return (
     <>
       <div
-        className="main text-base-100 rounded-xl 
+        className="main text-base-100 rounded-xl animate-viewpoint
         lg:flex-row-reverse lg:bg-base-100 lg:text-base-content lg:font-medium lg:p-8"
       >
         <div
           className="content h-20 bg-base-100 text-primary rounded-xl justify-center items-center
-          lg:h-[280px] lg:w-[50%] lg:bg-primary lg:text-base-100"
+          lg:h-[280px] lg:w-[50%] lg:bg-primary lg:text-base-100" 
         >
-          <h5>EDUCATION</h5>
+          <h2>EDUCATION</h2>
         </div>
 
-        <div className="content gap-8">
+        <div className="content gap-8 animate-viewpoint">
           <div>
             <div className="flex justify-between">
               <p>PAYAP UNIVERSITY</p>

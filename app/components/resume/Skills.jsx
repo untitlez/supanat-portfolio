@@ -1,12 +1,12 @@
 export default function Skills() {
   return (
     <>
-        <div className="main text-base-100 lg:gap-8">
+        <div className="main text-base-100 lg:gap-8 animate-viewpoint">
         <div className="content h-20 bg-base-100 text-primary rounded-xl justify-center items-center">
-          <h5>SKILLS</h5>
+          <h2>SKILLS</h2>
         </div>
 
-        <div className="content lg:flex">
+        <div className="content lg:flex animate-viewpoint">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
             {/* Card 1  */}
@@ -148,7 +148,7 @@ export default function Skills() {
                   >
                     <img
                       className="h-8 w-8 bg-base-100 rounded p-1"
-                      src="/icons/skooldio.png"
+                      src="/icons/skooldio.webp"
                       alt="icon skooldio"
                     />
                     <p className="hidden sm:flex text-base">Skooldio</p>
