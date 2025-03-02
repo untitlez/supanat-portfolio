@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -13,28 +17,21 @@ body {
 }
 
 @layer base {
+  
   h1 {
-    @apply text-[76px] leading-[120%] font-black;
-  }
-
-  h2 {
-    @apply text-[64px] leading-[120%] font-bold;
-  }
-
-  h3 {
     @apply text-[48px] leading-[120%] font-bold;
   }
 
-  h4 {
-    @apply text-[36px] leading-[120%] font-bold;
+  h2 {
+    @apply text-[30px] leading-[120%] font-bold;
   }
 
-  h5 {
-    @apply text-[24px] leading-[120%] font-bold;
+  h3 {
+    @apply text-[20px] leading-[120%] font-semibold;
   }
 
   p {
-    @apply text-[18px] leading-[140%];
+    @apply text-[18px] leading-[140%] ;
   }
 
   ul, li {
@@ -52,7 +49,7 @@ body {
 }
 
 .main {
-  @apply w-full flex flex-col px-8 lg:px-0 gap-8 lg:gap-12
+  @apply w-full flex flex-col px-4 sm:px-8 lg:px-0 gap-8 lg:gap-12
 }
 
 .content {
@@ -81,38 +78,32 @@ body {
 
 
 /* Animations  */
-.fin {
-  animation: fadein 1s linear;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+.animate-viewpoint {
+  animation: fadeInDown 1s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .fl {
-  animation: fadeinleft 0.6s linear;
-}
-
-@keyframes fadeinleft {
+  animation: fadeInLeft 1s linear;
+  }
+@keyframes fadeInLeft {
   0% {
     opacity: 0;
     transform: translateX(-40%);
-    transition: transform 0.12s;
   }
   100% {
     opacity: 1;
     transform: translateX(0%);
+    transition: transform 0.12s;
   }
 }
 
 .fr {
-  animation: fadeinright 0.6s linear;
-}
-@keyframes fadeinright {
+  animation: fadeInRight 1s linear;
+  }
+@keyframes fadeInRight {
   0% {
     opacity: 0;
     transform: translateX(40%);
@@ -125,27 +116,12 @@ body {
 }
 
 .fd {
-  animation: fadeindown 0.6s linear;
-}
-@keyframes fadeindown {
+  animation: fadeInDown 1s linear;
+  }
+@keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(40%);
-    transition: transform 0.12s;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-.fu {
-  animation: fadeinup 0.6s linear;
-}
-@keyframes fadeinup {
-  0% {
-    opacity: 0;
-    transform: translateY(-40%);
+    transform: translateY(20%);
     transition: transform 0.12s;
   }
   100% {

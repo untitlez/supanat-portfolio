@@ -24,7 +24,7 @@ export default function DesignIdPage({ params }) {
           </div>
         </div>
 
-        <div className="content bg-base-100 rounded-xl gap-12 p-8">
+        <div className="content bg-base-100 rounded-xl gap-12 p-8 fr">
           <div className="flex gap-3 justify-end">
             <a
               href={data.link01}
@@ -92,15 +92,15 @@ export default function DesignIdPage({ params }) {
             <div className="w-full my-6">
               <ul className="flex justify-between">
                 <p>Time Frame :</p>
-                <li className="justify-start">{data.timeFrame}</li>
+                <li className="justify-end">{data.timeFrame}</li>
               </ul>
               <ul className="flex justify-between">
                 <p>Role :</p>
-                <li className="justify-start">{data.role}</li>
+                <li className="justify-end">{data.role}</li>
               </ul>
               <ul className="flex justify-between">
                 <p>Font Family :</p>
-                <li className="justify-start">{data.font}</li>
+                <li className="justify-end">{data.font}</li>
               </ul>
             </div>
           </div>

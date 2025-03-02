@@ -1,12 +1,12 @@
 export default function Skills() {
   return (
     <>
-      <div className="main text-base-100 lg:gap-8">
+        <div className="main text-base-100 lg:gap-8 animate-viewpoint">
         <div className="content h-20 bg-base-100 text-primary rounded-xl justify-center items-center">
-          <h5>SKILLS</h5>
+          <h2>SKILLS</h2>
         </div>
 
-        <div className="content lg:flex">
+        <div className="content lg:flex animate-viewpoint">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Card 1  */}
             <div className="card-skills">
@@ -134,7 +134,80 @@ export default function Skills() {
               </ul>
             </div>
           </div>
-        </div>
+          </div>
+
+          {/* Footer */}
+          <div className="content justify-between bg-base-content gap-8 p-8
+          lg:mt-8 rounded-t-xl lg:flex-row">
+            <div>
+              <div className="gap-4 flex justify-between items-center lg:grid">
+              <p>CERTIFICATIONS</p>
+                  <a
+                    className="contact hover:text-accent"
+                    href="https://www.skooldio.com/"
+                    target="_blank"
+                  >
+                    <img
+                      className="h-8 w-8 bg-base-100 rounded p-1"
+                      src="/icons/skooldio.webp"
+                      alt="icon skooldio"
+                    />
+                    <p className="hidden sm:flex text-base">Skooldio</p>
+                  </a>
+                  </div>
+
+                <ul className="list-disc pl-6">
+                  <li>
+                    <a
+                      className="hover:text-accent"
+                      href="https://drive.google.com/file/d/1JHPjzT2qOy4_p9k0mdrKKoFED2APk_7W/view?usp=drive_link"
+                      target="_blank"
+                    >
+                      Intro to User Experience Design
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      className="hover:text-accent"
+                      href="https://drive.google.com/file/d/1nSM5l17htmYBUsL3Av8CTCYJp1rUYTYh/view?usp=sharing"
+                      target="_blank"
+                    >
+                      UI Fundamentals
+                    </a>
+                  </li>
+                </ul>
+            </div>
+
+            <div className="justify-between sm:flex sm:items-center lg:flex-col">
+              <p>CONTACT ME</p>
+              <div className="flex gap-3 items-center">
+              <a
+                    className="rounded-md hover:bg-accent"
+                    href=""
+                    target="_blank"
+                  >
+                    <img
+                      className="h-10 w-10 icon hover:invert-0"
+                      src="/icons/mail.png"
+                      alt="icon mail"
+                    />
+                  </a>
+                  <a
+                    className="rounded-md hover:bg-accent"
+                    href=""
+                    target="_blank"
+                  >
+                    <img
+                      className="h-9 w-9 icon hover:invert-0"
+                      src="/icons/call.png"
+                      alt="icon call"
+                    />
+                  </a>
+              </div>
+            </div>
+          </div>
+        
 
         {/* Footer */}
         <div

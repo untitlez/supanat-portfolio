@@ -6,18 +6,18 @@ export default function About() {
           <img
             src="/profile.jpg"
             alt="image_profile"
-            className="h-[200px] sm:h-full sm:w-[75%] md:h-[400px] md:w-full object-cover rounded-xl"
+            className="h-[200px] sm:h-full sm:w-[75%] md:h-[400px] md:w-full object-cover rounded-xl fl"
           />
         </div>
 
-        <div className="content gap-8">
+        <div className="content gap-8 fr">
           <div className="grid gap-1">
-            <h3>SUPANAT CHAISRI</h3>
-            <h5>Frontend Developer</h5>
+            <h1>SUPANAT CHAISRI</h1>
+            <h2 className="font-light opacity-80">Frontend Developer</h2>
           </div>
-          <div className="grid gap-2">
-            <p>ABOUT ME</p>
-            <p>
+          <div className="grid gap-3">
+            <h3>ABOUT ME</h3>
+            <p className="opacity-80">
               I'm interested in working as a Frontend Developer. Currently, I
               keep improving my skills and practice myself. If there were
               experts willing to guide or mentor me, I would be extremely
@@ -26,8 +26,8 @@ export default function About() {
           </div>
 
           <div className="grid gap-2">
-            <p>HOBBIES</p>
-            <div className="flex flex-col sm:flex-row sm:justify-between">
+            <h3>HOBBIES</h3>
+            <div className="flex flex-col sm:flex-row sm:justify-between opacity-80">
               <ul className="grid">
                 {/* Location */}
                 <li className="contact">

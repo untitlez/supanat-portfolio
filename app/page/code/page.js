@@ -8,7 +8,7 @@ export default function CodePage() {
         {codeData.map((data) => (
           <div
             key={data.id}
-            className="mockup-browser bg-base-300 border w-80 shadow-xl"
+            className="mockup-browser bg-base-300 border w-80 shadow-xl fd"
           >
             <div className="mockup-browser-toolbar">
               <p className="input">{data.title}</p>

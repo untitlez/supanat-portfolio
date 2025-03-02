@@ -6,7 +6,7 @@ export default function DesignPage() {
     <>
       <div className="flex flex-wrap justify-center gap-8">
         {designData.map((data) => (
-          <div key={data.id} className="mockup-phone relative">
+          <div key={data.id} className="mockup-phone relative fd">
             <div className="camera"></div>
             <div className="display">
               <div
