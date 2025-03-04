@@ -1,5 +1,4 @@
-import { designData } from "@/app/data/DesignData";
-import Link from "next/link";
+import { designData } from "@/app/components/data/DesignData";
 
 export default function DesignIdPage({ params }) {
   const { id } = params;

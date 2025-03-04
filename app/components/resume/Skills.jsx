@@ -10,10 +10,7 @@ export default function Skills() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Card 1  */}
             <div className="card-skills">
-              <p className="border-b-2 w-full p-3 text-center">
-                TECHNICAL SKILLS
-              </p>
-              <p className="border-b-2 w-full p-3 text-center font-semibold">TECHNICAL SKILLS</p>
+            <p className="border-b-2 w-full p-3 text-center font-semibold">TECHNICAL SKILLS</p>
               <ul className="grid">
                 <li className="contact">
                   <img
@@ -185,34 +182,7 @@ export default function Skills() {
           <div className="justify-between sm:flex sm:items-center lg:flex-col">
             <p>CONTACT ME</p>
             <div className="flex gap-3 items-center">
-              <a
-                    className="rounded-md hover:bg-accent"
-                    href=""
-                    target="_blank"
-                  >
-                    <img
-                      className="h-10 w-10 icon hover:invert-0"
-                      src="/icons/mail.png"
-                      alt="icon mail"
-                    />
-                  </a>
-                  <a
-                    className="rounded-md hover:bg-accent"
-                    href=""
-                    target="_blank"
-                  >
-                    <img
-                      className="h-9 w-9 icon hover:invert-0"
-                      src="/icons/call.png"
-                      alt="icon call"
-                    />
-                  </a>
-              </div>
-            </div>
-          </div>
-          </div>
-        
-
+            <a
                 data-tip="tleza_championship2@hotmail.com"
                 className="rounded-md lg:tooltip lg:tooltip-left lg:tooltip-accent hover:bg-accent opacity-80"
                 href="mailto:tleza_championship2@hotmail.com"
@@ -234,10 +204,11 @@ export default function Skills() {
                   alt="icon call"
                 />
               </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+          
     </>
   );
 }
