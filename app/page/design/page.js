@@ -1,4 +1,4 @@
-import { designData } from "@/app/data/DesignData";
+import { designData } from "@/app/components/data/DesignData";
 import Link from "next/link";
 
 export default function DesignPage() {

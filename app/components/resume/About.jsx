@@ -10,8 +10,8 @@ export default function About() {
           />
         </div>
 
-        <div className="content gap-8 fr">
-          <div className="grid gap-1">
+        <div className="content gap-10 fr">
+          <div className="grid">
             <h1>SUPANAT CHAISRI</h1>
             <h2 className="font-light opacity-80">Frontend Developer</h2>
           </div>

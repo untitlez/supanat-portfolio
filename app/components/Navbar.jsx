@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Navbar({ hidden, portfolioBtn, resumeBtn }) {
+export default function Navbar({ hidden, projectBtn, resumeBtn }) {
   return (
     <>
       <nav className="navbar pl-4 pr-6 md:mb-4 lg:mt-4 lg:rounded-xl text-primary bg-base-100 justify-end border-b">
@@ -38,13 +38,13 @@ export default function Navbar({ hidden, portfolioBtn, resumeBtn }) {
             <button
               className={`btn btn-sm btn-primary cursor-pointer ${resumeBtn}`}
             >
-              PORTFOLIO
+              PROJECTS
             </button>
           </Link>
 
           <Link href="/">
             <button
-              className={`btn btn-sm btn-primary cursor-pointer ${portfolioBtn}`}
+              className={`btn btn-sm btn-primary cursor-pointer ${projectBtn}`}
             >
               RESUME
             </button>
