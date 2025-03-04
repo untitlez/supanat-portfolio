@@ -5,7 +5,7 @@ export const codeData = [
     title: "Users",
     tools: "Vercel / Axios / React.js / Next.js",
     description: "RESTful API / State",
-    link: "https://e-commerce-untitlezs-projects.vercel.app/page/users",
+    link: "https://practice-website-projects.vercel.app/page/users",
   },
 
   {
@@ -14,7 +14,7 @@ export const codeData = [
     title: "Products",
     tools: "Vercel / Axios / React.js / Next.js",
     description: "Fetch API / State",
-    link: "https://e-commerce-untitlezs-projects.vercel.app/page/product",
+    link: "https://practice-website-projects.vercel.app/page/product",
   },
 
   {
