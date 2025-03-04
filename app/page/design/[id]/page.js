@@ -1,4 +1,5 @@
 import { designData } from "@/app/data/DesignData";
+import Link from "next/link";
 
 export default function DesignIdPage({ params }) {
   const { id } = params;
@@ -23,7 +24,7 @@ export default function DesignIdPage({ params }) {
             </div>
           </div>
         </div>
-
+ 
         <div className="content bg-base-100 rounded-xl gap-12 p-8 fr">
           <div className="flex gap-3 justify-end">
             <a

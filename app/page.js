@@ -7,7 +7,7 @@ import Skills from "./components/resume/Skills";
 export default function Home() {
   return (
     <>
-      <div data-theme="light" className="min-h-screen bg-primary">
+      <div data-theme="light" className="min-h-screen bg-primary relative">
         <div className="main-layout">
           <Navbar hidden="hidden" resumeBtn={"btn-outline"} />
           <About />

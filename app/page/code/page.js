@@ -1,4 +1,4 @@
-import { codeData } from "@/app/data/CodeData";
+import { codeData } from "@/app/components/data/CodeData";
 import Link from "next/link";
 
 export default function CodePage() {
