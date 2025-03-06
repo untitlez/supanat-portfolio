@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar({ hidden, projectBtn, resumeBtn }) {
   return (
     <>
-      <nav className="navbar pl-4 pr-6 md:mb-4 lg:mt-4 lg:rounded-xl text-primary bg-base-100 justify-end border-b">
+      <nav className="navbar h-auto pl-4 pr-6 md:mb-4 lg:mt-4 lg:rounded-xl text-primary bg-base-100 justify-end border-b">
         <div className={`dropdown w-full ${hidden}`}>
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg

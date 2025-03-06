@@ -140,52 +140,66 @@ export default function Skills() {
           className="content justify-between bg-base-content gap-8 p-8
           lg:mt-8 rounded-t-xl lg:flex-row"
         >
-          <div>
-            <div className="gap-4 flex justify-between items-center lg:grid">
+            <div className="flex flex-col gap-3 lg:grid">
               <p>CERTIFICATIONS</p>
-              <a
-                className="contact hover:text-accent opacity-80"
-                href="https://www.skooldio.com/"
-                target="_blank"
-              >
-                <img
-                  className="h-8 w-8 bg-base-100 rounded p-1"
-                  src="/icons/skooldio.webp"
-                  alt="icon skooldio"
-                />
-                <p className="hidden sm:flex text-base">Skooldio</p>
-              </a>
-            </div>
-
-            <ul className="list-disc pl-6">
-              <li>
+            <ul className="grid opacity-80">
+            <li className="pl-1 lg:tooltip lg:tooltip-left lg:tooltip-accent" data-tip="Skooldio">
                 <a
-                  className="hover:text-accent opacity-80"
+                  className="contact hover:text-accent"
                   href="https://drive.google.com/file/d/1JHPjzT2qOy4_p9k0mdrKKoFED2APk_7W/view?usp=drive_link"
                   target="_blank"
                 >
+                <img
+                  data-tip="Skooldio"
+
+                  className="h-8 w-8 bg-base-100 rounded p-0.5"
+                  src="/icons/skooldio.webp"
+                  alt="icon skooldio"
+                />
                   Intro to User Experience Design
                 </a>
               </li>
 
-              <li>
+              <li className="pl-1 lg:tooltip lg:tooltip-left lg:tooltip-accent" data-tip="Skooldio">
                 <a
-                  className="hover:text-accent opacity-80"
+                  className="contact hover:text-accent"
                   href="https://drive.google.com/file/d/1nSM5l17htmYBUsL3Av8CTCYJp1rUYTYh/view?usp=sharing"
                   target="_blank"
                 >
+                   <img
+                  data-tip="Udemy"
+
+                  className="h-8 w-8 bg-base-100 rounded p-0.5"
+                  src="/icons/skooldio.webp"
+                  alt="icon skooldio"
+                />
                   UI Fundamentals
                 </a>
+              </li>
+
+              <li className="pl-1 lg:tooltip lg:tooltip-left lg:tooltip-accent" data-tip="Udemy">
+              <a
+                className="contact hover:text-accent"
+                href="https://drive.google.com/file/d/1Ol7tcnVbOlaKGC_WlG1HhT5OmPJ1bddG/view?usp=sharing"
+                target="_blank"
+              >
+                <img
+                  className="h-8 w-8 bg-base-100 rounded p-1"
+                  src="/icons/udemy.svg"
+                  alt="icon udemy"
+                />
+                The Complete Full-Stack Web Development
+              </a>
               </li>
             </ul>
           </div>
 
-          <div className="justify-between sm:flex sm:items-center lg:flex-col">
+          <div className="flex justify-between items-center lg:flex-col">
             <p>CONTACT ME</p>
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center opacity-80">
               <a
                 data-tip="tleza_championship2@hotmail.com"
-                className="rounded-md lg:tooltip lg:tooltip-left lg:tooltip-accent hover:bg-accent opacity-80"
+                className="rounded-md lg:tooltip lg:tooltip-left lg:tooltip-accent hover:bg-accent"
                 href="mailto:tleza_championship2@hotmail.com"
               >
                 <img
@@ -196,7 +210,7 @@ export default function Skills() {
               </a>
               <a
                 data-tip="088-2252252"
-                className="rounded-md lg:tooltip lg:tooltip-accent hover:bg-accent opacity-90"
+                className="rounded-md lg:tooltip lg:tooltip-accent hover:bg-accent"
                 href="tel:+0882252252"
               >
                 <img
