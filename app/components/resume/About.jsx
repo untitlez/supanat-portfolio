@@ -6,11 +6,11 @@ export default function About() {
           <img
             src="/profile.jpg"
             alt="image_profile"
-            className="h-[200px] sm:h-full sm:w-[75%] md:h-[400px] md:w-full object-cover rounded-xl sm:fl"
+            className="h-[200px] sm:h-full sm:w-[75%] md:h-[400px] md:w-full object-cover rounded-xl fl"
           />
         </div>
 
-        <div className="content gap-10 sm:fr">
+        <div className="content gap-10 fr">
           <div className="grid">
             <h1>SUPANAT CHAISRI</h1>
             <h2 className="font-light opacity-80">Frontend Developer</h2>
