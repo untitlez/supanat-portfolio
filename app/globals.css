@@ -10,6 +10,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,45 +21,45 @@ body {
 @layer base {
   
   h1 {
-    @apply text-[48px] leading-[120%] font-bold;
+    @apply text-4xl font-bold lg:text-5xl
   }
 
   h2 {
-    @apply text-[30px] leading-[120%] font-bold;
+    @apply text-2xl font-semibold lg:text-3xl
   }
 
   h3 {
-    @apply text-[20px] leading-[120%] font-semibold;
+    @apply text-lg font-semibold lg:text-xl
   }
 
   p {
-    @apply text-[18px] leading-[140%] ;
-  }
-
-  ul, li {
-    @apply text-[16px] leading-[140%];
+    @apply text-base lg:text-lg
   }
 }
 
 .box {
   border-width: 2px;
-  border-color: white;
+  border-color: black;
 }
 
-.main-layout {
-  @apply flex flex-col justify-self-center w-full max-w-screen-lg gap-12 lg:gap-16
+.layout {
+  @apply grid min-h-screen px-4 gap-12 lg:gap-24
 }
 
 .main {
-  @apply w-full flex flex-col px-4 sm:px-8 lg:px-0 gap-8 lg:gap-12
+  @apply grid gap-8 lg:gap-12 lg:grid-cols-4
 }
 
 .content {
-  @apply w-full flex flex-col
+  @apply grid col-span-2 gap-8 lg:gap-12
+}
+
+.emphasize {
+  @apply border-l-4 border-primary pl-2
 }
 
 .contact {
-  @apply inline-flex items-center gap-3 my-1 w-full 
+  @apply inline-flex items-center gap-3 my-1
 }
 
 .card-skills {
@@ -65,7 +67,7 @@ body {
 }
 
 .icon {
-  @apply p-1 rounded invert
+  @apply p-1 rounded
 }
 
 .size-palette {
