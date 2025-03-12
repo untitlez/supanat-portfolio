@@ -27,7 +27,13 @@ export default function About() {
 
           <div className="grid gap-2">
             <h3>HOBBIES</h3>
-            <div className="flex flex-col sm:flex-row sm:justify-between opacity-80">
+            <ul className="opacity-80">
+              <li>Listening to podcasts : Business, Economics</li>
+              <li>Workout : Running half marathon, Gym </li>
+            </ul>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row sm:justify-between">
               <ul className="grid">
                 {/* Location */}
                 <li className="contact">
@@ -135,7 +141,6 @@ export default function About() {
                   </a>
                 </li>
               </ul>
-            </div>
           </div>
         </div>
       </div>
