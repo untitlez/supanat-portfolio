@@ -1,45 +1,50 @@
 export default function Education() {
-    return (
-      <>
-        <div className="main rounded-xl bg-base-100 p-8 animate-viewpoint">
-          <div className="content rounded-lg bg-primary text-base-100 text-center p-4 lg:hidden" >
-            <h2>EDUCATION</h2>
-          </div>
-  
-          <div className="content gap-8 animate-viewpoint">
-            <div>
-              <div className="flex justify-between">
-                <p>PAYAP UNIVERSITY</p>
-                <p className="text-base">2016</p>
+  const education = [
+    {
+      name: "PAYAP UNIVERSITY",
+      year: "2016",
+      major: "Bachelor of Business Administration : Human Resource Management",
+      description:
+        "Recruitment and selection, Human resource development, Employee relations, Performance appraisal, Managing diversity",
+    },
+    {
+      name: "DAMRONGRATSONGKROH SCHOOL",
+      year: "2012",
+      major: "Computer Science (Chiang Rai)",
+      description:
+        "Basic computer skill such as HTML, Ebook, Microsoft Office, Adobe Photoshop, Adobe Dreamweaver",
+    },
+  ];
+
+  return (
+    <>
+      <div className="main">
+        {education.map((edu, i) => (
+          <div key={i} className="content ">
+            <div className="grid grid-cols-3">
+              <figure className="col-span-1">
+                <img
+                  src="/shiba.jpg"
+                  alt="images"
+                  className="object-cover aspect-square rounded-xl"
+                />
+              </figure>
+              <div className="col-span-2 p-6">
+                <div className="grid gap-2 sm:flex sm:flex-row-reverse justify-between items-center">
+                   <div className="badge badge-soft badge-neutral">
+                    {edu.year}
+                  </div>   
+                  <h3>{edu.name}</h3>
               </div>
-  
-              <ul className="list-disc pl-6">
-                <li className="list-none ml-[-24px] mr-2 text-base-100/60">
-                  Bachelor of Business Administration : Human Resource Management
-                </li>
-                <li>Recruitment and selection</li>
-                <li>Human resource development</li>
-                <li>Performance appraisal</li>
-                <li>Managing diversity</li>
-              </ul>
-            </div>
-            <div>
-              <div className="flex justify-between">
-                <p className="break-all mr-8">DAMRONGRATSONGKROH SCHOOL</p>
-                <p className="text-base">2012</p>
+
+              <h3 className="text-base-content/60 mb-4">{edu.major}</h3>
+
+                <p>{edu.description}</p>
               </div>
-              <ul className="list-disc pl-6">
-                <li className="list-none ml-[-24px] text-base-100/60">
-                  Computer Science (Chiang Rai)
-                </li>
-                <li>Basic computer skill such as HTML, Ebook</li>
-                <li>Microsoft Office Word/Powerpoint/Excel</li>
-                <li>Adobe Photoshop/Dreamweaver</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </>
-    );
-  }
-  
+        ))}
+      </div>
+    </>
+  );
+}

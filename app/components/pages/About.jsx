@@ -74,11 +74,10 @@ export default function About() {
           </div>
           <div className="grid gap-3">
             <h3>HOBBIES</h3>
-            <ul className="list-disc pl-4">
-              <li>Listening to podcasts : Business, Economics</li>
-              <li>Workout : Running half marathon, Gym </li>
-
-            </ul>
+            <div>
+              <p>Listening to podcasts : Business, Economics</p>
+              <p>Workout : Running half marathon, Gym </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap gap-6 lg:gap-8">

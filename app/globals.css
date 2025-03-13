@@ -43,7 +43,7 @@ body {
 }
 
 .layout {
-  @apply grid min-h-screen px-4 gap-12 lg:gap-24
+  @apply grid min-h-screen px-4 gap-24
 }
 
 .main {
