@@ -47,7 +47,7 @@ body {
 }
 
 .main {
-  @apply grid gap-8 lg:gap-12 lg:grid-cols-4
+  @apply grid gap-8 lg:gap-12 lg:p-8 lg:grid-cols-4 lg:rounded-xl lg:border lg:shadow-md lg:bg-base-100
 }
 
 .content {

@@ -1,71 +1,72 @@
 export default function Experience() {
-    return (
-      <>
-        <div className="main text-base-100 lg:flex-row animate-viewpoint">
-          <div
-            className="content h-20 bg-base-100 text-primary rounded-xl justify-center items-center 
-            lg:h-[430px] lg:w-[50%]"
-          >
-            <h2>EXPERIENCE</h2>
-          </div>
-  
-          <div className="content gap-8 animate-viewpoint">
-          {/* Barista */}
-            <div>
-              <div className="flex justify-between">
-                <p>BARISTA</p>
-                <p className="text-bas text-end ml-11">JAN 2017 - OCT 2019</p>
-              </div>
-              <ul className="list-disc pl-6">
-                <li className="list-none ml-[-24px] text-base-100/60">
-                  Doi Chaang Coffee (Chiangmai international Airport)
-                </li>
-                <li>Preparing and serving meals and drinks.</li>
-                <li>Cleaning work area, coffee machine and equipment.</li>
-                <li>Describe menu items and suggest products to customers</li>
-                <li>Cashier duties</li>
-                <li>Inventory duties</li>
-              </ul>
+  const experience = [
+    {
+      job: "BARISTA",
+      time: "JAN 2017 - OCT 2019",
+      place: "Doi Chaang Coffee (Chiangmai international Airport)",
+      job_description:
+        "Preparing and serving meals and drinks / Cleaning work area, coffee machine and equipment / Describe menu items and suggest products to customers / Cashier duties / Inventory duties",
+      position: "timeline-start md:text-end",
+    },
+
+    {
+      job: "PURCHASING",
+      time: "JAN 2017 - OCT 2019",
+      place: "AnLao Lao Restaurant (Chiang Rai)",
+      job_description:
+        "Purchase and provision of goods and ingredient / Customer service / Take orders and serving foods and beverages / Assisting in the bar making cocktails, mixed drinks, wine and beer / ",
+      position: "timeline-end",
+    },
+
+    {
+      job: "PART TIME",
+      time: "2014 - 2016",
+      place: "SF Cinema City (Promenada Chiang Mai)",
+      job_description: "Operation, Coordinate, services",
+      position: "timeline-start md:text-end",
+    },
+    {
+      job: "PART TIME",
+      time: "2014",
+      place: "The Pizza Company (Chiang Mai)",
+      job_description: "Driver, Made to order, Cleaning",
+      position: "timeline-end",
+    },
+  ];
+
+  return (
+    <>
+      <div className="main animate-viewpoint">
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical col-span-4">
+        {experience.map((exp, i) => (
+          <li key={i}>
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </div>
-  
-            {/* Purchasing  */}
-            <div>
-              <div className="flex justify-between">
-                <p>PURCHASING</p>
-                <p className="text-base text-end ml-4">JAN 2017 - OCT 2019</p>
-              </div>
-              <ul className="list-disc pl-6">
-                <li className="list-none ml-[-24px] text-base-100/60 mr-7">
-                  AnLao Lao Restaurant (Chiang Rai)
-                </li>
-                <li>Purchase and provision of goods and ingredient</li>
-                <li>Customer service</li>
-                <li>Take orders and serving foods and beverages</li>
-                <li>
-                  Assisting in the bar making cocktails, mixed drinks, wine and
-                  beer
-                </li>
-              </ul>
+            <div className={`md:mb-10 ${exp.position}`}>
+              <time className="font-mono italic">{exp.time}</time>
+              <h3 className="font-black">{exp.job}</h3>
+              <h3 className="font-bold text-base-content/70 mb-1">
+                {exp.place}
+              </h3>
+              <p>{exp.job_description}</p>
             </div>
-  
-            {/* Part time  */}
-            <div>
-              <div className="flex justify-between">
-                <p>PART TIME</p>
-                <p className="text-base">2014 - 2016</p>
-              </div>
-              <ul className="flex justify-between list-disc pl-6 opacity-60">
-                <li>SF Cinema City (Promenada Chiang Mai)</li>
-                <li className="list-none text-base text-end">2014 - 2016</li>
-              </ul>
-              <ul className="flex justify-between list-disc pl-6 opacity-60">
-                <li>The Pizza Company (Chiang Mai)</li>
-                <li className="list-none text-base">2014</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-  
+            <hr />
+          </li>
+        ))}
+      </ul>
+      </div>
+    </>
+  );
+}
