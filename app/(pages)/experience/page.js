@@ -1,11 +1,9 @@
 import { experience } from "@/data/Experience";
 
 export default function Experience() {
-  
-
-    return (
-      <>
-        <div className="main animate-viewpoint">
+  return (
+    <>
+      <div className="main text-primary animate-viewpoint ">
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical col-span-6">
           {experience.map((exp, i) => (
             <li key={i}>
@@ -26,17 +24,14 @@ export default function Experience() {
               <div className={`md:mb-10 ${exp.position}`}>
                 <time className="font-mono italic">{exp.time}</time>
                 <h3 className="font-black">{exp.job}</h3>
-                <h3 className="font-bold text-base-content/70 mb-1">
-                  {exp.place}
-                </h3>
-                <p>{exp.job_description}</p>
+                <h3 className="font-bold mb-1 opacity-60">{exp.place}</h3>
+                <p className="text-base-content">{exp.job_description}</p>
               </div>
               <hr />
             </li>
           ))}
         </ul>
-        </div>
-      </>
-    );
-  }
-  
+      </div>
+    </>
+  );
+}

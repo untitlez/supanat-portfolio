@@ -6,19 +6,18 @@ import Skills from "./(pages)/skills/page";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-
 export default function Home() {
   return (
     <>
-      <Intro/>
-      <Navbar/>
+      <Intro />
+      <Navbar />
       <div className="layout">
         <About />
         <Skills />
         <Experience />
         <Education />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

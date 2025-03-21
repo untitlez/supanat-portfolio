@@ -1,7 +1,7 @@
 export const codeData = [
     {
       id: "4",
-      src: "/users.webp",
+      src: "/img_projects/cat.jpg",
       title: "Users",
       tools: "Vercel / Axios / React.js / Next.js",
       description: "RESTful API / State",
@@ -10,7 +10,7 @@ export const codeData = [
   
     {
       id: "3",
-      src: "/product.webp",
+      src: "/img_projects/shiba.jpg",
       title: "Products",
       tools: "Vercel / Axios / React.js / Next.js",
       description: "Fetch API / State",
@@ -19,7 +19,7 @@ export const codeData = [
   
     {
       id: "2",
-      src: "/cat.webp",
+      src: "/img_projects/dear.jpg",
       title: "Find Your Cat",
       tools: "React.js / Next.js",
       description: "Fetch API / State",
@@ -28,7 +28,7 @@ export const codeData = [
   
     {
       id: "1",
-      src: "/to-do-list.webp",
+      src: "/img_projects/cow.jpg",
       title: "To-Do-List",
       tools: "React.js / Next.js",
       description: "State / Event",

@@ -5,80 +5,89 @@ import CodePage from "@/app/(projects)/code/page";
 export default function Skills() {
   return (
     <>
-      {/* name of each tab group should be unique */}
-      <div className="tabs tabs-lift h-screen content-center animate-viewpoint">
+      <div className="tabs content-start lg:mb-24">
         <input
           type="radio"
           name="my_tabs_3"
-          className="tab btn btn-sm btn-outline"
+          className="tab btn btn-ghost"
           aria-label="SKILLS"
           defaultChecked
         />
-        <div className="tab-content p-8 rounded-b-lg border-b-2 border-primary bg-primary">
-          <div className="grid lg:grid-cols-6 gap-8 lg:gap-12">
-            {/* Card 1 */}
-            <div className="card-skills">
-              <p className="card-skills-title">TECHNICAL SKILLS</p>
-              <ul className="card-skills-content">
-                {skills.technical.map((skill, i) => (
-                  <li key={i} className="contact">
-                    <img
-                      className="h-8 w-8 icon invert"
-                      src={skill.src}
-                      alt={skill.name}
-                    />
-                    {skill.name}
-                  </li>
-                ))}
-              </ul>
+        <div className="tab-box">
+          <div className="tab-contents fd">
+            {/* Card 1 : TECHNICAL SKILLS */}
+            <div className="card-box">
+              <div className="card-body p-4">
+                <h3 className="card-heading">TECHNICAL SKILLS</h3>
+                <div className="card-contents">
+                  {skills.technical.map((skill, i) => (
+                    <li key={i} className="contact">
+                      <img
+                        className="h-8 w-8 icon "
+                        src={skill.src}
+                        alt={skill.name}
+                      />
+                      {skill.name}
+                    </li>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="card-skills">
-              <p className="card-skills-title">TECHNICAL SKILLS</p>
-              <ul className="card-skills-content">
-                {skills.tools.map((tool, i) => (
-                  <li key={i} className="contact">
-                    <img
-                      className="h-8 w-8 icon invert"
-                      src={tool.src}
-                      alt={tool.name}
-                    />
-                    {tool.name}
-                  </li>
-                ))}
-              </ul>
+            {/* Card 2 : TOOLS SKILLS */}
+            <div className="card-box">
+              <div className="card-body p-4">
+                <h3 className="card-heading">TOOLS SKILLS</h3>
+                <div className="card-contents">
+                  {skills.tools.map((skill, i) => (
+                    <li key={i} className="contact">
+                      <img
+                        className="h-8 w-8 icon "
+                        src={skill.src}
+                        alt={skill.name}
+                      />
+                      {skill.name}
+                    </li>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            {/* Card 3 */}
-            <div className="card-skills">
-              <p className="card-skills-title">TECHNICAL SKILLS</p>
-              <ul className="card-skills-content">
-                {skills.tools.map((tool, i) => (
-                  <li key={i}>{tool.soft}</li>
-                ))}
-              </ul>
+            {/* Card 3 :  SOFT SKILLS */}
+            <div className="card-box">
+              <div className="card-body p-4">
+                <h3 className="card-heading">SOFT SKILLS</h3>
+                <ul className="card-contents list-disc">
+                  {skills.soft.map((skill, i) => (
+                    <li key={i}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
+        {/* Tab 2: PROJECTS */}
         <input
           type="radio"
           name="my_tabs_3"
-          className="tab"
+          className="tab btn btn-ghost"
+          data-theme="dark"
           aria-label="PROJECTS"
         />
-        <div className="tab-content p-6">
+        <div data-theme="dark" className="tab-box">
           <CodePage />
         </div>
 
+        {/* Tab 3: CERTIFICATIONS */}
         <input
           type="radio"
           name="my_tabs_3"
-          className="tab"
+          className="tab btn btn-ghost"
+          data-theme="emerald"
           aria-label="CERTIFICATIONS"
         />
-        <div className="tab-content p-6">
+        <div data-theme="emerald" className="tab-box">
           <Certificate />
         </div>
       </div>

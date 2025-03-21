@@ -4,27 +4,27 @@ import Link from "next/link";
 export default function CodePage() {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-8 py-24">
+      <div className="tab-contents max-h-screen overflow-y-auto fd">
         {codeData.map((data) => (
           <div
             key={data.id}
-            className="mockup-browser bg-base-300 border w-80 shadow-xl fd"
+            className="mockup-browser bg-base-300 border shadow-md"
           >
             <div className="mockup-browser-toolbar">
-              <p className="input">{data.title}</p>
+              <h3 className="input text-center">{data.title}</h3>
             </div>
             <div className="bg-base-200">
               <img
                 src={data.src}
                 alt="project image"
-                className="w-full h-48 object-cover"
+                className="aspect-[3/2] w-full object-cover"
               />
 
-              <div className="flex flex-col gap-4 p-4">
-                <ul>
+              <div className="grid gap-4 p-4">
+                <ul className="grid">
                   <li className="contact">
                     <img
-                      className="h-6 w-6 icon"
+                      className="h-6 w-6 icon invert"
                       src="/icons/tools.png"
                       alt="icon tools"
                     />
@@ -32,9 +32,9 @@ export default function CodePage() {
                   </li>
                   <li className="contact">
                     <img
-                      className="h-6 w-6 icon"
+                      className="h-6 w-6 icon invert"
                       src="/icons/detail.png"
-                      alt="icon tools"
+                      alt="icon detail"
                     />
                     {data.description}
                   </li>
@@ -44,7 +44,7 @@ export default function CodePage() {
                   target="_blank"
                   className="btn btn-accent"
                 >
-                  View
+                  <button>View</button>
                 </Link>
               </div>
             </div>
