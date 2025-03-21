@@ -43,15 +43,19 @@ body {
 }
 
 .layout {
-  @apply grid min-h-screen px-4 gap-24
+  @apply max-w-screen-2xl min-h-screen grid justify-self-center px-4 lg:px-8 gap-24 my-24 lg:gap-0 lg:my-0
 }
 
 .main {
-  @apply grid gap-8 lg:gap-12 lg:p-8 lg:grid-cols-4 lg:rounded-xl lg:border lg:shadow-md lg:bg-base-100
+  @apply lg:h-screen grid gap-8 lg:gap-12 lg:grid-cols-6 content-center
 }
 
-.content {
-  @apply grid col-span-2 gap-8 lg:gap-12
+.content-2 {
+  @apply grid lg:col-span-2 gap-8 lg:gap-12 items-start
+}
+
+.content-3 {
+  @apply grid lg:col-span-3 gap-8 lg:gap-12 items-start
 }
 
 .emphasize {
@@ -63,7 +67,15 @@ body {
 }
 
 .card-skills {
-  @apply border border-base-100 rounded-xl flex flex-col items-center justify-stretch gap-6 pb-6
+  @apply col-span-2  border border-base-100 rounded-xl text-base-100
+}
+
+.card-skills-title {
+  @apply w-full p-3 rounded-t-md text-center font-medium text-primary bg-base-100
+}
+
+.card-skills-content {
+  @apply grid justify-center my-8
 }
 
 .icon {

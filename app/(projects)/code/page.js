@@ -1,10 +1,10 @@
-import { codeData } from "@/app/data/CodeData";
+import { codeData } from "@/data/projects/CodeData";
 import Link from "next/link";
 
 export default function CodePage() {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8 py-24">
         {codeData.map((data) => (
           <div
             key={data.id}

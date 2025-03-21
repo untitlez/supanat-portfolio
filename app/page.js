@@ -1,9 +1,11 @@
+import About from "./(pages)/about/page";
+import Education from "./(pages)/education/page";
+import Experience from "./(pages)/experience/page";
+import Intro from "./(pages)/intro/page";
+import Skills from "./(pages)/skills/page";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import About from "./components/pages/About";
-import Education from "./components/pages/Education";
-import Experience from "./components/pages/Experience";
-import Intro from "./components/pages/Intro";
-import Skills from "./components/pages/Skills";
+
 
 export default function Home() {
   return (
@@ -12,10 +14,11 @@ export default function Home() {
       <Navbar/>
       <div className="layout">
         <About />
+        <Skills />
         <Experience />
         <Education />
-        <Skills />
       </div>
+      <Footer/>
     </>
   );
 }
