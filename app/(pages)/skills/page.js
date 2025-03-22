@@ -1,6 +1,6 @@
 import { skills } from "@/data/Skills";
 import Certificate from "../certificate/page";
-import CodePage from "@/app/(projects)/code/page";
+import ProjectsPage from "@/app/projects/page";
 
 export default function Skills() {
   return (
@@ -75,8 +75,8 @@ export default function Skills() {
           data-theme="dark"
           aria-label="PROJECTS"
         />
-        <div data-theme="dark" className="tab-box">
-          <CodePage />
+        <div className="tab-box border-none overflow-hidden">
+          <ProjectsPage />
         </div>
 
         {/* Tab 3: CERTIFICATIONS */}

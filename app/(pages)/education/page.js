@@ -4,7 +4,7 @@ export default function Education() {
   return (
     <>
       <div className="main animate-viewpoint">
-        {education.map((edu, i) => (
+        {education.map((study, i) => (
           <div
             key={i}
             className="content-3 bg-base-100 rounded-xl border shadow-md p-8"
@@ -12,7 +12,7 @@ export default function Education() {
             <div className="grid sm:grid-cols-3 lg:grid-cols-1 xl:sm:grid-cols-3 place-items-center">
               <figure className="sm:col-span-1">
                 <img
-                  src="/shiba.jpg"
+                  src={study.src}
                   alt="images"
                   className="object-cover aspect-square rounded-xl"
                 />
@@ -20,14 +20,14 @@ export default function Education() {
               <div className="sm:col-span-2 p-6">
                 <div className="grid gap-2 sm:flex sm:flex-row-reverse justify-between items-center">
                   <div className="badge badge-soft badge-neutral">
-                    {edu.year}
+                    {study.year}
                   </div>
-                  <h3>{edu.name}</h3>
+                  <h3>{study.name}</h3>
                 </div>
 
-                <h3 className="text-base-content/60 mb-4">{edu.major}</h3>
+                <h3 className="text-base-content/60 mb-4">{study.major}</h3>
 
-                <p>{edu.description}</p>
+                <p>{study.description}</p>
               </div>
             </div>
           </div>

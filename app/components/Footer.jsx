@@ -33,7 +33,7 @@ export default function Footer() {
     </div>
   </nav>
 </footer>
-<footer className="footer sm:footer-horizontal footer-center bg-base-content text-neutral-content p-4">
+<footer className="footer sm:footer-horizontal footer-center bg-neutral-800 text-neutral-content p-4">
   <aside>
     <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
   </aside>

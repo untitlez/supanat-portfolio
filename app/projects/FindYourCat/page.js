@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function FindYourCat() {
+export default function FindYourCatPage() {
   const [catImage, setCatImage] = useState("");
 
   const handleClick = async () => {
@@ -17,11 +17,12 @@ export default function FindYourCat() {
   };
 
   return (
-    <>
-      <div className="mockup-phone border-2 border-base-content sm:hidden">
+    <main className="h-screen grid place-items-center bg-primary">
+      {/* Mobile View */}
+      <section className="mockup-phone border-2 border-base-300 sm:hidden">
         <div className="camera"></div>
         <div className="display">
-          <div className="artboard artboard-demo phone-1 relative">
+          <figure className="artboard artboard-demo phone-1 relative">
             {catImage && (
               <img
                 src={catImage}
@@ -29,35 +30,39 @@ export default function FindYourCat() {
                 className="h-full object-cover"
               />
             )}
-
             <button
               onClick={handleClick}
-              className="btn btn-accent w-3/4 absolute bottom-4 shadow-xl"
+              className="btn btn-accent w-3/4 absolute bottom-4 shadow-md"
             >
               Click to adopt a cat
             </button>
-          </div>
+          </figure>
         </div>
-      </div>
+      </section>
 
-      <div className="mockup-browser bg-base-300 border shadow-xl mx-8 lg:mx-0 hidden sm:inline-block">
+      {/* Desktop View */}
+      <section className="mockup-browser bg-base-300 border shadow-xl mx-8 lg:mx-0 hidden sm:block">
         <div className="mockup-browser-toolbar">
-          <p className="input">Find Your Cat</p>
+          <p className="input text-center font-semibold">Find Your Cat</p>
         </div>
         <div className="bg-base-200 grid justify-center">
           {catImage && (
-            <img
-              src={catImage}
-              alt="Random Cat"
-              className="h-[500px] object-cover"
-            />
+            <figure>
+              <img
+                src={catImage}
+                alt="Random Cat"
+                className="h-[500px] object-cover"
+              />
+            </figure>
           )}
-
-          <button onClick={handleClick} className="btn btn-accent m-8">
+          <button
+            onClick={handleClick}
+            className="btn btn-accent m-8 shadow-md"
+          >
             Click to adopt a cat
           </button>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 }

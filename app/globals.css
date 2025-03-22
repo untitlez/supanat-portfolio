@@ -66,11 +66,11 @@ body {
 }
 
 .tab-contents {
-  @apply grid gap-8 lg:gap-12 md:grid-cols-2;
+  @apply grid m-8 gap-8 lg:gap-12 sm:grid-cols-2;
 }
 
 .tab-box {
-  @apply tab-content p-8 rounded-2xl bg-primary;
+  @apply tab-content rounded-2xl bg-primary;
 }
 
 .card-box {
@@ -83,6 +83,11 @@ body {
 
 .card-contents {
   @apply grid place-content-center h-full my-4;
+}
+
+.layout-projects {
+  @apply max-w-screen-2xl min-h-screen grid gap-8 lg:gap-12 sm:grid-cols-2 xl:grid-cols-3
+  content-start justify-self-center p-8;
 }
 
 .size-palette {

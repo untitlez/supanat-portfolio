@@ -5,6 +5,7 @@ export const education = [
       major: "Bachelor of Business Administration : Human Resource Management",
       description:
         "Recruitment and selection, Human resource development, Employee relations, Performance appraisal, Managing diversity",
+        src: "/pyu.webp",
     },
     {
       name: "DAMRONGRATSONGKROH SCHOOL",
@@ -12,5 +13,6 @@ export const education = [
       major: "Computer Science (Chiang Rai)",
       description:
         "Basic computer skill such as HTML, Ebook, Microsoft Office, Adobe Photoshop, Adobe Dreamweaver",
+        src: "/ds.webp",
     },
   ];
