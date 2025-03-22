@@ -5,7 +5,7 @@ import CodePage from "@/app/(projects)/code/page";
 export default function Skills() {
   return (
     <>
-      <div className="tabs content-start lg:mb-24">
+      <div className="tabs lg:mb-24">
         <input
           type="radio"
           name="my_tabs_3"
