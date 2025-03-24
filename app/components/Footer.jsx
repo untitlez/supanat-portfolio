@@ -35,7 +35,7 @@ export default function Footer() {
 </footer>
 <footer className="footer sm:footer-horizontal footer-center bg-neutral-800 text-neutral-content p-4">
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by Supanat Chaisri</p>
   </aside>
 </footer>
     </>
