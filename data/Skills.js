@@ -2,7 +2,7 @@ export const skills = {
     technical: [
       { name: "HTML", src: "/icons/html.png" },
       { name: "CSS", src: "/icons/css.png" },
-      { name: "JavaScript", src: "/icons/javaScript.png" },
+      { name: "JavaScript", src: "/icons/javascript.png" },
       { name: "React", src: "/icons/react.png" },
       { name: "Next", src: "/icons/next.png" },
     ],
@@ -11,7 +11,7 @@ export const skills = {
       { name: "VS Code", src: "/icons/vscode.png" },
       { name: "Tailwind CSS", src: "/icons/tailwindcss.png" },
       { name: "Bootstrap", src: "/icons/bootstrap.png" },
-      { name: "GitHub", src: "/icons/Github.png" },
+      { name: "GitHub", src: "/icons/github.png" },
       { name: "Postman", src: "/icons/postman.webp" },
     ],
     soft: [
