@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -99,24 +100,6 @@ body {
 
 /* Animations  */
 
-.animate-viewport {
-  animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-  animation-timeline: view();
-  animation-range: entry 0% cover 60%;
-}
-
-@keyframes slide-top {
-  0% {
-    opacity: 0;
-    transform: translateY(20%);
-    transition: transform 0.12s;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
 .BlurInTop{
   animation: BlurInTop 1s both
 }
@@ -128,3 +111,20 @@ body {
       opacity: 0;
   }
 }
+
+
+.slide-top {
+  animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+@keyframes slide-top {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
