@@ -9,9 +9,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar glass px-1 lg:px-4 lg: border-b sticky top-0 z-10 text-primary">
+      <nav className="navbar glass justify-between px-1 lg:px-4 border-b sticky top-0 z-10 text-primary ">
         {/* Navbar Start  */}
-        <div className="dropdown w-full lg:hidden">
+        <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Center  */}
-        <div className="px-4 gap-2 text-start">
+        <div className="px-3 gap-1 lg:gap-2">
           <img
             className="w-10 h-10"
             src="/favicon/clover.png"
@@ -54,7 +54,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar End  */}
-        <div className="w-full justify-end hidden lg:flex gap-2">
+        <div className="hidden lg:flex gap-2">
           {pages.map((page, i) => (
             <button
               key={i}
