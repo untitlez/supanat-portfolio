@@ -20,7 +20,7 @@ export default function Navbar() {
     </nav>
 
     {/* Mobile  */}
-    <nav className='nav px-4 ctf md:hidden z-50'>
+    <nav className='nav px-4 center-flex md:hidden z-50'>
       {/* Hamburger Menu  */}
       <div className="dropdown">
           <button className='menu-icon w-10 rounded peer'
@@ -39,7 +39,7 @@ export default function Navbar() {
           </div>
       </div>
       
-            <Link to="/portfolio" className='head-menu ctf w-full'><h5>Portfolio</h5></Link>
+            <Link to="/portfolio" className='head-menu center-flex w-full'><h5>Portfolio</h5></Link>
         
             <Link to="https://drive.google.com/file/d/16B74JyQMgziL5SL5o3qAtGZZvxx-w-CT/view?usp=sharing" target="_blank">
             <img className='menu-icon w-14 rounded-full'src="./icon/account_circle.png" alt="resume_file"/>

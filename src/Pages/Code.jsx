@@ -21,7 +21,7 @@ export default function Code() {
         <Link to="/codepage1">
         <div className='card'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>To-Do List</h6>
             </div>
 
@@ -43,7 +43,7 @@ export default function Code() {
         <Link to="/codepage2">
         <div className='card'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Random Image</h6>
             </div>
 
@@ -66,7 +66,7 @@ export default function Code() {
         <Link to="/codepage3">
         <div className='card'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Example Website</h6>
             </div>
 

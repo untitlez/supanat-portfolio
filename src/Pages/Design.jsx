@@ -20,7 +20,7 @@ export default function Design() {
         <Link to="/designpage1">
         <div className='card'>
             <img src="./img/App Default.png" alt="Mobile app white theme" />
-            <div className='primary rounded-b-md text-white text-center py-4'>
+            <div className='bg-primary rounded-b-md text-white text-center py-4'>
             <h6>Wallet App</h6>
             ( White Theme )
             </div>
@@ -31,7 +31,7 @@ export default function Design() {
         <Link to="/designpage2">
         <div className='card'>
             <img src="./img/App Dark.png" alt="Mobile app dark theme" />
-            <div className='primary rounded-b-md text-white text-center py-4'>
+            <div className='bg-primary rounded-b-md text-white text-center py-4'>
             <h6>Wallet App</h6>
             ( Dark Theme )
             </div>
@@ -42,7 +42,7 @@ export default function Design() {
         <Link to="/designpage3">
         <div className='card'>
             <img src="./img/MacBook Air (15 inch).png" alt="Redesign desktop" />
-            <div className='primary rounded-b-md text-white text-center py-4'>
+            <div className='bg-primary rounded-b-md text-white text-center py-4'>
             <h6>Redesign Brand - KFC</h6>
             ( Laptop )
             </div>
@@ -53,7 +53,7 @@ export default function Design() {
         <Link to="/designpage4">
         <div className='card'>
             <img src="./img/iPad Pro 2020.png" alt="Redesign tablet" />
-            <div className='primary rounded-b-md text-white text-center py-4'>
+            <div className='bg-primary rounded-b-md text-white text-center py-4'>
             <h6>Redesign Brand - KFC</h6>
             ( Tablet )
             </div>

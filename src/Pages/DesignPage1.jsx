@@ -29,7 +29,7 @@ export default function DesignPage1() {
         {/* Block 2  */}
         <div className='shadow-xl rounded-b-md'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Wallet App</h6>
             <p>( White Theme )</p>
             </div>
@@ -54,27 +54,27 @@ export default function DesignPage1() {
         {/* Block 3  */}
         <div className='shadow-xl rounded-b-md'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Color</h6>
             </div>
 
             {/* Detail  */}
             <div className='grid p-12 gap-12 text-sm'>
                 <div>
-                    <p>Primary Color</p>
+                    <p>bg-primary Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#257035] ctf text-white'>#257035</div>
-                        <div className='size-20 rounded-lg bg-[#96DFA4] ctf text-black'>#96DFA4</div>
-                        <div className='size-20 rounded-lg bg-[#96DFA4] ctf text-black'>#96DFA4</div>
+                        <div className='size-20 rounded-lg bg-[#257035] center-flex text-white'>#257035</div>
+                        <div className='size-20 rounded-lg bg-[#96DFA4] center-flex text-black'>#96DFA4</div>
+                        <div className='size-20 rounded-lg bg-[#96DFA4] center-flex text-black'>#96DFA4</div>
                     </div>
                 </div>
                 
                 <div>
                     <p>Secondary Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#C80201] ctf text-white'>#C80201</div>
-                        <div className='size-20 rounded-lg bg-[#FF9796] ctf text-black'>#FF9796</div>
-                        <div className='size-20 rounded-lg bg-[#FF9796] ctf text-black'>#FF9796</div>
+                        <div className='size-20 rounded-lg bg-[#C80201] center-flex text-white'>#C80201</div>
+                        <div className='size-20 rounded-lg bg-[#FF9796] center-flex text-black'>#FF9796</div>
+                        <div className='size-20 rounded-lg bg-[#FF9796] center-flex text-black'>#FF9796</div>
 
                     </div>
                 </div>
@@ -82,24 +82,24 @@ export default function DesignPage1() {
                 <div>
                     <p>Tertiary Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#BDBDBD] ctf text-white'>#BDBDBD</div>
-                        <div className='size-20 rounded-lg bg-[#DCDCDC] ctf text-black'>#DCDCDC</div>
-                        <div className='size-20 rounded-lg bg-[#EFEFEF] ctf text-black'>#EFEFEF</div>
+                        <div className='size-20 rounded-lg bg-[#BDBDBD] center-flex text-white'>#BDBDBD</div>
+                        <div className='size-20 rounded-lg bg-[#DCDCDC] center-flex text-black'>#DCDCDC</div>
+                        <div className='size-20 rounded-lg bg-[#EFEFEF] center-flex text-black'>#EFEFEF</div>
                     </div>
                 </div>
 
                 <div>
                     <p>Text Color</p>              
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#1F1F1F] ctf text-white'>#1F1F1F</div>
-                        <div className='size-20 rounded-lg bg-[#FFFFFF] ctf text-black border-2'>#FFFFFF</div>
+                        <div className='size-20 rounded-lg bg-[#1F1F1F] center-flex text-white'>#1F1F1F</div>
+                        <div className='size-20 rounded-lg bg-[#FFFFFF] center-flex text-black border-2'>#FFFFFF</div>
                     </div>
                 </div>
 
                 <div>
                     <p>Surface Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                    <div className='size-20 rounded-lg bg-[#FFFFFF] ctf text-black border-2 '>#FFFFFF</div>
+                    <div className='size-20 rounded-lg bg-[#FFFFFF] center-flex text-black border-2 '>#FFFFFF</div>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@ export default function DesignPage1() {
         {/* Block 4  */}
         <div className='shadow-xl rounded-b-md'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Typography</h6>
             </div>
 

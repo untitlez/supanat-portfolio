@@ -29,9 +29,9 @@ export default function CodePage2() {
         </div>
 
         {/* Bottom   */}
-        <div className="px-12 py-14 ctf text-center fin">
+        <div className="px-12 py-14 center-flex text-center fin">
           <div className="shadow-xl rounded-b-md">
-            <div className='primary text-white text-center rounded-t-md p-4'>
+            <div className='bg-primary text-white text-center rounded-t-md p-4'>
                 <h6>Random Cat</h6>
             </div>
 

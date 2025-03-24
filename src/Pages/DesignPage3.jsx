@@ -29,7 +29,7 @@ export default function DesignPage3() {
         {/* Block 2  */}
         <div className='shadow-xl rounded-b-md'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Redesign Brand - KFC</h6>
             <p>( Laptop )</p>
             </div>
@@ -54,43 +54,43 @@ export default function DesignPage3() {
         {/* Block 3  */}
         <div className='shadow-xl rounded-b-md text-sm'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Color</h6>
             </div>
 
             {/* Detail  */}
             <div className='grid p-12 gap-12'>
                 <div>
-                    <p>Primary Color</p>
+                    <p>bg-primary Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#E4002B] ctf text-white'>#E4002B</div>
-                        <div className='size-20 rounded-lg bg-[#FF95A9] ctf text-black'>#FF95A9</div>
-                        <div className='size-20 rounded-lg bg-[#FFC1CD] ctf text-black'>#FFC1CD</div>
+                        <div className='size-20 rounded-lg bg-[#E4002B] center-flex text-white'>#E4002B</div>
+                        <div className='size-20 rounded-lg bg-[#FF95A9] center-flex text-black'>#FF95A9</div>
+                        <div className='size-20 rounded-lg bg-[#FFC1CD] center-flex text-black'>#FFC1CD</div>
                     </div>
                 </div>
                 
                 <div>
                     <p>Secondary Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#676767] ctf text-white'>#676767</div>
-                        <div className='size-20 rounded-lg bg-[#C8C8C8] ctf text-black'>#C8C8C8</div>
-                        <div className='size-20 rounded-lg bg-[#EDEDED] ctf text-black'>#EDEDED</div>
+                        <div className='size-20 rounded-lg bg-[#676767] center-flex text-white'>#676767</div>
+                        <div className='size-20 rounded-lg bg-[#C8C8C8] center-flex text-black'>#C8C8C8</div>
+                        <div className='size-20 rounded-lg bg-[#EDEDED] center-flex text-black'>#EDEDED</div>
                     </div>
                 </div>
 
                 <div>
                     <p>Tertiary Color</p>
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#292929] ctf text-white'>#292929</div>
-                        <div className='size-20 rounded-lg bg-[#656565] ctf text-white'>#656565</div>
+                        <div className='size-20 rounded-lg bg-[#292929] center-flex text-white'>#292929</div>
+                        <div className='size-20 rounded-lg bg-[#656565] center-flex text-white'>#656565</div>
                     </div>
                 </div>
 
                 <div>
                     <p>Text Color</p>              
                     <div className='flex flex-wrap gap-4 mt-4'>
-                        <div className='size-20 rounded-lg bg-[#1F1F1F] ctf text-white'>#1F1F1F</div>
-                        <div className='size-20 rounded-lg bg-[#FFFFFF] ctf text-black border-2'>#FFFFFF</div>
+                        <div className='size-20 rounded-lg bg-[#1F1F1F] center-flex text-white'>#1F1F1F</div>
+                        <div className='size-20 rounded-lg bg-[#FFFFFF] center-flex text-black border-2'>#FFFFFF</div>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@ export default function DesignPage3() {
         {/* Block 4  */}
         <div className='shadow-xl rounded-b-md'>
             {/* Topic  */}
-            <div className='primary text-white rounded-t-md text-center py-4'>
+            <div className='bg-primary text-white rounded-t-md text-center py-4'>
             <h6>Typography</h6>
             </div>
 

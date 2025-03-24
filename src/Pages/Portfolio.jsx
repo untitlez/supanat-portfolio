@@ -7,7 +7,7 @@ export default function Portfolio() {
       <div className="main">
         <Link
           to="/code"
-          className="primary w-full h-96 text-white rounded-[1.5rem] grid place-items-center hover:italic fl">
+          className="bg-primary w-full h-96 text-white rounded-[1.5rem] grid place-items-center hover:italic fl">
           <h2>CODE</h2>
         </Link>
 

@@ -5,12 +5,12 @@ export default function Profile() {
     <>
       <div className="main">
         {/* Block Left */}
-        <div className="ctf p-12 aspect-[3/4] fin">
+        <div className="center-flex p-12 aspect-[3/4] fin">
           <img src="./img/profile.jpg" alt="image_profile" />
         </div>
 
         {/* Block Right */}
-        <div className="primary rounded-[24px] text-white grid items-center gap-8 px-12 py-16 fr">
+        <div className="bg-primary rounded-[24px] text-white grid items-center gap-8 px-12 py-16 fr">
             <h3>SUPANAT CHAISRI</h3>
             <h6 className="font-medium">Junior Frontend Developer</h6><hr />
             <h5>ABOUT ME</h5>

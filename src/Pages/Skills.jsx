@@ -5,14 +5,14 @@ export default function Skills() {
     <>
         <div className='main'>
             {/* Block Left  */}
-            <div className='text-[#34659D] ctf py-12 px-20 fin'>
+            <div className='text-[#34659D] center-flex py-12 px-20 fin'>
               <h4>SKILLS</h4>
             </div>
 
             {/* Block Content  */}
             <div className='grid gap-2 sm:grid-cols-2 w-full'>
             {/* Block Single  */}
-            <div className='primary rounded-2xl ctg gap-8 text-white text-center px-12 py-16 fl'>
+            <div className='bg-primary rounded-2xl center-grid gap-8 text-white text-center px-12 py-16 fl'>
             <h6>TECHNICAL SKILLS</h6>
 
               {/* Icon */}
@@ -87,7 +87,7 @@ export default function Skills() {
             {/* Block Double  */}
             <div className='grid gap-2 fr'>
             {/* Top */}
-            <div className='primary rounded-[24px] text-white ctg px-12 py-16 gap-8 '>
+            <div className='bg-primary rounded-[24px] text-white center-grid px-12 py-16 gap-8 '>
               <h6>SOFT SKILLS</h6>
               <div>
                 <ul>
@@ -101,7 +101,7 @@ export default function Skills() {
               </div>
               </div>
               {/* Bottom */}
-              <div className='primary rounded-[24px] text-white ctg px-10 py-16 gap-8 '>
+              <div className='bg-primary rounded-[24px] text-white center-grid px-10 py-16 gap-8 '>
               <h6>CERTIFICATIONS</h6>
               <div>
                   <a className='hover:opacity-80'

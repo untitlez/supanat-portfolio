@@ -15,9 +15,9 @@ export default function CodePage3() {
         </div>
 
         {/* Bottom  */}
-        <div className="ctf my-8  ">
+        <div className="center-flex my-8  ">
         <Link to="https://e-commerce-untitlezs-projects.vercel.app/" target="_blank"
-        className="ctf gap-4 py-3 px-4 rounded-md border-2 hover:border-gray-400">
+        className="center-flex gap-4 py-3 px-4 rounded-md border-2 hover:border-gray-400">
           <img src="./icon/vercel.png" alt="" className="size-8 "/>
           Vercel
           </Link>
