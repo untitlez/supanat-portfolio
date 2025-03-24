@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar glass px-1 lg:px-4 lg: mb-12 lg:mb-24 border-b sticky top-0 z-10 text-primary">
+      <nav className="navbar glass px-1 lg:px-4 lg: border-b sticky top-0 z-10 text-primary">
         {/* Navbar Start  */}
         <div className="dropdown w-full lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -41,7 +41,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Center  */}
-        <div className="btn btn-ghost text-start">
+        <div className="px-4 gap-2 text-start">
           <img
             className="w-10 h-10"
             src="/favicon/clover.png"

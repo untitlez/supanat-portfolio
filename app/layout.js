@@ -22,8 +22,9 @@ export default function RootLayout({ children }) {
       <body
         // className={inter.className}
         className="bg-base-200"
-        data-theme="light"      >
-          {children}
+        data-theme="light"
+      >
+        {children}
         <SpeedInsights />
       </body>
     </html>

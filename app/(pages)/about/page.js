@@ -9,11 +9,11 @@ export default function About() {
             <img
               src="/profile.jpg"
               alt="image_profile"
-              className="h-[250px] lg:h-full lg:w-3/4 object-cover rounded-xl fl"
+              className="h-[250px] lg:h-full lg:w-3/4 object-cover rounded-xl"
             />
           </div>
   
-          <div className="content-3 fr">
+          <div className="content-3">
             <div className="grid gap-3">
               <h1>SUPANAT CHAISRI</h1>
               <h2 className="font-normal">Frontend Developer</h2>

@@ -3,7 +3,7 @@ import { certificate } from "@/data/Certificate";
 export default function Certificate() {
   return (
     <>
-      <div className="tab-contents fd">
+      <div className="tab-contents">
         {certificate.map((item, i) => (
           <div key={i} className="card border shadow-md bg-base-100">
             <figure className="shadow-md">
@@ -14,7 +14,7 @@ export default function Certificate() {
                 <h3 className="card-title">{item.name}</h3>
                 <p>{item.course}</p>
               </div>
-              <a href={`/${item.link}`} className="btn btn-accent">
+              <a href={item.link} target="_blank" className="btn btn-accent">
                 View
               </a>
             </div>

@@ -12,10 +12,10 @@ export default function Home() {
       <Intro />
       <Navbar />
       <main className="layout">
-        <section id="about"><About /></section>
-        <section id="skills"><Skills /></section>
-        <section id="experience"><Experience /></section>
-        <section id="education"><Education /></section>
+        <section id="about" className="animate-viewport"><About /></section>
+        <section id="skills" className="animate-viewport"><Skills /></section>
+        <section id="experience" className="animate-viewport"><Experience /></section>
+        <section id="education" className="animate-viewport"><Education /></section>
       </main>
       <Footer />
     </>

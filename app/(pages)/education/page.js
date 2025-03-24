@@ -3,7 +3,7 @@ import { education } from "@/data/Education";
 export default function Education() {
   return (
     <>
-      <div className="main animate-viewpoint">
+      <div className="main">
         {education.map((study, i) => (
           <div
             key={i}

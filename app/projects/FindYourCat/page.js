@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function FindYourCatPage() {
+export default function FindYourCat() {
   const [catImage, setCatImage] = useState("");
 
   const handleClick = async () => {

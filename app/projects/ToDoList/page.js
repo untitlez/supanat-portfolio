@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function ToDoListPage() {
+export default function ToDoList() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 

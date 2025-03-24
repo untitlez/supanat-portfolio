@@ -26,7 +26,7 @@ export const projectsData = [
     tools: "React.js / Next.js",
     description: "Fetch API / State",
     domain: "View",
-    link: "/projects/coding/FindYourCat",
+    link: "/projects/FindYourCat",
   },
 
   {
@@ -36,14 +36,14 @@ export const projectsData = [
     tools: "React.js / Next.js",
     description: "State / Event",
     domain: "View",
-    link: "/projects/coding/ToDoList",
+    link: "/projects/ToDoList",
   },
   {
     id: "2",
     src: "/cover_photo/koala.jpg",
     title: "Wallet App",
     tools: "Figma",
-    description: "Design Mobile App / Dark mode",
+    description: "Design Mobile App",
     domain: "Figma",
     link: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=1028-2&t=8TXMCEq6EmJGXjQ5-1",
   },

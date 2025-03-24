@@ -5,7 +5,8 @@ import ProjectsPage from "@/app/projects/page";
 export default function Skills() {
   return (
     <>
-      <div className="tabs lg:mb-24">
+      <div className="main">
+      <div className="tabs col-span-6">
         <input
           type="radio"
           name="my_tabs_3"
@@ -14,7 +15,7 @@ export default function Skills() {
           defaultChecked
         />
         <div className="tab-box">
-          <div className="tab-contents fd">
+          <div className="tab-contents">
             {/* Card 1 : TECHNICAL SKILLS */}
             <div className="card-box">
               <div className="card-body p-4">
@@ -90,6 +91,7 @@ export default function Skills() {
         <div data-theme="emerald" className="tab-box">
           <Certificate />
         </div>
+      </div>
       </div>
     </>
   );
