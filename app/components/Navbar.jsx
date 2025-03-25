@@ -1,15 +1,33 @@
 "use client";
 
-export default function Navbar() {
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+import { useEffect, useState } from "react";
 
-  const pages = ["about", "skills", "experience", "education"];
+const scrollTo = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
+const pages = ["about", "skills", "experience", "education"];
+
+export default function Navbar() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.body.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   return (
     <>
-      <nav className="navbar glass justify-between px-1 lg:px-4 border-b sticky top-0 z-10 text-primary ">
+      <nav className="navbar glass justify-between px-1 lg:px-4 sticky top-0 z-10 text-primary ">
         {/* Navbar Start  */}
         <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -41,13 +59,16 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Center  */}
-        <div className="px-3 gap-1 lg:gap-2">
+        <div
+          onClick={toggleTheme}
+          className="px-3 gap-1 lg:gap-2 cursor-pointer hover:scale-110 animate"
+        >
           <img
-            className="w-10 h-10"
+            className="w-10 h-10 spin"
             src="/favicon/clover.png"
             alt="clover icon"
           />
-          <div>
+          <div className="">
             <p className="text-base font-semibold -mb-1">SUPANAT</p>
             <p className="text-sm font-medium opacity-60">Portfolio</p>
           </div>

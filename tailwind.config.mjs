@@ -12,7 +12,7 @@ export default {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
           primary: "#2345A7",
-          secondary: "#FF7053",
+          secondary: "#2345A7",
           accent: "#FED43D",
         },
       },

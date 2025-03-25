@@ -41,13 +41,9 @@ export default function About() {
                 data-tip={item.name}
                 href={item.link}
                 target="_blank"
-                className="h-8 w-8 rounded-md lg:tooltip lg:tooltip-accent hover:bg-accent"
+                className="icon-tooltip"
               >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="icon hover:invert-0"
-                />
+                {item.icon}
               </a>
             ))}
           </div>

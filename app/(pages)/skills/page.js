@@ -30,20 +30,21 @@ export default function Skills() {
 
   useScrollTrigger("#card1", 0.5);
   useScrollTrigger("#card2", 1);
-  useScrollTrigger("#card3", 1.5);
+  useScrollTrigger("#card3", 0.5);
 
   return (
     <>
       <div className="main">
         <div className="tabs col-span-6">
           <input
+            data-theme="light"
             type="radio"
             name="my_tabs_3"
-            className="tab btn btn-ghost"
+            className="tab btn btn-ghost "
             aria-label="SKILLS"
             defaultChecked
           />
-          <div className="tab-box">
+          <div className="tab-box bg-secondary">
             <div className="tab-contents">
               {/* Card 1 : TECHNICAL SKILLS */}
               <div id="card1" className="card-box">
@@ -52,11 +53,7 @@ export default function Skills() {
                   <div className="card-contents">
                     {skills.technical.map((skill, i) => (
                       <li key={i} className="contact">
-                        <img
-                          className="h-8 w-8 icon "
-                          src={skill.src}
-                          alt={skill.name}
-                        />
+                        {skill.icon}
                         {skill.name}
                       </li>
                     ))}
@@ -71,11 +68,7 @@ export default function Skills() {
                   <div className="card-contents">
                     {skills.tools.map((skill, i) => (
                       <li key={i} className="contact">
-                        <img
-                          className="h-8 w-8 icon "
-                          src={skill.src}
-                          alt={skill.name}
-                        />
+                        {skill.icon}
                         {skill.name}
                       </li>
                     ))}
@@ -117,7 +110,7 @@ export default function Skills() {
             data-theme="emerald"
             aria-label="CERTIFICATIONS"
           />
-          <div data-theme="emerald" className="tab-box">
+          <div className="tab-box border-none overflow-hidden">
             <Certificate />
           </div>
         </div>

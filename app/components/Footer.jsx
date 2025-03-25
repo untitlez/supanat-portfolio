@@ -13,21 +13,17 @@ export default function Footer() {
           </p>
         </aside>
         <nav>
-          <h3 className="mb-3">CONTACT ME</h3>
-          <div className="grid grid-flow-col gap-6">
+          <h3 className="mb-2 lg:mb-8">CONTACT ME</h3>
+          <div className="flex flex-wrap gap-4 lg:gap-6">
             {contactMe.map((item, i) => (
               <a
                 key={i}
                 data-tip={item.name}
                 href={item.link}
                 target="_blank"
-                className="h-8 w-8 rounded-md lg:tooltip lg:tooltip-accent hover:bg-accent"
+                className="icon-tooltip"
               >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="icon invert hover:invert-0"
-                />
+                {item.icon}
               </a>
             ))}
           </div>

@@ -1,18 +1,38 @@
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+
+import { FaFigma } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaBootstrap } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+
+const size = 24;
+
 export const skills = {
   technical: [
-    { name: "HTML", src: "/icons/html.png" },
-    { name: "CSS", src: "/icons/css.png" },
-    { name: "JavaScript", src: "/icons/javascript.png" },
-    { name: "React", src: "/icons/react.png" },
-    { name: "Next", src: "/icons/next.png" },
+    { name: "HTML", icon: <FaHtml5 size={size} /> },
+    { name: "CSS", icon: <FaCss3Alt size={size} /> },
+    { name: "JavaScript", icon: <IoLogoJavascript size={size} /> },
+    { name: "React", icon: <FaReact size={size} /> },
+    { name: "Next", icon: <RiNextjsFill size={size} /> },
   ],
   tools: [
-    { name: "Figma", src: "/icons/figma.png" },
-    { name: "VS Code", src: "/icons/vscode.png" },
-    { name: "Tailwind CSS", src: "/icons/tailwindcss.png" },
-    { name: "Bootstrap", src: "/icons/bootstrap.png" },
-    { name: "GitHub", src: "/icons/github.png" },
-    { name: "Postman", src: "/icons/postman.webp" },
+    { name: "Figma", icon: <FaFigma size={size} /> },
+    {
+      name: "VS Code",
+      icon: <FaFigma size={size} />,
+
+      icon: <VscVscode size={size} />,
+    },
+    { name: "Tailwind CSS", icon: <RiTailwindCssFill size={size} /> },
+    { name: "Bootstrap", icon: <FaBootstrap size={size} /> },
+    { name: "GitHub", icon: <FaGithub size={size} /> },
+    { name: "Postman", icon: <SiPostman size={size} /> },
   ],
   soft: [
     "Management Skills",
