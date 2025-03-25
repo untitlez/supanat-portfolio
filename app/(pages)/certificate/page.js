@@ -5,7 +5,11 @@ export default function Certificate() {
     <>
       <div className="tab-contents">
         {certificate.map((item, i) => (
-          <div key={i} className="card border shadow-md bg-base-100">
+          <div
+            key={i}
+            className="card border shadow-md bg-base-100 slide-top"
+            style={{ animationDelay: `${i * 0.2}s` }}
+          >
             <figure className="shadow-md">
               <img src={item.src} alt={item.name} className="object-contain " />
             </figure>

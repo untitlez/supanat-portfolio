@@ -21,7 +21,9 @@ export default function Experience() {
                   />
                 </svg>
               </div>
-              <div className={`md:bg-base-100 md:p-8 rounded-xl md:border md:shadow-xl ${exp.position}`}>
+              <div
+                className={`md:bg-base-100 md:p-8 rounded-xl md:border md:shadow-xl ${exp.position}`}
+              >
                 <time className="font-mono italic">{exp.time}</time>
                 <h3 className="font-black">{exp.job}</h3>
                 <h3 className="font-bold mb-2 opacity-60">{exp.place}</h3>

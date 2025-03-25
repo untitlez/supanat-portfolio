@@ -7,7 +7,7 @@ export default function FindYourCat() {
   const handleClick = async () => {
     try {
       const response = await fetch(
-        "https://api.thecatapi.com/v1/images/search"
+        "https://api.thecatapi.com/v1/images/search",
       );
       const data = await response.json();
       setCatImage(data[0].url);
