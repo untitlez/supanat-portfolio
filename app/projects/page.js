@@ -1,4 +1,6 @@
 import { projectsData } from "@/data/ProjectsData";
+import { VscTools } from "react-icons/vsc";
+import { BiCommentDetail } from "react-icons/bi";
 
 export default function ProjectsPage() {
   return (
@@ -24,28 +26,26 @@ export default function ProjectsPage() {
                 <div className="grid gap-4 p-4">
                   <ul className="grid">
                     <li className="contact">
-                      <img
-                        className="h-6 w-6 icon invert"
-                        src="/icons/tools.png"
-                        alt="icon tools"
-                      />
+                      <VscTools size={20} />
+
                       {data.tools}
                     </li>
                     <li className="contact">
-                      <img
-                        className="h-6 w-6 icon invert"
-                        src="/icons/detail.png"
-                        alt="icon detail"
-                      />
+                      <BiCommentDetail size={20} />
                       {data.description}
                     </li>
                   </ul>
                   <a
                     href={data.link}
                     target="_blank"
-                    className="btn btn-accent"
+                    className="btn btn-accent group relative"
                   >
-                    {data.domain}
+                    <p className="absolute opacity-100 group-hover:opacity-0 animate">
+                      {data.nameIcon}
+                    </p>
+                    <div className="opacity-0 scale-5 group-hover:opacity-100 group-hover:scale-100 animate">
+                      {data.icon}
+                    </div>
                   </a>
                 </div>
               </div>

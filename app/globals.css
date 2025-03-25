@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -55,19 +58,19 @@ body {
 }
 
 .contact {
-  @apply inline-flex items-center gap-3 my-1;
+  @apply inline-flex items-center gap-3 my-1 p-1;
 }
 
-.icon {
-  @apply p-1 rounded;
+.icon-tooltip {
+  @apply rounded-md p-2 lg:tooltip lg:tooltip-accent hover:bg-accent hover:text-black;
 }
 
 .tab-contents {
-  @apply grid m-8 gap-8 lg:gap-12 sm:grid-cols-2;
+  @apply grid p-8 gap-8 lg:gap-12 sm:grid-cols-2;
 }
 
 .tab-box {
-  @apply tab-content rounded-2xl bg-primary;
+  @apply tab-content rounded-2xl;
 }
 
 .card-box {
@@ -87,19 +90,15 @@ body {
   content-start justify-self-center p-8;
 }
 
-.size-palette {
-  @apply w-28 h-36 rounded-xl flex flex-col justify-end text-center gap-4 py-4 px-2;
+.absolute-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
 .animate {
-  @apply transition duration-1000 ease-in-out;
+  @apply transition duration-500 ease-in-out;
 }
 
 /* Animations  */
-
-.BlurInTop {
-  animation: BlurInTop 1s both;
-}
 
 @keyframes BlurInTop {
   from {
@@ -109,8 +108,8 @@ body {
   }
 }
 
-.slide-top {
-  animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.BlurInTop {
+  animation: BlurInTop 1s both;
 }
 
 @keyframes slide-top {
@@ -122,4 +121,21 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.slide-top {
+  animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 11s linear infinite;
 }
