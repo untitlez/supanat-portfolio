@@ -112,19 +112,19 @@ body {
   }
 }
 
-
 .slide-top {
-  animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-top {
   0% {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(40%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(0);
   }
 }
+
 

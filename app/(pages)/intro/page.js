@@ -4,11 +4,11 @@ export default function Intro() {
     <>
       <div className="h-screen grid place-items-center bg-primary">
         <ul className="flex gap-[1px] text-white ">
-        {text.map((letter, index) => (
+        {text.map((letter, i) => (
           <li
-          key={index}
+          key={i}
           className="BlurInTop"
-          style={{ animationDelay: `${index * 0.1}s` }}
+          style={{ animationDelay: `${i * 0.1}s` }}
           >
             <h1>{letter}</h1>
           </li>

@@ -5,10 +5,11 @@ export default function ProjectsPage() {
     <>
       <div data-theme="dark" className="bg-primary ">
         <div className="layout-projects">
-          {projectsData.map((data) => (
+          {projectsData.map((data,i) => (
             <div
               key={data.id}
-              className="mockup-browser border shadow-md bg-base-300 "
+              className="mockup-browser border shadow-md bg-base-300 slide-top"
+              style={{ animationDelay: `${i * 0.2}s` }}
             >
               <div className="mockup-browser-toolbar">
                 <h3 className="input text-center">{data.title}</h3>

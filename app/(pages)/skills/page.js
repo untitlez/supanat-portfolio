@@ -1,8 +1,34 @@
+"use client";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { skills } from "@/data/Skills";
 import Certificate from "../certificate/page";
 import ProjectsPage from "@/app/projects/page";
 
 export default function Skills() {
+
+gsap.registerPlugin(ScrollTrigger);
+
+const useScrollTrigger = (element, delays) => {
+  useEffect(() => {
+    gsap.fromTo(element, 
+      { opacity: 0, y: 100 }, {
+        opacity: 1, y: 0, duration: 1, delay: delays,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 90%",
+      },
+    });
+  }, [element, delays]);
+};
+
+useScrollTrigger("#card1", 0.5);
+useScrollTrigger("#card2", 1);
+useScrollTrigger("#card3", 1.5);
+
+
+
   return (
     <>
       <div className="main">
@@ -17,7 +43,7 @@ export default function Skills() {
         <div className="tab-box">
           <div className="tab-contents">
             {/* Card 1 : TECHNICAL SKILLS */}
-            <div className="card-box">
+            <div id="card1" className="card-box">
               <div className="card-body p-4">
                 <h3 className="card-heading">TECHNICAL SKILLS</h3>
                 <div className="card-contents">
@@ -36,7 +62,7 @@ export default function Skills() {
             </div>
 
             {/* Card 2 : TOOLS SKILLS */}
-            <div className="card-box">
+            <div id="card2" className="card-box">
               <div className="card-body p-4">
                 <h3 className="card-heading">TOOLS SKILLS</h3>
                 <div className="card-contents">
@@ -55,7 +81,7 @@ export default function Skills() {
             </div>
 
             {/* Card 3 :  SOFT SKILLS */}
-            <div className="card-box">
+            <div id="card3" className="card-box">
               <div className="card-body p-4">
                 <h3 className="card-heading">SOFT SKILLS</h3>
                 <ul className="card-contents list-disc">
