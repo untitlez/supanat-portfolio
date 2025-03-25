@@ -30,7 +30,7 @@ export default {
           accent: "#FED43D",
         },
       },
-      
+
       "cupcake",
       "bumblebee",
       "corporate",

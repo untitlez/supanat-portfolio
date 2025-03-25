@@ -5,7 +5,7 @@ export default function ProjectsPage() {
     <>
       <div data-theme="dark" className="bg-primary ">
         <div className="layout-projects">
-          {projectsData.map((data,i) => (
+          {projectsData.map((data, i) => (
             <div
               key={data.id}
               className="mockup-browser border shadow-md bg-base-300 slide-top"
