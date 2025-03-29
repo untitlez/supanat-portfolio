@@ -34,7 +34,7 @@ export default function Skills() {
 
   return (
     <>
-      <div className="main w-full">
+      <div className="main">
         <div className="tabs col-span-6">
           <input
             data-theme="light"

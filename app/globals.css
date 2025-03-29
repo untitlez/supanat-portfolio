@@ -70,7 +70,7 @@ body {
 }
 
 .tab-box {
-  @apply tab-content rounded-2xl;
+  @apply tab-content rounded-2xl w-full;
 }
 
 .card-box {
