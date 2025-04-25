@@ -19,9 +19,9 @@ export const aboutMe = [
     icon: <LiaBirthdayCakeSolid size={size} />,
   },
   {
-    name: "tleza_championship2@hotmail.com",
+    name: "supanatt.cs@gmail.com",
     icon: <IoMailOutline size={size} />,
-    link: "mailto:tleza_championship2@hotmail.com",
+    link: "mailto:supanatt.cs@gmail.com",
   },
   {
     name: "0882252252",

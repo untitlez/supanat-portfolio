@@ -38,7 +38,7 @@ body {
 
 .box {
   border-width: 2px;
-  border-color: black;
+  border-color: red;
 }
 
 .layout {
