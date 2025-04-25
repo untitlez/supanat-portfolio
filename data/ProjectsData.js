@@ -6,7 +6,15 @@ const size = 20;
 
 export const projectsData = [
   {
-    id: "6",
+    src: "/cover_photo/penguin.jpg",
+    title: "HR System",
+    tools: "React.js / Vite / Ant Design / Zustand",
+    description: "Authentication / Dashboard / Form / Theme",
+    icon: <IoLogoVercel size={size} />,
+    nameIcon: "Vercel",
+    link: "https://internal-projects.vercel.app/",
+  },
+  {
     src: "/cover_photo/cat.jpg",
     title: "Users",
     tools: "Vercel / Axios / React.js / Next.js",
@@ -15,9 +23,7 @@ export const projectsData = [
     nameIcon: "Vercel",
     link: "https://practice-website-projects.vercel.app/page/users",
   },
-
   {
-    id: "5",
     src: "/cover_photo/shiba.jpg",
     title: "Products",
     tools: "Vercel / Axios / React.js / Next.js",
@@ -26,9 +32,7 @@ export const projectsData = [
     nameIcon: "Vercel",
     link: "https://practice-website-projects.vercel.app/page/product",
   },
-
   {
-    id: "4",
     src: "/cover_photo/dear.jpg",
     title: "Find Your Cat",
     tools: "React.js / Next.js",
@@ -37,9 +41,7 @@ export const projectsData = [
     nameIcon: "View",
     link: "/projects/FindYourCat",
   },
-
   {
-    id: "3",
     src: "/cover_photo/cow.jpg",
     title: "To-Do-List",
     tools: "React.js / Next.js",
@@ -49,7 +51,6 @@ export const projectsData = [
     link: "/projects/ToDoList",
   },
   {
-    id: "2",
     src: "/cover_photo/koala.jpg",
     title: "Wallet App",
     tools: "Figma",
@@ -59,7 +60,6 @@ export const projectsData = [
     link: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=1028-2&t=8TXMCEq6EmJGXjQ5-1",
   },
   {
-    id: "1",
     src: "cover_photo/koala_junior.jpg",
     title: "Re-Design",
     tools: "Figma",

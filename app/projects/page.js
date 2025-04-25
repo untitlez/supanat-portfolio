@@ -9,7 +9,7 @@ export default function ProjectsPage() {
         <div className="layout-projects">
           {projectsData.map((data, i) => (
             <div
-              key={data.id}
+              key={i}
               className="mockup-browser border shadow-md bg-base-300 slide-top"
               style={{ animationDelay: `${i * 0.2}s` }}
             >
