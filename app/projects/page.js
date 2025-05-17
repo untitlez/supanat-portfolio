@@ -1,13 +1,12 @@
-import { projectsData } from "@/data/ProjectsData";
-import { VscTools } from "react-icons/vsc";
-import { BiCommentDetail } from "react-icons/bi";
+import { ProjectsData, stackData } from "@/data/ProjectsData";
+import { GoStack } from "react-icons/go";
 
 export default function ProjectsPage() {
   return (
     <>
       <div data-theme="dark" className="bg-primary ">
         <div className="layout-projects">
-          {projectsData.map((data, i) => (
+          {ProjectsData.map((data, i) => (
             <div
               key={i}
               className="mockup-browser border shadow-md bg-base-300 slide-top"
@@ -24,16 +23,12 @@ export default function ProjectsPage() {
                 />
 
                 <div className="grid gap-4 p-4">
-                  <ul className="grid">
-                    <li className="contact">
-                      <VscTools size={20} />
-
-                      {data.tools}
-                    </li>
-                    <li className="contact">
-                      <BiCommentDetail size={20} />
-                      {data.description}
-                    </li>
+                  <ul className="flex flex-wrap items-center my-2 gap-2">
+                    {data.tools.map((tool, i) => (
+                      <li key={i} className="btn btn-primary btn-xs cursor-default">
+                        {tool}
+                      </li>
+                    ))}
                   </ul>
                   <a
                     href={data.link}

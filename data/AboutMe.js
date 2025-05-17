@@ -46,6 +46,6 @@ export const aboutMe = [
   {
     name: "GitHub",
     icon: <FaGithub size={size} />,
-    link: "https://github.com/untitlez/supanat-portfolio.git",
+    link: "https://github.com/untitlez",
   },
 ];
