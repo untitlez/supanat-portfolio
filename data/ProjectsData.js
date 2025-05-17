@@ -19,7 +19,7 @@ export const ProjectsData = [
       "Axios",
       "Responsive",
     ],
-    link: "https://internal-projects.vercel.app/",
+    link: "https://hr-projects-lyart.vercel.app/",
   },
   {
     src: "/cover_photo/cat.jpg",
