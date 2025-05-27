@@ -1,6 +1,4 @@
-import { IoLocationOutline } from "react-icons/io5";
-import { LiaBirthdayCakeSolid } from "react-icons/lia";
-import { IoMailOutline } from "react-icons/io5";
+import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -9,14 +7,10 @@ import { FaGithub } from "react-icons/fa";
 
 const size = 24;
 
-export const aboutMe = [
+export const contactMe = [
   {
     name: "Chiang Mai,Thailand",
     icon: <IoLocationOutline size={size} />,
-  },
-  {
-    name: "11 FEB 1994",
-    icon: <LiaBirthdayCakeSolid size={size} />,
   },
   {
     name: "supanatt.cs@gmail.com",

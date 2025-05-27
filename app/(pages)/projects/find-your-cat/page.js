@@ -7,7 +7,7 @@ export default function FindYourCat() {
   const handleClick = async () => {
     try {
       const response = await fetch(
-        "https://api.thecatapi.com/v1/images/search",
+        "https://api.thecatapi.com/v1/images/search"
       );
       const data = await response.json();
       setCatImage(data[0].url);
@@ -17,7 +17,7 @@ export default function FindYourCat() {
   };
 
   return (
-    <main className="h-screen grid place-items-center bg-primary">
+    <div className="h-screen grid place-items-center">
       {/* Mobile View */}
       <section className="mockup-phone border-2 border-base-300 sm:hidden">
         <div className="camera"></div>
@@ -32,7 +32,7 @@ export default function FindYourCat() {
             )}
             <button
               onClick={handleClick}
-              className="btn btn-accent w-3/4 absolute bottom-4 shadow-md"
+              className="btn btn-primary w-3/4 absolute bottom-4 shadow-xl"
             >
               Click to adopt a cat
             </button>
@@ -41,7 +41,7 @@ export default function FindYourCat() {
       </section>
 
       {/* Desktop View */}
-      <section className="mockup-browser bg-base-300 border shadow-xl mx-8 lg:mx-0 hidden sm:block">
+      <section className="mockup-browser bg-base-300 border border-base-content/75 shadow-xl mx-8 lg:mx-0 hidden sm:block">
         <div className="mockup-browser-toolbar">
           <p className="input text-center font-semibold">Find Your Cat</p>
         </div>
@@ -57,12 +57,12 @@ export default function FindYourCat() {
           )}
           <button
             onClick={handleClick}
-            className="btn btn-accent m-8 shadow-md"
+            className="btn btn-primary m-8 shadow-md"
           >
             Click to adopt a cat
           </button>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

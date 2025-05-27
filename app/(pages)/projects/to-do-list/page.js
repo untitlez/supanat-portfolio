@@ -18,12 +18,9 @@ export default function ToDoList() {
   };
 
   return (
-    <main
-      data-theme="dark"
-      className="h-screen grid place-items-center bg-primary"
-    >
+    <div className="h-screen grid place-items-center">
       {/* Mobile View */}
-      <section className="mockup-phone border-2 border-base-content sm:hidden">
+      <section className="mockup-phone border-2 border-base-300 sm:hidden">
         <div className="camera"></div>
         <div className="display">
           <article className="artboard artboard-demo phone-1 flex justify-start gap-6 px-6 pt-10">
@@ -35,7 +32,7 @@ export default function ToDoList() {
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
               />
-              <button className="btn btn-accent" onClick={addTask}>
+              <button className="btn btn-primary" onClick={addTask}>
                 Add
               </button>
             </header>
@@ -48,7 +45,7 @@ export default function ToDoList() {
                 >
                   {task.text}
                   <button
-                    className="btn btn-sm btn-outline btn-accent"
+                    className="btn btn-sm btn-outline btn-error"
                     onClick={() => deleteTask(index)}
                   >
                     Delete
@@ -61,7 +58,7 @@ export default function ToDoList() {
       </section>
 
       {/* Desktop View */}
-      <section className="mockup-browser bg-base-300 border shadow-xl hidden sm:block">
+      <section className="mockup-browser bg-base-300 border border-base-content/75 shadow-xl hidden sm:block">
         <div className="mockup-browser-toolbar">
           <p className="input">To-Do-List</p>
         </div>
@@ -77,7 +74,7 @@ export default function ToDoList() {
                 if (e.key === "Enter") addTask();
               }}
             />
-            <button className="btn btn-accent" onClick={addTask}>
+            <button className="btn btn-primary" onClick={addTask}>
               Add
             </button>
           </header>
@@ -90,7 +87,7 @@ export default function ToDoList() {
               >
                 {task.text}
                 <button
-                  className="btn btn-sm btn-outline btn-accent"
+                  className="btn btn-sm btn-outline btn-error"
                   onClick={() => deleteTask(index)}
                 >
                   Delete
@@ -100,6 +97,6 @@ export default function ToDoList() {
           </ul>
         </article>
       </section>
-    </main>
+    </div>
   );
 }

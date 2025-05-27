@@ -8,31 +8,11 @@ export default {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
-      {
-        light: {
-          ...require("daisyui/src/theming/themes")["light"],
-          primary: "#2345A7",
-          secondary: "#2345A7",
-          accent: "#FED43D",
-        },
-      },
-      {
-        dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
-          primary: "#FF7053",
-          secondary: "#2345A7",
-          accent: "#FED43D",
-        },
-      },
-      {
-        emerald: {
-          ...require("daisyui/src/theming/themes")["emerald"],
-          accent: "#FED43D",
-        },
-      },
-
+      "light",
+      "dark",
       "cupcake",
       "bumblebee",
+      "emerald",
       "corporate",
       "synthwave",
       "retro",
@@ -57,6 +37,9 @@ export default {
       "night",
       "coffee",
       "winter",
+      "dim",
+      "nord",
+      "sunset",
     ],
   },
 };
