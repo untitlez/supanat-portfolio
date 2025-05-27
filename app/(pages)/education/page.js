@@ -32,14 +32,14 @@ export default function Education() {
       {education.map((study, i) => (
         <motion.div
           className="max-w-screen-sm grid gap-4 bg-base-100 p-8 rounded-3xl border border-base-content/75 
-          shadow-xl hover:shadow-2xl "
+          shadow-xl hover:shadow-2xl"
           key={i}
           ref={ref}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={motionContent}
         >
-          <figure className="flex justify-center">
+          <figure className="flex justify-center animate-pulse">
             <img
               src={study.src}
               alt="Institution Logo"
