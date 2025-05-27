@@ -9,9 +9,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,74 +18,24 @@ body {
 
 @layer base {
   h1 {
-    @apply text-4xl font-bold lg:text-5xl;
+    @apply text-4xl lg:text-6xl font-bold;
   }
-
   h2 {
-    @apply text-2xl font-semibold lg:text-3xl;
+    /* Sub H1  */
+    @apply text-xl lg:text-4xl font-medium opacity-80;
   }
-
   h3 {
-    @apply text-lg font-semibold lg:text-xl;
+    @apply text-lg font-medium;
   }
-
-  p {
-    @apply text-base lg:text-lg;
+  h4 {
+    /* Sub H3  */
+    @apply text-lg opacity-60;
   }
 }
 
 .box {
   border-width: 2px;
-  border-color: red;
-}
-
-.layout {
-  @apply max-w-screen-2xl min-h-screen grid justify-self-center px-4 lg:px-8 gap-24 my-24 lg:gap-0 lg:my-0;
-}
-
-.main {
-  @apply lg:min-h-screen grid gap-8 lg:gap-12 lg:grid-cols-6 content-center;
-}
-
-.content-2 {
-  @apply grid lg:col-span-2 gap-8 lg:gap-12 items-start;
-}
-
-.content-3 {
-  @apply grid lg:col-span-3 gap-8 lg:gap-12 items-start;
-}
-
-.contact {
-  @apply inline-flex items-center gap-3 my-1 p-1;
-}
-
-.icon-tooltip {
-  @apply rounded-md p-2 lg:tooltip lg:tooltip-accent hover:bg-accent hover:text-black;
-}
-
-.tab-contents {
-  @apply grid p-8 gap-8 lg:gap-12 sm:grid-cols-2;
-}
-
-.tab-box {
-  @apply tab-content rounded-2xl w-full;
-}
-
-.card-box {
-  @apply card bg-base-100 shadow-sm;
-}
-
-.card-heading {
-  @apply text-center border-b-2 pb-3;
-}
-
-.card-contents {
-  @apply grid place-content-center h-full my-4;
-}
-
-.layout-projects {
-  @apply max-w-screen-2xl min-h-screen grid gap-8 lg:gap-12 sm:grid-cols-2 xl:grid-cols-3
-  content-start justify-self-center p-8;
+  border-color: white;
 }
 
 .absolute-center {
@@ -100,33 +48,6 @@ body {
 
 /* Animations  */
 
-@keyframes BlurInTop {
-  from {
-    transform: scaleY(0.2) translateY(-100px);
-    filter: blur(20px);
-    opacity: 0;
-  }
-}
-
-.BlurInTop {
-  animation: BlurInTop 1s both;
-}
-
-@keyframes slide-top {
-  0% {
-    opacity: 0;
-    transform: translateY(40%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.slide-top {
-  animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -135,7 +56,35 @@ body {
     transform: rotate(360deg);
   }
 }
-
 .spin {
   animation: spin 11s linear infinite;
+}
+
+@keyframes animate-flow {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-flow {
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-flow {
+    animation-duration: 7s;
+  }
+}
+
+.animate-flow {
+  animation: animate-flow 30s linear infinite;
+}
+
+.animate-flow-reverse {
+  animation: animate-flow 30s linear infinite reverse;
 }

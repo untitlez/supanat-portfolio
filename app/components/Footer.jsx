@@ -1,19 +1,18 @@
-import { contactMe } from "@/data/ContactMe";
+import { contactMe } from "@/constant/ContactMe";
 
 export default function Footer() {
   return (
     <>
-      <footer className="footer sm:footer-horizontal place-content-between bg-neutral text-neutral-content gap-12 px-10 py-20">
-        <aside>
-          <img src="/favicon/clover.png" alt="Logo Page" />
-          <p>
-            SUPANAT CHAISRI
-            <br />
-            Frontend Developer
-          </p>
+      <footer className="footer sm:footer-horizontal bg-base-300 text-primary justify-items-center gap-20 px-4 lg:px-10 py-20">
+        <aside className="flex flex-col items-center gap-4">
+          <img src="/favicon/clover.png" alt="Logo Page" className="spin" />
+          <div>
+            <h3>SUPANAT CHAISRI</h3>
+            <h4>Frontend Developer</h4>
+          </div>
         </aside>
-        <nav>
-          <h3 className="mb-2 lg:mb-8">CONTACT ME</h3>
+        <nav className="flex flex-col justify-center items-center gap-8 h-full">
+          <h3 className="">CONTACT ME</h3>
           <div className="flex flex-wrap gap-4 lg:gap-6">
             {contactMe.map((item, i) => (
               <a
@@ -21,7 +20,7 @@ export default function Footer() {
                 data-tip={item.name}
                 href={item.link}
                 target="_blank"
-                className="icon-tooltip"
+                className="rounded-md p-2 lg:tooltip"
               >
                 {item.icon}
               </a>
@@ -29,14 +28,14 @@ export default function Footer() {
           </div>
         </nav>
       </footer>
-      <footer className="footer sm:footer-horizontal footer-center bg-neutral-800 text-neutral-content p-4">
+      <div className="footer footer-center p-2 bg-base-200">
         <aside>
           <p>
             Copyright © {new Date().getFullYear()} - All right reserved by
             Supanat Chaisri
           </p>
         </aside>
-      </footer>
+      </div>
     </>
   );
 }

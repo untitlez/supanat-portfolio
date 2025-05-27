@@ -1,67 +1,43 @@
-"use client";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import About from "./(pages)/about/page";
-import Education from "./(pages)/education/page";
-import Experience from "./(pages)/experience/page";
 import Intro from "./(pages)/intro/page";
+import About from "./(pages)/about/page";
 import Skills from "./(pages)/skills/page";
-import Footer from "./components/Footer";
+import Projects from "./(pages)/projects/page";
+import Certificate from "./(pages)/certificate/page";
+import Experience from "./(pages)/experience/page";
+import Education from "./(pages)/education/page";
+
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { GradientBg } from "./components/GradientBg";
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const useScrollTriggerAnimation = (element, fromValues, toValues) => {
-    useEffect(() => {
-      gsap.fromTo(element, fromValues, {
-        ...toValues,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 40%",
-        },
-      });
-    }, [element, fromValues, toValues]);
-  };
-
-  useScrollTriggerAnimation(
-    "#about",
-    { opacity: 0, y: 100 },
-    { opacity: 1, y: 0, duration: 1 },
-  );
-
-  useScrollTriggerAnimation(
-    "#experience",
-    { opacity: 0, x: -100 },
-    { opacity: 1, x: 0, duration: 1 },
-  );
-
-  useScrollTriggerAnimation(
-    "#education",
-    { opacity: 0, scale: 0.8 },
-    { opacity: 1, scale: 1, duration: 1 },
-  );
-
   return (
-    <>
+    <main className="flex flex-col items-center gap-24 lg:gap-0 lg:my-0 bg-base-200">
+      <GradientBg />
       <Intro />
       <Navbar />
-      <main className="layout">
-        <section id="about">
-          <About />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="education">
-          <Education />
-        </section>
-      </main>
+      <section id="about" className="max-w-screen-2xl mx-4 z-10">
+        <About />
+      </section>
+      <section id="skills" className="w-full z-10">
+        <Skills />
+      </section>
+      <section
+        id="projects"
+        className="w-full max-w-screen-2xl px-4 lg:my-40 z-10"
+      >
+        <Projects />
+      </section>
+      <section id="certificate" className="w-full max-w-screen-2xl px-4 z-10">
+        <Certificate />
+      </section>
+      <section id="experience" className="max-w-screen-2xl mx-4 z-10">
+        <Experience />
+      </section>
+      <section id="education" className="max-w-screen-2xl mx-4 z-10">
+        <Education />
+      </section>
       <Footer />
-    </>
+    </main>
   );
 }
