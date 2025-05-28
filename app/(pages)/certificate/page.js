@@ -15,7 +15,7 @@ export default function Certificate() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.9, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -28,7 +28,7 @@ export default function Certificate() {
 
   return (
     <motion.div
-      className="min-h-screen grid place-content-center"
+      className="lg:min-h-screen grid place-content-center"
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}

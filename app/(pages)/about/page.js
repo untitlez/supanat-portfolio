@@ -51,12 +51,12 @@ export default function About() {
           src="/profile.jpg"
           alt="Profile Image"
           loading="lazy"
-          className="sm:hidden h-[250px] lg:h-full lg:w-3/4 object-cover rounded-xl"
+          className="sm:hidden h-[250px] lg:h-full lg:w-3/4 object-cover rounded-3xl shadow-xl border border-base-content/50"
         />
       </motion.div>
 
       <motion.div
-        className="w-full space-y-12 px-8 py-12 rounded-3xl bg-base-100 border border-base-content/50 max-w-screen-sm"
+        className="w-full max-w-screen-sm space-y-12 px-8 py-12 rounded-3xl bg-base-100 border border-base-content/50"
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

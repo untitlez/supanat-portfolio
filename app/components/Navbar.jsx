@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content z-[1] mt-3 p-1 rounded-xl border shadow bg-base-100"
+          className="menu menu-sm dropdown-content z-10 mt-3 p- rounded-xl shadow-xl bg-base-100"
         >
           {pages.map((page, i) => (
             <li key={i} onClick={() => scrollTo(page)}>

@@ -53,8 +53,8 @@ export default function Experience() {
               </svg>
             </div>
             <div
-              className={`md:bg-base-100 py-4 md:p-8 rounded-3xl border-base-content/75 md:border md:shadow-xl 
-                hover:shadow-2xl ${exp.position}`}
+              className={`md:bg-base-100 py-4 md:p-8 rounded-3xl border-base-content/50 md:border md:shadow-xl 
+                lg:hover:shadow-2xl animate ${exp.position}`}
             >
               <motion.div
                 initial="hidden"
@@ -62,7 +62,7 @@ export default function Experience() {
                 variants={motionItem}
                 custom={i}
               >
-                <time className="font-mono italic animate-pulse">
+                <time className="font-mono italic">
                   {exp.time}
                 </time>
                 <h3 className="font-bold">{exp.job}</h3>

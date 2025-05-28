@@ -58,7 +58,7 @@ export default function ToDoList() {
       </section>
 
       {/* Desktop View */}
-      <section className="mockup-browser bg-base-300 border border-base-content/75 shadow-xl hidden sm:block">
+      <section className="mockup-browser bg-base-300 border border-base-content/50 shadow-xl hidden sm:block">
         <div className="mockup-browser-toolbar">
           <p className="input">To-Do-List</p>
         </div>

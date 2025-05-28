@@ -42,7 +42,7 @@ export default function FindYourCat() {
       </section>
 
       {/* Desktop View */}
-      <section className="mockup-browser bg-base-300 border border-base-content/75 shadow-xl mx-8 lg:mx-0 hidden sm:block">
+      <section className="mockup-browser bg-base-300 border border-base-content/50 shadow-xl mx-8 lg:mx-0 hidden sm:block">
         <div className="mockup-browser-toolbar">
           <p className="input text-center font-semibold">Find Your Cat</p>
         </div>

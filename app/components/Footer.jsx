@@ -5,12 +5,7 @@ export default function Footer() {
     <footer className="w-full">
       <div className="footer sm:footer-horizontal bg-base-300 text-primary justify-items-center gap-20 px-4 lg:px-10 py-20">
         <aside className="flex flex-col items-center gap-4">
-          <img
-            src="/favicon/clover.png"
-            alt="Logo Page"
-            className="spin"
-            loading="lazy"
-          />
+          <img src="/favicon/clover.png" alt="Logo Page" loading="lazy" />
           <div>
             <h3>SUPANAT CHAISRI</h3>
             <h4>Frontend Developer</h4>
@@ -35,8 +30,8 @@ export default function Footer() {
       </div>
       <aside className="footer footer-center p-2 bg-base-200">
         <p>
-          Copyright © {new Date().getFullYear()} - All right reserved by
-          Supanat Chaisri
+          Copyright © {new Date().getFullYear()} - All right reserved by Supanat
+          Chaisri
         </p>
       </aside>
     </footer>

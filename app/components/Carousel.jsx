@@ -109,7 +109,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className="overflow-hidden w-full p-4 sm:p-6 rounded-3xl border bg-base-100 border-base-content/75 group"
+      className="overflow-hidden w-full p-4 sm:p-6 rounded-3xl border bg-base-100 border-base-content/50 group"
     >
       <motion.div
         className="flex"
@@ -151,7 +151,7 @@ export default function Carousel({
               <img
                 src={item.src}
                 alt={item.name}
-                className="brightness-90 group-hover:scale-110 pointer-events-none animate"
+                className="brightness-90 lg:group-hover:scale-110 pointer-events-none animate"
                 loading="lazy"
               />
               <div
