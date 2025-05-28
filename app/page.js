@@ -14,7 +14,9 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center gap-24 lg:gap-0 lg:my-0 bg-base-200">
       <GradientBg />
-      <Intro />
+      <section className="hidden lg:block">
+        <Intro />
+      </section>
       <Navbar />
       <section id="about" className="max-w-screen-2xl mx-4 z-10">
         <About />

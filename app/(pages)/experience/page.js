@@ -62,7 +62,9 @@ export default function Experience() {
                 variants={motionItem}
                 custom={i}
               >
-                <time className="font-mono italic animate-pulse">{exp.time}</time>
+                <time className="font-mono italic animate-pulse">
+                  {exp.time}
+                </time>
                 <h3 className="font-bold">{exp.job}</h3>
                 <h4 className="mb-2 opacity-60">{exp.place}</h4>
                 <p className="text-base-content">{exp.job_description}</p>

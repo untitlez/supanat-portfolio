@@ -7,7 +7,7 @@ export default function FindYourCat() {
   const handleClick = async () => {
     try {
       const response = await fetch(
-        "https://api.thecatapi.com/v1/images/search"
+        "https://api.thecatapi.com/v1/images/search",
       );
       const data = await response.json();
       setCatImage(data[0].url);
@@ -28,6 +28,7 @@ export default function FindYourCat() {
                 src={catImage}
                 alt="Random Cat"
                 className="h-full object-cover"
+                loading="lazy"
               />
             )}
             <button
@@ -52,6 +53,7 @@ export default function FindYourCat() {
                 src={catImage}
                 alt="Random Cat"
                 className="h-[500px] object-cover"
+                loading="lazy"
               />
             </figure>
           )}

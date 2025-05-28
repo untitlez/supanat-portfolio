@@ -5,11 +5,11 @@ export default function Intro() {
   return (
     <>
       {/* Back Ground  */}
-      <div className="absolute w-full h-3/4 z-10 bg-gradient-to-b from-base-100 to-transparent">
+      <div className="absolute left-0 top-0 w-full h-3/4 z-10 bg-gradient-to-b from-base-100 to-transparent">
         <AuroraBg />
       </div>
       {/* Content  */}
-      <section
+      <div
         className="relative min-h-screen w-full max-w-screen-md lg:max-w-screen-2xl 
       grid place-content-center md:grid-cols-2 px-4 lg:px-24 z-20"
       >
@@ -41,9 +41,14 @@ export default function Intro() {
           </p>
         </div>
         <figure className="hidden md:grid place-content-center">
-          <img src="/3D.png" alt="Image Cover" className="h-96 spin" />
+          <img
+            src="/3D.png"
+            alt="Image Cover"
+            className="h-96 spin"
+            loading="lazy"
+          />
         </figure>
-      </section>
+      </div>
     </>
   );
 }

@@ -40,15 +40,24 @@ export default function About() {
         variants={motionContent}
         custom={customDelays}
       >
-        <StackImage
-          randomRotation={true}
-          sendToBackOnClick={true}
-          cardsData={imageProfile}
+        <div className="hidden sm:block">
+          <StackImage
+            randomRotation={true}
+            sendToBackOnClick={true}
+            cardsData={imageProfile}
+          />
+        </div>
+        <img
+          src="/profile.jpg"
+          alt="Profile Image"
+          loading="lazy"
+          className="sm:hidden h-[250px] lg:h-full lg:w-3/4 object-cover rounded-xl"
         />
       </motion.div>
 
       <motion.div
         className="w-full space-y-12 px-8 py-12 rounded-3xl bg-base-100 border border-base-content/50 max-w-screen-sm"
+        ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={motionContent}
@@ -61,14 +70,15 @@ export default function About() {
           custom={customDelays + 0.3}
         >
           <div className="flex items-end gap-4">
-            <h3 className="text-2xl lg:text-3xl">Hi there!</h3>
+            <h3 className="text-xl lg:text-3xl">Hi there!</h3>
             <img
-              className="w-10 h-10 lg:w-16 lg:h-16 mb-1"
               src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif"
               alt="Say Hi"
+              className="w-10 h-10 lg:w-16 lg:h-16 mb-1"
+              loading="lazy"
             />
           </div>
-          <h3 className="text-2xl lg:text-3xl text-primary">
+          <h3 className="text-xl lg:text-3xl text-primary">
             I'm SUPANAT CHAISRI
           </h3>
         </motion.div>
@@ -80,7 +90,7 @@ export default function About() {
           custom={customDelays + 0.6}
         >
           <h3>About Me</h3>
-          <p className="opacity-75">
+          <p className="opacity-75 text-justify">
             I'm interested in working as a Frontend Developer. Currently, I keep
             improving my skills and practice myself. If there were experts
             willing to guide or mentor me, I would be extremely grateful.
@@ -88,7 +98,7 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          className="flex gap-3 items-center"
+          className="flex flex-wrap gap-3 sm:items-center"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={motionItem}

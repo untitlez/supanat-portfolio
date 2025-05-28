@@ -3,12 +3,12 @@ import { ProjectsData } from "@/constant/ProjectsData";
 export default function Projects() {
   return (
     <div className="lg:min-h-screen flex items-center">
-      <div className="w-full overflow-x-auto snap-x snap-mandatory flex gap-8 lg:gap-12 lg:grid lg:grid-cols-3 p-4 ">
+      <div className="w-full overflow-x-auto snap-x snap-mandatory flex gap-8 lg:gap-12 lg:grid lg:grid-cols-3 p-4">
         {ProjectsData.map((data, i) => (
           <div
             key={i}
-            className="mockup-browser rounded-3xl min-w-min lg:min-w-0 snap-start inline-flex flex-col group
-            shadow-xl bg-base-100 border border-base-content/50 hover:scale-105 animate "
+            className="mockup-browser rounded-3x min-w-80 sm:min-w-min lg:min-w-0 snap-start flex flex-col group
+            shadow-xl bg-base-100 border border-base-content/50 hover:scale-105 animate"
           >
             <div className="mockup-browser-toolbar">
               <h3 className="input text-center animate-pulse">{data.title}</h3>
@@ -23,6 +23,7 @@ export default function Projects() {
                 src={data.src}
                 alt="cover photo"
                 className="aspect-[3/2] rounded-xl object-cover"
+                loading="lazy"
               />
             </a>
 
@@ -37,7 +38,7 @@ export default function Projects() {
               <a
                 href={data.link}
                 target="_blank"
-                className="btn btn-primary text-base"
+                className="btn btn-primary sm:text-base"
               >
                 {data.icon}
                 {data.nameIcon}

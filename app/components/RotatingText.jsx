@@ -89,7 +89,7 @@ const RotatingText = forwardRef((props, ref) => {
       }
       return Math.abs(staggerFrom - index) * staggerDuration;
     },
-    [staggerFrom, staggerDuration]
+    [staggerFrom, staggerDuration],
   );
 
   const handleIndexChange = useCallback(
@@ -97,7 +97,7 @@ const RotatingText = forwardRef((props, ref) => {
       setCurrentTextIndex(newIndex);
       if (onNext) onNext(newIndex);
     },
-    [onNext]
+    [onNext],
   );
 
   const next = useCallback(() => {
@@ -131,7 +131,7 @@ const RotatingText = forwardRef((props, ref) => {
         handleIndexChange(validIndex);
       }
     },
-    [texts.length, currentTextIndex, handleIndexChange]
+    [texts.length, currentTextIndex, handleIndexChange],
   );
 
   const reset = useCallback(() => {
@@ -148,7 +148,7 @@ const RotatingText = forwardRef((props, ref) => {
       jumpTo,
       reset,
     }),
-    [next, previous, jumpTo, reset]
+    [next, previous, jumpTo, reset],
   );
 
   useEffect(() => {
@@ -161,7 +161,7 @@ const RotatingText = forwardRef((props, ref) => {
     <motion.span
       className={cn(
         "flex flex-wrap whitespace-pre-wrap relative",
-        mainClassName
+        mainClassName,
       )}
       {...rest}
       layout
@@ -178,7 +178,7 @@ const RotatingText = forwardRef((props, ref) => {
           className={cn(
             splitBy === "lines"
               ? "flex flex-col w-full"
-              : "flex flex-wrap whitespace-pre-wrap relative"
+              : "flex flex-wrap whitespace-pre-wrap relative",
           )}
           layout
           aria-hidden="true"
@@ -204,8 +204,8 @@ const RotatingText = forwardRef((props, ref) => {
                         previousCharsCount + charIndex,
                         array.reduce(
                           (sum, word) => sum + word.characters.length,
-                          0
-                        )
+                          0,
+                        ),
                       ),
                     }}
                     className={cn("inline-block", elementLevelClassName)}

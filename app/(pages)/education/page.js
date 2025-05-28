@@ -5,9 +5,7 @@ import { useScrollInView } from "@/app/lib/hook/useScrollInView";
 import { education } from "@/constant/Education";
 
 export default function Education() {
-  const { ref, isInView } = useScrollInView({
-    margin: "0px 0px -50% 0px",
-  });
+  const { ref, isInView } = useScrollInView();
 
   const motionContent = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -44,6 +42,7 @@ export default function Education() {
               src={study.src}
               alt="Institution Logo"
               className="object-contain"
+              loading="lazy"
             />
           </figure>
           <motion.div

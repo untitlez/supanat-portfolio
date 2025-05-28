@@ -2,10 +2,15 @@ import { contactMe } from "@/constant/ContactMe";
 
 export default function Footer() {
   return (
-    <>
-      <footer className="footer sm:footer-horizontal bg-base-300 text-primary justify-items-center gap-20 px-4 lg:px-10 py-20">
+    <footer className="w-full">
+      <div className="footer sm:footer-horizontal bg-base-300 text-primary justify-items-center gap-20 px-4 lg:px-10 py-20">
         <aside className="flex flex-col items-center gap-4">
-          <img src="/favicon/clover.png" alt="Logo Page" className="spin" />
+          <img
+            src="/favicon/clover.png"
+            alt="Logo Page"
+            className="spin"
+            loading="lazy"
+          />
           <div>
             <h3>SUPANAT CHAISRI</h3>
             <h4>Frontend Developer</h4>
@@ -27,15 +32,13 @@ export default function Footer() {
             ))}
           </div>
         </nav>
-      </footer>
-      <div className="footer footer-center p-2 bg-base-200">
-        <aside>
-          <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by
-            Supanat Chaisri
-          </p>
-        </aside>
       </div>
-    </>
+      <aside className="footer footer-center p-2 bg-base-200">
+        <p>
+          Copyright © {new Date().getFullYear()} - All right reserved by
+          Supanat Chaisri
+        </p>
+      </aside>
+    </footer>
   );
 }

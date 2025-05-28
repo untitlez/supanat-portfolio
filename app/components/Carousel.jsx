@@ -152,11 +152,11 @@ export default function Carousel({
                 src={item.src}
                 alt={item.name}
                 className="brightness-90 group-hover:scale-110 pointer-events-none animate"
+                loading="lazy"
               />
               <div
-                className="absolute bottom-0 w-full flex flex-row-reverse sm:flex-row justify-end sm:justify-between 
-              items-center gap-4 p-3 sm:p-4 rounded-b-xl text-neutral-50 backdrop-blur-sm 
-              bg-gradient-to-t from-neutral-900/75 to-transparent"
+                className="absolute bottom-0 w-full flex justify-between items-center gap-4 p-3 sm:p-4 
+                rounded-b-xl text-neutral-50 backdrop-blur-sm bg-gradient-to-t from-neutral-900/75 to-transparent"
               >
                 <div>
                   <h3 className="font-semibold mb-1">{item.name}</h3>

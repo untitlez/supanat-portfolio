@@ -19,6 +19,13 @@ export default function Certificate() {
     },
   };
 
+  const propsCarousel = {
+    items: certificate,
+    autoplay: true,
+    pauseOnHover: true,
+    loop: true,
+  };
+
   return (
     <motion.div
       className="min-h-screen grid place-content-center"
@@ -27,13 +34,12 @@ export default function Certificate() {
       animate={isInView ? "visible" : "hidden"}
       variants={motionContent}
     >
-      <Carousel
-        items={certificate}
-        baseWidth={640}
-        autoplay={true}
-        pauseOnHover={true}
-        loop={true}
-      />
+      <div className="sm:hidden">
+        <Carousel baseWidth={300} {...propsCarousel} />
+      </div>
+      <div className="hidden sm:block">
+        <Carousel baseWidth={600} {...propsCarousel} />
+      </div>
     </motion.div>
   );
 }

@@ -173,7 +173,7 @@ export default function DecryptedText({
 
     const observer = new IntersectionObserver(
       observerCallback,
-      observerOptions
+      observerOptions,
     );
     const currentRef = containerRef.current;
     if (currentRef) {
