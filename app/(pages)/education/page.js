@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { useScrollInView } from "@/app/lib/hook/useScrollInView";
 import { education } from "@/constant/Education";
@@ -23,17 +24,14 @@ export default function Education() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.9, delay: 0.3, ease: "easeOut" },
+      transition: { duration: 0.6, delay: 0.3, ease: "easeOut" },
     },
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className="lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center gap-12 text-primary"
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={motionContent}
     >
       {education.map((study, i) => (
         <div
@@ -41,14 +39,20 @@ export default function Education() {
           shadow-xl lg:hover:shadow-2xl animate"
           key={i}
         >
-          <figure className="flex justify-center">
-            <img
+          <motion.figure
+            className="flex justify-center"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={motionContent}
+          >
+            <Image
               src={study.src}
               alt="Institution Logo"
+              width={300}
+              height={300}
               className="object-contain"
-              loading="lazy"
             />
-          </figure>
+          </motion.figure>
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -63,6 +67,6 @@ export default function Education() {
           </motion.div>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 }

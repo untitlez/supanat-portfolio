@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AuroraBg from "@/app/components/AuroraBg";
 import DecryptedText from "@/app/components/DecryptedText";
 
@@ -37,7 +38,13 @@ export default function Intro() {
         </p>
       </div>
       <figure className="grid place-content-center z-50">
-        <img src="/3D.png" alt="Image Cover" className="h-96 w-96 spin" />
+        <Image
+          src="/3D.png"
+          alt="Image Cover"
+          width={400}
+          height={400}
+          className="spin"
+        />
       </figure>
     </section>
   );

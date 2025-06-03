@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 
 import { useScrollInView } from "@/app/lib/hook/useScrollInView";
@@ -56,7 +57,7 @@ export default function About() {
       </motion.div>
 
       <motion.div
-        className="w-full max-w-screen-sm space-y-12 px-8 py-12 rounded-3xl bg-base-100 border border-base-content/50"
+        className="w-full max-w-screen-sm space-y-12 px-6 sm:px-8 py-12 rounded-3xl bg-base-100 border border-base-content/50"
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -71,11 +72,12 @@ export default function About() {
         >
           <div className="flex items-end gap-4">
             <h3 className="text-xl lg:text-3xl">Hi there!</h3>
-            <img
+            <Image
               src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif"
               alt="Say Hi"
-              className="w-10 h-10 lg:w-16 lg:h-16 mb-1"
-              loading="lazy"
+              width={48}
+              height={48}
+              className="mb-1"
             />
           </div>
           <h3 className="text-xl lg:text-3xl text-primary">

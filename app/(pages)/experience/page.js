@@ -9,32 +9,17 @@ export default function Experience() {
     margin: "0px 0px -50% 0px",
   });
 
-  const motionContent = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.3, ease: "easeOut" },
-    },
-  };
-
   const motionItem = {
     hidden: { opacity: 0, y: 50 },
     visible: (customDelay = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.9, delay: 0.3 * customDelay, ease: "easeOut" },
+      transition: { duration: 0.6, delay: 0.3 * customDelay, ease: "easeOut" },
     }),
   };
 
   return (
-    <motion.div
-      className="min-h-screen content-center text-primary"
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={motionContent}
-    >
+    <div className="min-h-screen content-center text-primary" ref={ref}>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical gap-2 md:gap-0 col-span-6 md:scale-90">
         {experience.map((exp, i) => (
           <li key={i}>
@@ -62,9 +47,7 @@ export default function Experience() {
                 variants={motionItem}
                 custom={i}
               >
-                <time className="font-mono italic">
-                  {exp.time}
-                </time>
+                <time className="font-mono italic">{exp.time}</time>
                 <h3 className="font-bold">{exp.job}</h3>
                 <h4 className="mb-2 opacity-60">{exp.place}</h4>
                 <p className="text-base-content">{exp.job_description}</p>
@@ -74,6 +57,6 @@ export default function Experience() {
           </li>
         ))}
       </ul>
-    </motion.div>
+    </div>
   );
 }

@@ -15,7 +15,7 @@ export default function Certificate() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.9, ease: "easeOut" },
     },
   };
 
@@ -27,19 +27,23 @@ export default function Certificate() {
   };
 
   return (
-    <motion.div
-      className="lg:min-h-screen grid place-content-center"
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={motionContent}
-    >
-      <div className="sm:hidden">
+    <div className="lg:min-h-screen grid place-content-center" ref={ref}>
+      <motion.div
+        className="sm:hidden"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={motionContent}
+      >
         <Carousel baseWidth={300} {...propsCarousel} />
-      </div>
-      <div className="hidden sm:block">
+      </motion.div>
+      <motion.div
+        className="hidden sm:block"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={motionContent}
+      >
         <Carousel baseWidth={600} {...propsCarousel} />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

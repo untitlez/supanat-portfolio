@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Skills() {
   return (
     <div className="overflow-hidden h-[50vh] space-y-8 content-center">
-      <div className="animate-flow flex gap-4 w-max">
+      <div className="animate-flow flex gap-4 lg:gap-8 w-max">
         {[...skills.technical, ...skills.technical].map((item, i) => (
           <div
             key={i}
@@ -18,7 +18,7 @@ export default function Skills() {
           </div>
         ))}
       </div>
-      <div className="animate-flow-reverse flex gap-4 w-max">
+      <div className="animate-flow-reverse flex gap-4 lg:gap-8 w-max">
         {[...skills.tools, ...skills.tools].map((item, i) => (
           <div
             key={i}

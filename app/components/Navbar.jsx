@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useScrollInView } from "../lib/hook/useScrollInView";
+import Image from "next/image";
 
 const pages = ["about", "projects", "certificate", "experience", "education"];
 
@@ -53,11 +54,11 @@ export default function Navbar() {
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content z-10 mt-3 p- rounded-xl shadow-xl bg-base-100"
+          className="menu dropdown-content z-20 mt-2 gap-1 rounded-xl shadow-xl bg-base-100/90"
         >
           {pages.map((page, i) => (
             <li key={i} onClick={() => scrollTo(page)}>
-              <button className="uppercase font-semibold">{page}</button>
+              <button className="uppercase">{page}</button>
             </li>
           ))}
         </ul>
@@ -68,8 +69,10 @@ export default function Navbar() {
         onClick={toggleTheme}
         className="px-3 gap-1 lg:gap-2 cursor-pointer animate"
       >
-        <img
-          className="w-10 h-10 spin"
+        <Image
+          width={40}
+          height={40}
+          className="spin"
           src="/favicon/clover.png"
           alt="Logo Page"
         />

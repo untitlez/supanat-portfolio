@@ -67,26 +67,14 @@ body {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-40%);
-  }
-}
-
-@media (max-width: 768px) {
-  .animate-flow {
-    animation-duration: 20s;
-  }
-}
-
-@media (max-width: 480px) {
-  .animate-flow {
-    animation-duration: 7s;
+    transform: translateX(-30%);
   }
 }
 
 .animate-flow {
-  animation: animate-flow 30s linear infinite;
+  animation: animate-flow 20s linear infinite;
 }
 
 .animate-flow-reverse {
-  animation: animate-flow 30s linear infinite reverse;
+  animation: animate-flow 20s linear infinite reverse;
 }

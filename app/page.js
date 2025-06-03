@@ -22,10 +22,7 @@ export default function Home() {
       <section id="skills" className="w-full z-10">
         <Skills />
       </section>
-      <section
-        id="projects"
-        className="w-full px-4 lg:my-40 z-10"
-      >
+      <section id="projects" className="w-full px-4 lg:my-40 z-10">
         <Projects />
       </section>
       <section id="certificate" className="w-full max-w-screen-2xl px-4 z-10">
