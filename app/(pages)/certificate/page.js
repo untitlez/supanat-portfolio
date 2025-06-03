@@ -30,17 +30,17 @@ export default function Certificate() {
     <div className="lg:min-h-screen grid place-content-center" ref={ref}>
       <motion.div
         className="sm:hidden"
-        // initial="hidden"
-        // animate={isInView ? "visible" : "hidden"}
-        // variants={motionContent}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={motionContent}
       >
         <Carousel baseWidth={300} {...propsCarousel} />
       </motion.div>
       <motion.div
         className="hidden sm:block"
-        // initial="hidden"
-        // animate={isInView ? "visible" : "hidden"}
-        // variants={motionContent}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={motionContent}
       >
         <Carousel baseWidth={600} {...propsCarousel} />
       </motion.div>
