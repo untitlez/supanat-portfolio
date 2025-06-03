@@ -98,7 +98,7 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          className="flex flex-wrap gap-3 sm:items-center"
+          className="flex flex-col sm:flex-row gap-3 sm:items-center"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={motionItem}

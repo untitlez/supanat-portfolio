@@ -87,7 +87,7 @@ export const ProjectsData = [
     link: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=1028-2&t=8TXMCEq6EmJGXjQ5-1",
   },
   {
-    src: "cover_photo/koala_junior.jpg",
+    src: "/cover_photo/koala_junior.jpg",
     title: "Re-Design",
     icon: <FaFigma size={size} />,
     nameIcon: "Figma",
