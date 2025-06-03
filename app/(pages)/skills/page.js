@@ -6,10 +6,7 @@ export default function Skills() {
     <div className="overflow-hidden h-[50vh] space-y-8 content-center">
       <div className="animate-flow flex gap-4 lg:gap-8 w-max">
         {[...skills.technical, ...skills.technical].map((item, i) => (
-          <div
-            key={i}
-            className="btn btn-primary btn-sm sm:btn-md text-xs sm:text-base"
-          >
+          <div key={i} className="btn btn-primary text-base">
             {item.svg && (
               <Image src={item.svg} width={20} height={20} alt={item.name} />
             )}
@@ -20,10 +17,7 @@ export default function Skills() {
       </div>
       <div className="animate-flow-reverse flex gap-4 lg:gap-8 w-max">
         {[...skills.tools, ...skills.tools].map((item, i) => (
-          <div
-            key={i}
-            className="btn btn-primary btn-sm sm:btn-md text-xs sm:text-base"
-          >
+          <div key={i} className="btn btn-primary text-base">
             {item.svg && (
               <Image src={item.svg} width={20} height={20} alt={item.name} />
             )}

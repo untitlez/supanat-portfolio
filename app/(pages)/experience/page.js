@@ -9,18 +9,31 @@ export default function Experience() {
     margin: "0px 0px -50% 0px",
   });
 
+  const motionContent = {
+    hidden: { opacity: 0 },
+    visible: (customDelay = 0) => ({
+      opacity: 1,
+      transition: { duration: 0.3, delay: customDelay, ease: "easeOut" },
+    }),
+  };
+
   const motionItem = {
     hidden: { opacity: 0, y: 50 },
     visible: (customDelay = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, delay: 0.3 * customDelay, ease: "easeOut" },
+      transition: { duration: 0.9, delay: 0.6 * customDelay, ease: "easeOut" },
     }),
   };
 
   return (
     <div className="min-h-screen content-center text-primary" ref={ref}>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical gap-2 md:gap-0 col-span-6 md:scale-90">
+      <motion.ul
+        className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical gap-2 md:gap-0 col-span-6 md:scale-90"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={motionContent}
+      >
         {experience.map((exp, i) => (
           <li key={i}>
             <div className="timeline-middle md:mx-10">
@@ -56,7 +69,7 @@ export default function Experience() {
             <hr />
           </li>
         ))}
-      </ul>
+      </motion.ul>
     </div>
   );
 }

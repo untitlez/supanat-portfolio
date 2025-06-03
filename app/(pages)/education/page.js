@@ -12,11 +12,11 @@ export default function Education() {
 
   const motionContent = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
+    visible: (customDelay = 0) => ({
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+      transition: { duration: 0.6, delay: customDelay, ease: "easeOut" },
+    }),
   };
 
   const motionItem = {
@@ -24,14 +24,17 @@ export default function Education() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, delay: 0.3, ease: "easeOut" },
+      transition: { duration: 0.9, delay: 0.6, ease: "easeOut" },
     },
   };
 
   return (
-    <div
-      ref={ref}
+    <motion.div
       className="lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center gap-12 text-primary"
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={motionContent}
     >
       {education.map((study, i) => (
         <div
@@ -44,12 +47,13 @@ export default function Education() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={motionContent}
+            custom={0.6}
           >
             <Image
               src={study.src}
               alt="Institution Logo"
-              width={300}
-              height={300}
+              width={200}
+              height={200}
               className="object-contain"
             />
           </motion.figure>
@@ -67,6 +71,6 @@ export default function Education() {
           </motion.div>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }

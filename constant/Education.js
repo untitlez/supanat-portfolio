@@ -10,7 +10,7 @@ export const education = [
   {
     name: "DAMRONGRATSONGKROH SCHOOL",
     year: "2012",
-    major: "Computer Science (Chiang Rai)",
+    major: "Computer Science (Chiang Rai)",
     description:
       "Basic computer skill such as HTML, Ebook, Microsoft Office, Adobe Photoshop, Adobe Dreamweaver",
     src: "/logo/ds.webp",
