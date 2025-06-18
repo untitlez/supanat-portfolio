@@ -3,13 +3,13 @@ export const certificate = [
     name: "Skooldio",
     course: "Intro to User Experience Design",
     src: "/certificate/skiooldio-ux.png",
-    link: "https://drive.google.com/file/d/1JHPjzT2qOy4_p9k0mdrKKoFED2APk_7W/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1VxGgHhE2hzkckt08JpJ48Y3PeuSet0g6/view",
   },
   {
     name: "Skooldio",
     course: "UI Fundamentals",
     src: "/certificate/skiooldio-ui.png",
-    link: "https://drive.google.com/file/d/1nSM5l17htmYBUsL3Av8CTCYJp1rUYTYh/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1FyC4LN7cV_tuQ_NITOceigykR-PHO5oB/view",
   },
   {
     name: "Coursera",
@@ -27,6 +27,6 @@ export const certificate = [
     name: "Udemy",
     course: "The Complete Full-Stack Web Development",
     src: "/certificate/udemy-fullstack.png",
-    link: "https://drive.google.com/file/d/1Ol7tcnVbOlaKGC_WlG1HhT5OmPJ1bddG/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1TOAeIx_m6Df1-2616dIUw3fAGHC4_wNx/view",
   },
 ];
