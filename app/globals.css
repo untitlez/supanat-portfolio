@@ -72,9 +72,9 @@ body {
 }
 
 .animate-flow {
-  animation: animate-flow 20s ease-in-out infinite;
+  animation: animate-flow 20s linear infinite;
 }
 
 .animate-flow-reverse {
-  animation: animate-flow 20s ease-in-out infinite reverse;
+  animation: animate-flow 20s linear infinite reverse;
 }

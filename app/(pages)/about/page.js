@@ -4,10 +4,25 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 import { useScrollInView } from "@/app/lib/hook/useScrollInView";
-import { hobby, imageProfile } from "@/constant/AboutMe";
+import { StackImage } from "@/components/StackImage";
+import RotatingText from "@/components/RotatingText";
 
-import { StackImage } from "@/app/components/StackImage";
-import RotatingText from "@/app/components/RotatingText";
+const imageProfile = [
+  {
+    id: 1,
+    img: "/profile2.jpg",
+  },
+  {
+    id: 2,
+    img: "/profile.jpg",
+  },
+];
+
+const hobby = [
+  "Podcasts : Business, Economics",
+  "Running half marathon",
+  "Gym",
+];
 
 export default function About() {
   const { ref, isInView } = useScrollInView();
@@ -93,7 +108,7 @@ export default function About() {
         >
           <h3>About Me</h3>
           <p className="opacity-75 text-justify">
-            I'm interested in working as a Frontend Developer. Currently, I keep
+            I'm interested in working as a Web Developer. Currently, I keep
             improving my skills and practice myself. If there were experts
             willing to guide or mentor me, I would be extremely grateful.
           </p>

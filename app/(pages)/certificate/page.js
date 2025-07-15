@@ -1,49 +1,98 @@
 "use client";
 
-import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
-import { useScrollInView } from "@/app/lib/hook/useScrollInView";
-import { certificate } from "@/constant/Certificate";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-import Carousel from "@/app/components/Carousel";
+const certificate = [
+  {
+    name: "Skooldio",
+    course: "Intro to User Experience Design",
+    src: "/certificate/skiooldio-ux.png",
+    link: "https://drive.google.com/file/d/1VxGgHhE2hzkckt08JpJ48Y3PeuSet0g6/view",
+  },
+  {
+    name: "Skooldio",
+    course: "UI Fundamentals",
+    src: "/certificate/skiooldio-ui.png",
+    link: "https://drive.google.com/file/d/1FyC4LN7cV_tuQ_NITOceigykR-PHO5oB/view",
+  },
+  {
+    name: "Coursera",
+    course: "Meta Front-End Developer",
+    src: "/certificate/meta-frontend.png",
+    link: "https://drive.google.com/file/d/10Yn_g7PJhT4UfYPUe0VOpOFk2_9Hg4YF/view",
+  },
+  {
+    name: "Coursera",
+    course: "Microsoft Front-End Developer",
+    src: "/certificate/microsoft-frontend.png",
+    link: "https://drive.google.com/file/d/1VHAomSkhg1aGD8xwpt6QtyE7r5xOWUgj/view",
+  },
+  {
+    name: "Udemy",
+    course: "The Complete Full-Stack Web Development",
+    src: "/certificate/udemy-fullstack.png",
+    link: "https://drive.google.com/file/d/1TOAeIx_m6Df1-2616dIUw3fAGHC4_wNx/view",
+  },
+];
 
 export default function Certificate() {
-  const { ref, isInView } = useScrollInView({ margin: "0px 0px -50% 0px" });
+  const [count, setCount] = useState();
+  const [current, setCurrent] = useState(0);
 
-  const motionContent = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.9, ease: "easeOut" },
-    },
+  const handleChange = () => {
+    setCurrent(count.selectedScrollSnap() + 1);
+    count.on("select", () => {
+      setCurrent(count.selectedScrollSnap() + 1);
+    });
   };
 
-  const propsCarousel = {
-    items: certificate,
-    autoplay: true,
-    pauseOnHover: true,
-    loop: true,
-  };
+  useEffect(() => {
+    if (!count) return;
+    handleChange();
+  }, [count]);
 
   return (
-    <div className="lg:min-h-screen grid place-content-center" ref={ref}>
-      <motion.div
-        className="sm:hidden"
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={motionContent}
+    <div className="lg:min-h-screen grid place-items-center">
+      <Carousel
+        className="w-3/4 lg:w-full lg:max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50"
+        setApi={setCount}
       >
-        <Carousel baseWidth={300} {...propsCarousel} />
-      </motion.div>
-      <motion.div
-        className="hidden sm:block"
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={motionContent}
-      >
-        <Carousel baseWidth={600} {...propsCarousel} />
-      </motion.div>
+        <CarouselContent>
+          {certificate.map((item, index) => (
+            <CarouselItem key={index}>
+              <div className="aspect- flex flex-col justify-center items-center">
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  className="object-contain rounded-xl hover:cursor-grab active:cursor-grabbing"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="w-full mt-5 flex justify-center gap-2 relative">
+          {certificate.map((_, index) => (
+            <div
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index + 1 === current ? "bg-base-content" : "bg-base-content/30"
+              }`}
+            />
+          ))}
+        </div>
+        <div className="hidden sm:block">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
+      </Carousel>
     </div>
   );
 }

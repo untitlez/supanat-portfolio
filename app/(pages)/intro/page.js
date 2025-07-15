@@ -1,6 +1,6 @@
 import Image from "next/image";
-import AuroraBg from "@/app/components/AuroraBg";
-import DecryptedText from "@/app/components/DecryptedText";
+import AuroraBg from "@/components/AuroraBg";
+import DecryptedText from "@/components/DecryptedText";
 
 export default function Intro() {
   return (

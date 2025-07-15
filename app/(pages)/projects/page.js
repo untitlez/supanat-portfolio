@@ -1,49 +1,176 @@
-import { ProjectsData } from "@/constant/ProjectsData";
 import Image from "next/image";
+import { ClockFading, SquareArrowOutUpRight } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+const ProjectsData = [
+  {
+    src: "/cover_photo/lion.jpg",
+    title: "Hotel System",
+    icon: ClockFading,
+    label: "In Progress",
+    tools: [
+      "Next",
+      "Next Auth",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Route API",
+      "TypeScript",
+      "Zod",
+      "React",
+      "React Hook Form",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Axios",
+      "Theme",
+      "Responsive",
+    ],
+  },
+  {
+    src: "/cover_photo/cat.jpg",
+    title: "Admin",
+    icon: SquareArrowOutUpRight,
+    label: "Vercel",
+    tools: [
+      "Next",
+      "React",
+      "React Hook Form",
+      "CRUD",
+      "Mock API",
+      "Tailwind CSS",
+      "Daisy UI",
+      "Zustand",
+      "Axios",
+      "Theme",
+      "Responsive",
+    ],
+    link: "https://practice-website-projects.vercel.app/admin",
+  },
+  {
+    src: "/cover_photo/shiba.jpg",
+    title: "Coffee Shop",
+    icon: SquareArrowOutUpRight,
+    label: "Vercel",
+    tools: [
+      "Next",
+      "React",
+      "React Hook Form",
+      "Fetch API",
+      "Tailwind CSS",
+      "Daisy UI",
+      "Zustand",
+      "Axios",
+      "Theme",
+      "Responsive",
+    ],
+    link: "https://practice-website-projects.vercel.app/shop",
+  },
+  {
+    src: "/cover_photo/penguin.jpg",
+    title: "HR System",
+    icon: SquareArrowOutUpRight,
+    label: "Vercel",
+    tools: [
+      "Vite",
+      "React",
+      "Ant Design",
+      "Fetch API",
+      "Tailwind CSS",
+      "Zustand",
+      "Axios",
+      "Theme",
+      "Responsive",
+    ],
+    link: "https://hr-projects-lyart.vercel.app/",
+  },
+  {
+    src: "/cover_photo/dear.jpg",
+    title: "Find Your Cat",
+    icon: SquareArrowOutUpRight,
+    label: "View",
+    tools: ["Next", "React", "Tailwind CSS", "Daisy UI", "Responsive"],
+    link: "/projects/find-your-cat",
+  },
+  {
+    src: "/cover_photo/cow.jpg",
+    title: "To-Do-List",
+    icon: SquareArrowOutUpRight,
+    label: "View",
+    tools: ["Next", "React", "Tailwind CSS", "Daisy UI", "Responsive"],
+    link: "/projects/to-do-list",
+  },
+  {
+    src: "/cover_photo/koala.jpg",
+    title: "Wallet App",
+    icon: SquareArrowOutUpRight,
+    label: "Figma",
+    tools: ["Figma", "Responsive "],
+    link: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=1028-2&t=8TXMCEq6EmJGXjQ5-1",
+  },
+  {
+    src: "/cover_photo/koala_junior.jpg",
+    title: "Re-Design",
+    icon: SquareArrowOutUpRight,
+    label: "Figma",
+    tools: ["Figma", "Responsive "],
+    link: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=194-9&t=uSXl9qY1jnfq0c2m-1",
+  },
+];
 
 export default function Projects() {
   return (
-    <div className="lg:min-h-screen w-full overflow-x-auto snap-x snap-mandatory flex gap-4 pb-6 lg:gap-12 lg:grid lg:grid-cols-3">
-      {ProjectsData.map((data, i) => (
-        <div
+    <div className="lg:min-h-screen grid gap-4 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
+      {ProjectsData.map((item, i) => (
+        <Card
           key={i}
-          className="mockup-browser rounded-3x min-w-[90%] sm:min-w-min lg:min-w-0 snap-start flex flex-col justify-center
-            shadow-xl bg-base-100 border border-base-content/50 lg:hover:scale-105 animate"
+          className="grid bg-base-100 border-base-content/50 rounded-3xl shadow-xl "
         >
-          <div className="mockup-browser-toolbar">
-            <h3 className="input text-center">{data.title}</h3>
-          </div>
-
-          <a
-            href={data.link}
-            target="_blank"
-            className="px-3 sm:px-6 brightness-95 animate"
-          >
-            <img
-              src={data.src}
-              alt="cover photo"
-              className="aspect-[3/2] rounded-xl object-cover"
-            />
-          </a>
-
-          <div className="flex flex-col flex-1 justify-between gap-3 sm:gap-6 m-3 sm:m-6">
-            <ul className="flex flex-wrap items-center my-2 gap-2">
-              {data.tools.map((tool, i) => (
-                <li key={i} className="btn btn-outline btn-xs cursor-default">
+          <CardHeader>
+            <CardTitle>
+              <div className="mb-2 btn btn-block pointer-events-none">
+                <h3>{item.title}</h3>
+              </div>
+            </CardTitle>
+            <CardDescription>
+              <a href={item.link} target="_blank">
+                <div className="relative w-full aspect-video">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    className="object-cover rounded-xl shadow-md hover:scale-95 transition duration-500"
+                    sizes="30vw"
+                    fill
+                  />
+                </div>
+              </a>
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2">
+              {item.tools.map((tool, i) => (
+                <div key={i} className="btn btn-xs btn-outline cursor-default">
                   {tool}
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
+          </CardContent>
+          <CardFooter>
             <a
-              href={data.link}
+              href={item.link}
               target="_blank"
-              className="btn btn-primary btn-sm sm:btn-md sm:text-base"
+              className="btn btn-block btn-primary"
             >
-              {data.icon}
-              {data.nameIcon}
+              {item.label}
+              <item.icon className="size-5" />
             </a>
-          </div>
-        </div>
+          </CardFooter>
+        </Card>
       ))}
     </div>
   );

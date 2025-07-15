@@ -1,39 +1,42 @@
-"use client";
+const experience = [
+  {
+    job: "BARISTA",
+    time: "DEC 2020 - JUL 2024 (3 years 8 months)",
+    place: "Doi Chaang Coffee (Chiang Mai international Airport)",
+    job_description:
+      "Preparing and serving meals and drinks / Cleaning work area, coffee machine and equipment / Describe menu items and suggest products to customers / Cashier duties / Inventory duties",
+    position: "timeline-start md:text-end",
+  },
 
-import { motion } from "motion/react";
-import { useScrollInView } from "@/app/lib/hook/useScrollInView";
-import { experience } from "@/constant/Experience";
+  {
+    job: "PURCHASING",
+    time: "JAN 2019 - OCT 2020 (1 years 10 months)",
+    place: "AnLao Lao Restaurant (Chiang Rai)",
+    job_description:
+      "Purchase and provision of goods and ingredient / Customer service / Take orders and serving foods and beverages / Assisting in the bar making cocktails, mixed drinks, wine and beer / ",
+    position: "timeline-end",
+  },
+
+  {
+    job: "PART TIME",
+    time: "2014 - 2017 (3 Years)",
+    place: "SF Cinema City (Promenada Chiang Mai)",
+    job_description: "Operation, Coordinate, services",
+    position: "timeline-start md:text-end",
+  },
+  {
+    job: "PART TIME",
+    time: "2014 (6 months)",
+    place: "The Pizza Company (Chiang Mai)",
+    job_description: "Driver, Made to order, Cleaning",
+    position: "timeline-end",
+  },
+];
 
 export default function Experience() {
-  const { ref, isInView } = useScrollInView({
-    margin: "0px 0px -50% 0px",
-  });
-
-  const motionContent = {
-    hidden: { opacity: 0 },
-    visible: (customDelay = 0) => ({
-      opacity: 1,
-      transition: { duration: 0.3, delay: customDelay, ease: "easeOut" },
-    }),
-  };
-
-  const motionItem = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (customDelay = 0) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.9, delay: 0.6 * customDelay, ease: "easeOut" },
-    }),
-  };
-
   return (
-    <div className="min-h-screen content-center text-primary" ref={ref}>
-      <motion.ul
-        className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical gap-2 md:gap-0 col-span-6 md:scale-90"
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={motionContent}
-      >
+    <div className="min-h-screen content-center text-primary">
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical gap-2 md:gap-0 col-span-6 md:scale-90">
         {experience.map((exp, i) => (
           <li key={i}>
             <div className="timeline-middle md:mx-10">
@@ -54,22 +57,17 @@ export default function Experience() {
               className={`md:bg-base-100 py-4 md:p-8 rounded-3xl border-base-content/50 md:border md:shadow-xl 
                 lg:hover:shadow-2xl animate ${exp.position}`}
             >
-              <motion.div
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={motionItem}
-                custom={i}
-              >
+              <div>
                 <time className="font-mono italic">{exp.time}</time>
                 <h3 className="font-bold">{exp.job}</h3>
-                <h4 className="mb-2 opacity-60">{exp.place}</h4>
+                <h4 className="mb-2 text-base-content/80">{exp.place}</h4>
                 <p className="text-base-content">{exp.job_description}</p>
-              </motion.div>
+              </div>
             </div>
             <hr />
           </li>
         ))}
-      </motion.ul>
+      </ul>
     </div>
   );
 }

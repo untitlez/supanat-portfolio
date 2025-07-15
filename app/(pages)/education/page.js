@@ -1,76 +1,54 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "motion/react";
-import { useScrollInView } from "@/app/lib/hook/useScrollInView";
-import { education } from "@/constant/Education";
+
+const education = [
+  {
+    name: "PAYAP UNIVERSITY",
+    year: "2016",
+    major: "Bachelor of Business Administration : Human Resource Management",
+    description:
+      "Recruitment and selection, Human resource development, Employee relations, Performance appraisal, Managing diversity",
+    src: "/logo/pyu.webp",
+  },
+  {
+    name: "DAMRONGRATSONGKROH SCHOOL",
+    year: "2012",
+    major: "Computer Science (Chiang Rai)",
+    description:
+      "Basic computer skill such as HTML, Ebook, Microsoft Office, Adobe Photoshop, Adobe Dreamweaver",
+    src: "/logo/ds.webp",
+  },
+];
 
 export default function Education() {
-  const { ref, isInView } = useScrollInView({
-    margin: "0px 0px -50% 0px",
-  });
-
-  const motionContent = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: (customDelay = 0) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.6, delay: customDelay, ease: "easeOut" },
-    }),
-  };
-
-  const motionItem = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.9, delay: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
-    <motion.div
-      className="lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center gap-12 text-primary"
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={motionContent}
-    >
+    <div className="lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center gap-12 text-primary">
       {education.map((study, i) => (
         <div
           className="max-w-screen-sm grid gap-4 bg-base-100 p-8 rounded-3xl border border-base-content/50 
           shadow-xl lg:hover:shadow-2xl animate"
           key={i}
         >
-          <motion.figure
-            className="flex justify-center"
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={motionContent}
-            custom={0.6}
-          >
-            <Image
-              src={study.src}
-              alt="Institution Logo"
-              width={200}
-              height={200}
-              className="object-contain"
-            />
-          </motion.figure>
-          <motion.div
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={motionItem}
-          >
+          <figure className="flex justify-center">
+            <div className="relative w-full aspect-video">
+              <Image
+                src={study.src}
+                alt="Institution Logo"
+                className="object-contain"
+                sizes="50vw"
+                fill
+              />
+            </div>
+          </figure>
+          <div>
             <div className="flex flex-wrap-reverse justify-between items-center gap-4">
               <h3>{study.name}</h3>
               <p className="badge badge-primary">{study.year}</p>
             </div>
-            <h4 className="mb-2 opacity-60">{study.major}</h4>
+            <h4 className="mb-2 text-base-content/80">{study.major}</h4>
             <p className="text-base-content">{study.description}</p>
-          </motion.div>
+          </div>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 }

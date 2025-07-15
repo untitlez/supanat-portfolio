@@ -6,9 +6,9 @@ import Certificate from "./(pages)/certificate/page";
 import Experience from "./(pages)/experience/page";
 import Education from "./(pages)/education/page";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { GradientBg } from "./components/GradientBg";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { GradientBg } from "../components/GradientBg";
 
 export default function Home() {
   return (
@@ -22,10 +22,10 @@ export default function Home() {
       <section id="skills" className="w-full z-10">
         <Skills />
       </section>
-      <section id="projects" className="w-full px-4 lg:my-40 z-10">
+      <section id="projects" className="max-w-screen-2xl px-4 lg:my-40 z-10">
         <Projects />
       </section>
-      <section id="certificate" className="w-full max-w-screen-2xl px-4 z-10">
+      <section id="certificate" className="max-w-screen-2xl px-4 z-10">
         <Certificate />
       </section>
       <section id="experience" className="max-w-screen-2xl mx-4 z-10">
