@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useScrollInView } from "../app/lib/hook/useScrollInView";
+import { useScrollInView } from "../lib/useScrollInView";
 import Image from "next/image";
 
 const pages = ["about", "projects", "certificate", "experience", "education"];

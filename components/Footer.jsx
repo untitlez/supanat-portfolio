@@ -5,7 +5,6 @@ import {
   Instagram,
   MapPin,
   Phone,
-  User2,
   UserCircle,
 } from "lucide-react";
 import Image from "next/image";
@@ -54,21 +53,21 @@ export default function Footer() {
         <aside className="flex flex-col items-center gap-4">
           <div className="relative w-full aspect-square">
             <Image
-              src="/favicon/clover.png"
+              src="/favicon/clover.webp"
               alt="Logo Page"
               className="object-contain spin"
-              sizes="50vw"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               fill
             />
           </div>
           <div>
             <h3>SUPANAT CHAISRI</h3>
-            <h4>Frontend Developer</h4>
+            <h4>Web Developer</h4>
           </div>
         </aside>
         <nav className="flex flex-col justify-center items-center gap-8 h-full">
           <h3 className="">CONTACT ME</h3>
-          <div className="flex flex-wrap gap-4 lg:gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {contactMe.map((item, i) => (
               <a
                 key={i}

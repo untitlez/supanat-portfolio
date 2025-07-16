@@ -62,7 +62,7 @@ export default function Certificate() {
   return (
     <div className="lg:min-h-screen grid place-items-center">
       <Carousel
-        className="w-3/4 lg:w-full lg:max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50"
+        className="sm:w-3/4 lg:w-full lg:max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50"
         setApi={setCount}
       >
         <CarouselContent>

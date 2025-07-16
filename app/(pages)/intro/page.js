@@ -23,13 +23,13 @@ export default function Intro() {
           <h2>
             <DecryptedText
               animateOn="view"
-              text="Frontend Developer"
+              text="Web Developer"
               sequential={true}
             />
           </h2>
         </div>
 
-        <p className="text-lg text-base-content/60">
+        <p className="text-lg text-base-content/90">
           <DecryptedText
             animateOn="view"
             text="Progress through practice and preparing for the next opportunity."
@@ -37,13 +37,13 @@ export default function Intro() {
           />
         </p>
       </div>
-      <figure className="grid place-content-center z-50">
+      <figure className="relative aspect-square h-[50vh] z-50">
         <Image
-          src="/3D.png"
+          src="/3D.webp"
           alt="Image Cover"
-          width={400}
-          height={400}
           className="spin"
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          fill
         />
       </figure>
     </section>

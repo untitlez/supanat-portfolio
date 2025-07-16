@@ -60,7 +60,7 @@ export default function Experience() {
               <div>
                 <time className="font-mono italic">{exp.time}</time>
                 <h3 className="font-bold">{exp.job}</h3>
-                <h4 className="mb-2 text-base-content/80">{exp.place}</h4>
+                <h4 className="mb-2">{exp.place}</h4>
                 <p className="text-base-content">{exp.job_description}</p>
               </div>
             </div>

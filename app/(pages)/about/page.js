@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
-import { useScrollInView } from "@/app/lib/hook/useScrollInView";
+import { useScrollInView } from "@/lib/useScrollInView";
 import { StackImage } from "@/components/StackImage";
 import RotatingText from "@/components/RotatingText";
 
