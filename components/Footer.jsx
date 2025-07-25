@@ -61,8 +61,8 @@ export default function Footer() {
             />
           </div>
           <div>
-            <h3>SUPANAT CHAISRI</h3>
-            <h4>Web Developer</h4>
+            <h3 className="text-base-content">SUPANAT CHAISRI</h3>
+            <h4 className="text-base-content/75">Web Developer</h4>
           </div>
         </aside>
         <nav className="flex flex-col justify-center items-center gap-8 h-full">

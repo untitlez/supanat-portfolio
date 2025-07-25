@@ -46,7 +46,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="overflow-hidden h-[50vh] flex flex-col justify-center gap">
+    <div className="overflow-hidden sm:h-[50vh] flex flex-col justify-center gap">
       {skills.map((skill, index) => (
         <div
           key={index}
@@ -57,9 +57,12 @@ export default function Skills() {
               {skill.head}
             </h2>
           </div>
-          <div className="inline-flex gap-6">
+          <div className="inline-flex flex-wrap justify-center gap-3 lg:gap-6">
             {skill.items.map((item, i) => (
-              <div key={i} className="btn btn-primary text-base">
+              <div
+                key={i}
+                className="btn btn-primary btn-sm text-sm lg:btn-md lg:text-base"
+              >
                 <img src={item.icon} alt={item.name} className="size-4" />
                 {item.name}
               </div>
