@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useScrollInView } from "../lib/useScrollInView";
-import Image from "next/image";
 
 const pages = ["about", "projects", "certificate", "experience", "education"];
 
@@ -73,7 +73,7 @@ export default function Navbar() {
           width={40}
           height={40}
           className="spin"
-          src="/favicon/clover.png"
+          src="/favicon/clover.webp"
           alt="Logo Page"
         />
         <div className="">

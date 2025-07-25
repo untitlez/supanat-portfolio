@@ -9,13 +9,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 @layer base {
@@ -60,45 +54,4 @@ body {
 }
 .spin {
   animation: spin 11s linear infinite;
-}
-
-/*
-*/
-
-@keyframes animate-flow {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes animate-flow-reverse {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@media (max-width: 768px) {
-  .animate-flow {
-    animation: animate-flow 10s linear infinite alternate-reverse;
-  }
-
-  .animate-flow-reverse {
-    animation: animate-flow-reverse 10s linear infinite alternate-reverse;
-  }
-}
-
-@media (min-width: 769px) {
-  .animate-flow {
-    animation: animate-flow 30s linear infinite alternate-reverse;
-  }
-
-  .animate-flow-reverse {
-    animation: animate-flow-reverse 30s linear infinite alternate-reverse;
-  }
 }

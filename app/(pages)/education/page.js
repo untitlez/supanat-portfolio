@@ -27,12 +27,13 @@ export default function Education() {
           key={i}
           className="max-w-screen-sm grid gap-4 bg-base-100 p-8 rounded-3xl border border-base-content/50 shadow-xl lg:hover:shadow-2xl"
         >
-          <figure className="relative  aspect-video overflow-hidden">
+          <figure className="relative w-full aspect-video overflow-hidden">
             <Image
               src={study.src}
               alt="Institution Logo"
               className="object-contain"
-              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              sizes="50vw"
+              priority
               fill
             />
           </figure>

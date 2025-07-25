@@ -51,12 +51,12 @@ export default function Footer() {
     <footer className="w-full">
       <div className="footer sm:footer-horizontal bg-base-300 text-primary justify-items-center gap-20 px-4 lg:px-10 py-20">
         <aside className="flex flex-col items-center gap-4">
-          <div className="relative w-full aspect-square">
+          <div className="relative w-full size-24 aspect-square">
             <Image
               src="/favicon/clover.webp"
               alt="Logo Page"
-              className="object-contain spin"
-              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              className="object-contain"
+              sizes="50vw"
               fill
             />
           </div>
@@ -84,8 +84,8 @@ export default function Footer() {
       </div>
       <aside className="footer footer-center p-2 bg-base-200">
         <p>
-          Copyright © {new Date().getFullYear()} - All right reserved by
-          Supanat Chaisri
+          Copyright © {new Date().getFullYear()} - All right reserved by Supanat
+          Chaisri
         </p>
       </aside>
     </footer>

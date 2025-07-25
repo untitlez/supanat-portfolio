@@ -1,6 +1,7 @@
 import Image from "next/image";
 import AuroraBg from "@/components/AuroraBg";
 import DecryptedText from "@/components/DecryptedText";
+import { ButtonLink } from "@/components/ButtonLink";
 
 export default function Intro() {
   return (
@@ -29,20 +30,14 @@ export default function Intro() {
           </h2>
         </div>
 
-        <p className="text-lg text-base-content/90">
-          <DecryptedText
-            animateOn="view"
-            text="Progress through practice and preparing for the next opportunity."
-            maxIterations={40}
-          />
-        </p>
+        <ButtonLink />
       </div>
       <figure className="relative aspect-square h-[50vh] z-50">
         <Image
           src="/3D.webp"
           alt="Image Cover"
           className="spin"
-          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          sizes="100vw"
           fill
         />
       </figure>

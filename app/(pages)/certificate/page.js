@@ -88,7 +88,7 @@ export default function Certificate() {
             />
           ))}
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden sm:block text-primary">
           <CarouselPrevious />
           <CarouselNext />
         </div>
