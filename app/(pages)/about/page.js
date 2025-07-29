@@ -107,10 +107,12 @@ export default function About() {
           custom={customDelays + 0.6}
         >
           <h3>About Me</h3>
-          <p className="opacity-75 text-justify">
-            I'm interested in working as a Web Developer. Currently, I keep
-            improving my skills and practice myself. If there were experts
-            willing to guide or mentor me, I would be extremely grateful.
+          <p className="opacity-75 text-balance text-justify">
+            I'm a passionate learner on the path to becoming a Fullstack
+            Developer. I began with UX/UI and frontend development, and now I'm
+            actively building my backend skills. I enjoy working on mini
+            projects to practice and continuously improve. I'm always eager to
+            grow and contribute.
           </p>
         </motion.div>
 

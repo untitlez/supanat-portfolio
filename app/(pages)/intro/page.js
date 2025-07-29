@@ -11,8 +11,8 @@ export default function Intro() {
         <AuroraBg />
       </div>
       {/* Content  */}
-      <div className="space-y-12 max-w-md z-50">
-        <div className="space-y-3 ">
+      <div className="space-y-16 max-w-md z-50">
+        <div className="space-y-3">
           <h1 className="w-2/3">
             <DecryptedText
               animateOn="view"
@@ -24,7 +24,7 @@ export default function Intro() {
           <h2>
             <DecryptedText
               animateOn="view"
-              text="Web Developer"
+              text="Frontend Developer"
               sequential={true}
             />
           </h2>
