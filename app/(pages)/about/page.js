@@ -72,7 +72,7 @@ export default function About() {
       </motion.div>
 
       <motion.div
-        className="w-full max-w-screen-sm space-y-12 px-6 sm:px-8 py-12 rounded-3xl bg-base-100 border border-base-content/50"
+        className="w-full max-w-screen-sm space-y-12 px-6 sm:px-8 py-12 shadow-xl rounded-3xl bg-base-100 border border-base-content/50"
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

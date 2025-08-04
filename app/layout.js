@@ -11,9 +11,9 @@ export const metadata = {
   title: "SUPANAT - Portfolio",
   description: "My Portfolio",
   icons: {
-    icon: "/favicon/clover.png",
-    apple: "/favicon/clover.png",
-    shortcut: "/favicon/clover.png",
+    icon: "/favicon/clover.webp",
+    apple: "/favicon/clover.webp",
+    shortcut: "/favicon/clover.webp",
   },
 };
 

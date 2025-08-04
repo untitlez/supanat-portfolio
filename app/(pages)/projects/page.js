@@ -36,10 +36,9 @@ const ProjectsData = [
         href: "https://github.com/untitlez/Hotel-System",
       },
       {
-        label: "In Progress",
-        icon: ClockFading,
-        href: "",
-        className: "btn-outline pointer-events-none",
+        label: "Vercel",
+        icon: Link,
+        href: "https://hotel-system-5euhptsyp-untitlezs-projects.vercel.app",
       },
     ],
   },

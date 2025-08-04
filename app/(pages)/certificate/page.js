@@ -62,7 +62,7 @@ export default function Certificate() {
   return (
     <div className="lg:min-h-screen grid place-items-center">
       <Carousel
-        className="sm:w-3/4 lg:w-full lg:max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50"
+        className="sm:w-3/4 lg:w-full lg:max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50 shadow-xl"
         setApi={setCount}
       >
         <CarouselContent>
@@ -72,7 +72,7 @@ export default function Certificate() {
                 <img
                   src={item.src}
                   alt={item.name}
-                  className="object-contain rounded-xl hover:cursor-grab active:cursor-grabbing"
+                  className="object-contain rounded-xl hover:cursor-grab active:cursor-grabbing shadow-md"
                 />
               </div>
             </CarouselItem>
@@ -88,9 +88,9 @@ export default function Certificate() {
             />
           ))}
         </div>
-        <div className="hidden sm:block text-primary">
-          <CarouselPrevious />
-          <CarouselNext />
+        <div className="hidden sm:block">
+          <CarouselPrevious className="border border-base-content" />
+          <CarouselNext className="border border-base-content" />
         </div>
       </Carousel>
     </div>
