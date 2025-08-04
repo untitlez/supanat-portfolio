@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ClockFading, Link, Figma, Github } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Card,
   CardContent,
@@ -36,11 +37,13 @@ const ProjectsData = [
         href: "https://github.com/untitlez/Hotel-System",
       },
       {
-        label: "Vercel",
-        icon: Link,
+        label: "In Progress",
+        icon: ClockFading,
         href: "https://hotel-system-5euhptsyp-untitlezs-projects.vercel.app",
+        className: "btn-outline pointer-events-none",
       },
     ],
+    fullstack: {},
   },
   {
     src: "/cover_photo/cat.jpg",
@@ -170,7 +173,7 @@ export default function Projects() {
       {ProjectsData.map((item, i) => (
         <Card
           key={i}
-          className="grid bg-base-100 border-base-content/50 rounded-3xl shadow-xl lg:hover:scale-105 transition duration-500"
+          className="grid bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/30 animate group"
         >
           <CardHeader>
             <CardTitle>
@@ -179,12 +182,13 @@ export default function Projects() {
               </div>
             </CardTitle>
             <CardDescription>
-              <div className="relative w-full aspect-video">
-                <div className="absolute inset-0 bg-base-300 animate-pulse rounded-xl" />
+              <div className="relative aspect-video overflow-hidden rounded-xl">
+                <Skeleton className="absolute inset-0 rounded-xl" />
                 <Image
                   src={item.src}
                   alt={item.title}
-                  className="object-cover rounded-xl shadow-md"
+                  className="object-cover shadow-md
+                  group-hover:scale-105 animate delay-100"
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   fill
                 />
