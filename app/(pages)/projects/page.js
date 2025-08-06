@@ -37,10 +37,9 @@ const ProjectsData = [
         href: "https://github.com/untitlez/Hotel-System",
       },
       {
-        label: "In Progress",
-        icon: ClockFading,
-        href: "https://hotel-system-5euhptsyp-untitlezs-projects.vercel.app",
-        className: "btn-outline pointer-events-none",
+        label: "Vercel",
+        icon: Link,
+        href: "https://hotel-system-ecru.vercel.app",
       },
     ],
     fullstack: {},
@@ -213,7 +212,7 @@ export default function Projects() {
                 key={i}
                 href={link.href}
                 target="_blank"
-                className={`btn flex-1 btn-primary ${link.className}`}
+                className="btn flex-1 btn-primary"
               >
                 <link.icon className="size-5" />
                 {link.label}
