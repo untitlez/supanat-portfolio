@@ -6,35 +6,54 @@ import Certificate from "./(pages)/certificate/page";
 import Experience from "./(pages)/experience/page";
 import Education from "./(pages)/education/page";
 
+import { fieldItems } from "@/lib/constant";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { GradientBg } from "../components/GradientBg";
+import AuroraBg from "@/components/AuroraBg";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-24 lg:gap-0 lg:my-0 bg-base-200">
-      <GradientBg />
-      <Intro />
-      <Navbar />
-      <section id="about" className="max-w-screen-2xl mx-4 z-10">
-        <About />
-      </section>
-      <section id="skills" className="w-full z-10">
-        <Skills />
-      </section>
-      <section id="projects" className="max-w-screen-2xl px-4 lg:my-40 z-10">
-        <Projects />
-      </section>
-      <section id="certificate" className="max-w-screen-2xl px-4 z-10">
-        <Certificate />
-      </section>
-      <section id="experience" className="max-w-screen-2xl mx-4 z-10">
-        <Experience />
-      </section>
-      <section id="education" className="max-w-screen-2xl mx-4 z-10">
-        <Education />
-      </section>
-      <Footer />
+    <main className="h-screen overflow-hidden grid bg-gradient">
+      <AuroraBg />
+      <div className="overflow-y-scroll flex flex-col items-center gap-24 lg:gap-0 lg:my-0  z-0">
+        <Intro />
+        <Navbar />
+        <section
+          id={fieldItems.page.about.id}
+          className="max-w-screen-2xl mx-4 z-10"
+        >
+          <About />
+        </section>
+        <section id={fieldItems.page.skills.id} className="w-full z-10">
+          <Skills />
+        </section>
+        <section
+          id={fieldItems.page.projects.id}
+          className="max-w-screen-2xl px-4 lg:my-40 z-10"
+        >
+          <Projects />
+        </section>
+        <section
+          id={fieldItems.page.certificate.id}
+          className="max-w-screen-2xl px-4 z-10"
+        >
+          <Certificate />
+        </section>
+        <section
+          id={fieldItems.page.experience.id}
+          className="max-w-screen-2xl mx-4 z-10"
+        >
+          <Experience />
+        </section>
+        <section
+          id={fieldItems.page.education.id}
+          className="max-w-screen-2xl mx-4 z-10"
+        >
+          <Education />
+        </section>
+        <Footer />
+      </div>
     </main>
   );
 }

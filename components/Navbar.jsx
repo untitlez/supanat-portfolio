@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="navbar justify-between px-1 lg:px-4 sticky top-0 z-20 text-primary backdrop-blur-md"
+      className="navbar justify-between px-1 lg:px-4 sticky top-0 z-50 text-primary backdrop-blur-md"
       ref={ref}
       initial={{ opacity: 0, y: -20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}

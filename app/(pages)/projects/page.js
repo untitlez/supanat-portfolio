@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ClockFading, Link, Figma, Github } from "lucide-react";
+import { ClockFading, Link, Figma, Github, Eye } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   Card,
@@ -9,141 +9,117 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import HotelSystemPage from "./hotel-system/page";
 
 const ProjectsData = [
   {
     src: "/cover_photo/lion.jpg",
     title: "Hotel System",
+    description: "",
     tools: [
-      "Next",
-      "Next Auth",
-      "Prisma ORM",
-      "PostgreSQL",
-      "Route API",
-      "TypeScript",
-      "Zod",
-      "React",
-      "React Hook Form",
-      "Shadcn UI",
-      "Tailwind CSS",
-      "Axios",
-      "Theme",
-      "Responsive",
+      { label: "Next", icon: "/icon/nextjs.svg" },
+      { label: "Next Auth", icon: "/icon/" },
+      { label: "Prisma ORM", icon: "/icon/Prisma.svg" },
+      { label: "PostgreSQL", icon: "/icon/" },
+      { label: "Route API", icon: "/icon/" },
+      { label: "TypeScript", icon: "/icon/TypeScript.svg" },
+      { label: "Zod", icon: "/icon/" },
+      { label: "React", icon: "/icon/" },
+      { label: "React Hook Form", icon: "/icon/" },
+      { label: "Shadcn UI", icon: "/icon/" },
+      { label: "Tailwind CSS", icon: "/icon/" },
+      { label: "Axios", icon: "/icon/" },
+      { label: "Theme", icon: "/icon/" },
+      { label: "Responsive", icon: "/icon/" },
     ],
-    links: [
-      {
-        label: "GitHub",
-        icon: Github,
-        href: "https://github.com/untitlez/Hotel-System",
-      },
-      {
-        label: "Vercel",
-        icon: Link,
-        href: "https://hotel-system-ecru.vercel.app",
-      },
-    ],
-    fullstack: {},
   },
   {
     src: "/cover_photo/cat.jpg",
     title: "Admin",
     tools: [
-      "Next",
-      "React",
-      "React Hook Form",
-      "CRUD",
-      "Mock API",
-      "Tailwind CSS",
-      "Daisy UI",
-      "Zustand",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        icon: Github,
-        href: "https://github.com/untitlez/WebApp-Projects",
-      },
-      {
-        label: "Vercel",
-        icon: Link,
-        href: "https://practice-website-projects.vercel.app/admin",
-      },
+      { label: "Next", icon: "" },
+      { label: "React", icon: "" },
+      { label: "React Hook Form", icon: "" },
+      { label: "CRUD", icon: "" },
+      { label: "Mock API", icon: "" },
+      { label: "Tailwind CSS", icon: "" },
+      { label: "Daisy UI", icon: "" },
+      { label: "Zustand", icon: "" },
+      { label: "Axios", icon: "" },
+      { label: "Theme", icon: "" },
+      { label: "Responsive", icon: "" },
     ],
   },
   {
     src: "/cover_photo/shiba.jpg",
     title: "Coffee Shop",
     tools: [
-      "Next",
-      "React",
-      "React Hook Form",
-      "Fetch API",
-      "Tailwind CSS",
-      "Daisy UI",
-      "Zustand",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        icon: Github,
-        href: "https://github.com/untitlez/WebApp-Projects",
-      },
-      {
-        label: "Vercel",
-        icon: Link,
-        href: "https://practice-website-projects.vercel.app/shop",
-      },
+      { label: "Next", icon: "" },
+      { label: "React", icon: "" },
+      { label: "React Hook Form", icon: "" },
+      { label: "Fetch API", icon: "" },
+      { label: "Tailwind CSS", icon: "" },
+      { label: "Daisy UI", icon: "" },
+      { label: "Zustand", icon: "" },
+      { label: "Axios", icon: "" },
+      { label: "Theme", icon: "" },
+      { label: "Responsive", icon: "" },
     ],
   },
   {
     src: "/cover_photo/penguin.jpg",
     title: "HR System",
     tools: [
-      "Vite",
-      "React",
-      "Ant Design",
-      "Fetch API",
-      "Tailwind CSS",
-      "Zustand",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        icon: Github,
-        href: "https://github.com/untitlez/HR-Projects",
-      },
-      {
-        label: "Vercel",
-        icon: Link,
-        href: "https://hr-projects-lyart.vercel.app/",
-      },
+      { label: "Vite", icon: "" },
+      { label: "React", icon: "" },
+      { label: "Ant Design", icon: "" },
+      { label: "Fetch API", icon: "" },
+      { label: "Tailwind CSS", icon: "" },
+      { label: "Zustand", icon: "" },
+      { label: "Axios", icon: "" },
+      { label: "Theme", icon: "" },
+      { label: "Responsive", icon: "" },
     ],
   },
   {
     src: "/cover_photo/dear.jpg",
     title: "Find Your Cat",
-    tools: ["Next", "React", "Tailwind CSS", "Daisy UI", "Responsive"],
+    tools: [
+      { label: "Next", icon: "" },
+      { label: "React", icon: "" },
+      { label: "Tailwind CSS", icon: "" },
+      { label: "Daisy UI", icon: "" },
+      { label: "Responsive", icon: "" },
+    ],
     links: [{ label: "View", icon: Link, href: "/projects/find-your-cat" }],
   },
   {
     src: "/cover_photo/cow.jpg",
     title: "To-Do-List",
-    tools: ["Next", "React", "Tailwind CSS", "Daisy UI", "Responsive"],
+    tools: [
+      { label: "Next", icon: "" },
+      { label: "React", icon: "" },
+      { label: "Tailwind CSS", icon: "" },
+      { label: "Daisy UI", icon: "" },
+      { label: "Responsive", icon: "" },
+    ],
     links: [{ label: "View", icon: Link, href: "/projects/to-do-list" }],
   },
   {
     src: "/cover_photo/koala.jpg",
     title: "Wallet App",
-    tools: ["Figma", "Responsive "],
+    tools: [
+      { label: "Figma", icon: "" },
+      { label: "Responsive", icon: "" },
+    ],
     links: [
       {
         label: "Figma",
@@ -155,7 +131,10 @@ const ProjectsData = [
   {
     src: "/cover_photo/koala_junior.jpg",
     title: "Re-Design",
-    tools: ["Figma", "Responsive "],
+    tools: [
+      { label: "Figma", icon: "" },
+      { label: "Responsive", icon: "" },
+    ],
     links: [
       {
         label: "Figma",
@@ -199,25 +178,40 @@ export default function Projects() {
               {item.tools.map((tool, i) => (
                 <div
                   key={i}
-                  className="btn btn-xs btn-outline border-base-content/50 cursor-default"
+                  className="btn btn-sm btn-outline border-base-content/50 cursor-default"
                 >
-                  {tool}
+                  <div className="relative aspect-square size-4">
+                    <Image
+                      src={tool.icon}
+                      alt="icon"
+                      className="object-cover"
+                      sizes="30vw"
+                      fill
+                    />
+                  </div>
+                  {tool.label}
                 </div>
               ))}
             </div>
           </CardContent>
-          <CardFooter className="flex items-end gap-3">
-            {item.links.map((link, i) => (
-              <a
-                key={i}
-                href={link.href}
-                target="_blank"
-                className="btn flex-1 btn-primary"
-              >
-                <link.icon className="size-5" />
-                {link.label}
-              </a>
-            ))}
+          <CardFooter>
+            <Dialog>
+              <DialogTrigger className="btn flex-1 btn-primary capitalize">
+                <Eye className="size-5" />
+                see more
+              </DialogTrigger>
+              <DialogContent className="bg-base-100 border-base-content/50">
+                <DialogHeader>
+                  <DialogTitle className="text-primary">
+                    Are you absolutely sure?
+                  </DialogTitle>
+                  <DialogDescription></DialogDescription>
+                </DialogHeader>
+                <div>
+                  <HotelSystemPage />
+                </div>
+              </DialogContent>
+            </Dialog>
           </CardFooter>
         </Card>
       ))}

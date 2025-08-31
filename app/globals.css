@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +27,10 @@ body {
     /* Sub H3  */
     @apply text-lg text-base-content/60;
   }
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-b from-transparent via-base-100/50 to-base-200;
 }
 
 .box {

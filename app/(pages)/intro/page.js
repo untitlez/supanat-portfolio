@@ -1,19 +1,16 @@
 import Image from "next/image";
-import AuroraBg from "@/components/AuroraBg";
+import Link from "next/link";
+import { Github, Download } from "lucide-react";
+import { Routes } from "@/lib/routes";
 import DecryptedText from "@/components/DecryptedText";
-import { ButtonLink } from "@/components/ButtonLink";
 
 export default function Intro() {
   return (
-    <section className="hidden relative min-h-screen w-full lg:grid grid-cols-2 place-items-center px-4 lg:px-24 z-20">
-      {/* Back Ground  */}
-      <div className="absolute left-0 top-0 w-full h-3/4 z-10 bg-gradient-to-b from-base-100 to-transparent">
-        <AuroraBg />
-      </div>
-      {/* Content  */}
-      <div className="space-y-16 max-w-md z-50">
-        <div className="space-y-3">
-          <h1 className="w-2/3">
+    <section className="min-h-screen w-full overflow-hidden flex flex-col-reverse justify-end lg:grid lg:grid-cols-2 place-items-center gap-8 lg:gap-0 px-4 lg:px-24 z-0">
+      {/* Title  */}
+      <div className="max-w-md flex flex-col gap-16">
+        <div className="space-y-3 text-center lg:text-start">
+          <h1 className="lg:w-2/3">
             <DecryptedText
               animateOn="view"
               text="SUPANAT CHAISRI"
@@ -25,15 +22,35 @@ export default function Intro() {
             <DecryptedText
               className="text-primary/80 font-normal"
               animateOn="view"
-              text="Frontend Developer"
+              text="Fullstack Developer"
               sequential={true}
             />
           </h2>
         </div>
 
-        <ButtonLink />
+        {/* Link  */}
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href={Routes.link.github}
+            target="_blank"
+            className="btn btn-outline flex-1 lg:flex-none lg:px-8"
+          >
+            <Github className="size-4" />
+            Github
+          </Link>
+          <Link
+            href={Routes.link.resume}
+            target="_blank"
+            className="btn btn-outline flex-1 lg:flex-none lg:px-8"
+          >
+            <Download className="size-4" />
+            Download CV
+          </Link>
+        </div>
       </div>
-      <figure className="relative aspect-square h-[50vh] z-50">
+
+      {/* Image  */}
+      <figure className="relative aspect-square h-[50vh] bg-transparent">
         <Image
           src="/3D.webp"
           alt="Image Cover"
