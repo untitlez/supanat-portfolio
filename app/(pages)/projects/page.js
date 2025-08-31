@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ClockFading, Link, Figma, Github } from "lucide-react";
+import { Link, Figma, Github, Globe, Lightbulb } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   Card,
@@ -11,6 +11,44 @@ import {
 } from "@/components/ui/card";
 
 const ProjectsData = [
+  {
+    src: "/cover_photo/otter.jpg",
+    title: "Lesson Plan",
+    tools: [
+      "Node",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Cookie",
+      "Next",
+      "TypeScript",
+      "Zod",
+      "React",
+      "React Hook Form",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Axios",
+      "Theme",
+      "Responsive",
+    ],
+    links: [
+      {
+        label: "server",
+        icon: Github,
+        href: "https://github.com/untitlez/my-server",
+      },
+      {
+        label: "client",
+        icon: Github,
+        href: "https://github.com/untitlez/my-client",
+      },
+      {
+        label: "production",
+        icon: Globe,
+        href: "https://my-client-gamma.vercel.app",
+      },
+    ],
+  },
   {
     src: "/cover_photo/lion.jpg",
     title: "Hotel System",
@@ -37,12 +75,11 @@ const ProjectsData = [
         href: "https://github.com/untitlez/Hotel-System",
       },
       {
-        label: "Vercel",
-        icon: Link,
+        label: "production",
+        icon: Globe,
         href: "https://hotel-system-ecru.vercel.app",
       },
     ],
-    fullstack: {},
   },
   {
     src: "/cover_photo/cat.jpg",
@@ -67,8 +104,8 @@ const ProjectsData = [
         href: "https://github.com/untitlez/WebApp-Projects",
       },
       {
-        label: "Vercel",
-        icon: Link,
+        label: "demo web",
+        icon: Lightbulb,
         href: "https://practice-website-projects.vercel.app/admin",
       },
     ],
@@ -95,8 +132,8 @@ const ProjectsData = [
         href: "https://github.com/untitlez/WebApp-Projects",
       },
       {
-        label: "Vercel",
-        icon: Link,
+        label: "demo web",
+        icon: Lightbulb,
         href: "https://practice-website-projects.vercel.app/shop",
       },
     ],
@@ -122,8 +159,8 @@ const ProjectsData = [
         href: "https://github.com/untitlez/HR-Projects",
       },
       {
-        label: "Vercel",
-        icon: Link,
+        label: "demo web",
+        icon: Lightbulb,
         href: "https://hr-projects-lyart.vercel.app/",
       },
     ],
@@ -206,13 +243,13 @@ export default function Projects() {
               ))}
             </div>
           </CardContent>
-          <CardFooter className="flex items-end gap-3">
+          <CardFooter className="flex items-end gap-2">
             {item.links.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
                 target="_blank"
-                className="btn flex-1 btn-primary"
+                className="btn flex-1 btn-primary capitalize"
               >
                 <link.icon className="size-5" />
                 {link.label}

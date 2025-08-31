@@ -1,20 +1,10 @@
 "use client";
 
-import { FolderOpen, Github } from "lucide-react";
+import { Download, Github } from "lucide-react";
 
 export const ButtonLink = () => {
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <div className="flex gap-3">
-      <button
-        className="btn btn-outline px-8"
-        onClick={() => scrollTo("projects")}
-      >
-        <FolderOpen className="size-5" />
-        Project
-      </button>
       <a
         className="btn btn-outline px-8"
         href="https://github.com/untitlez"
@@ -22,6 +12,14 @@ export const ButtonLink = () => {
       >
         <Github className="size-5" />
         Github
+      </a>
+      <a
+        className="btn btn-outline px-8"
+        href="https://drive.google.com/file/d/1BRoWSyP2gaAl4zZDeDh8CzW5hm6X0wbT/view?usp=sharing"
+        target="_blank"
+      >
+        <Download className="size-5" />
+        Download CV
       </a>
     </div>
   );

@@ -33,11 +33,11 @@ export default function Intro() {
 
         <ButtonLink />
       </div>
-      <figure className="relative aspect-square h-[50vh] z-50">
+      <figure className="relative aspect-square h-[50vh] z-50 bg-transparent">
         <Image
           src="/3D.webp"
           alt="Image Cover"
-          className="spin"
+          className="spin bg-transparent"
           sizes="100vw"
           fill
         />

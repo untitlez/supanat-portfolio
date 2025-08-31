@@ -16,15 +16,14 @@ const skills = [
     //Tool & Libraries
     head: "Backend stack",
     items: [
-      { name: "Next.js", icon: "/icon/nextjs.svg" },
-      { name: "Typescript", icon: "/icon/typescript.svg" },
-      // { name: "Node.js", icon: "/icon/nodejs.svg" },
-      // { name: "Express.js", icon: "/icon/expressjs.svg" },
+      { name: "Node.js", icon: "/icon/nodejs.svg" },
+      { name: "Express.js", icon: "/icon/expressjs.svg" },
+      { name: "MongoDB", icon: "/icon/mongodb.svg" },
       { name: "PostgreSQL", icon: "/icon/postgresql.svg" },
-      { name: "Prisma", icon: "/icon/prisma.svg" },
-      // { name: "MongoDB", icon: "/icon/mongodb.svg" },
-      // { name: "Auth0", icon: "/icon/auth0.svg" },
+      { name: "PrismaORM", icon: "/icon/prisma.svg" },
+      { name: "Next.js", icon: "/icon/nextjs.svg" },
       { name: "Zod", icon: "/icon/zod.svg" },
+      // { name: "Auth0", icon: "/icon/auth0.svg" },
     ],
   },
   {
