@@ -21,7 +21,7 @@ export default function Home() {
         <Navbar />
         <section
           id={fieldItems.page.about.id}
-          className="max-w-screen-2xl mx-4 z-10"
+          className="flex-1 max-w-screen-2xl mx-4 z-10"
         >
           <About />
         </section>
@@ -30,25 +30,25 @@ export default function Home() {
         </section>
         <section
           id={fieldItems.page.projects.id}
-          className="max-w-screen-2xl px-4 lg:my-40 z-10"
+          className="w-full max-w-screen-2xl px-4 lg:my-40 z-10"
         >
           <Projects />
         </section>
         <section
           id={fieldItems.page.certificate.id}
-          className="max-w-screen-2xl px-4 z-10"
+          className="flex-1 max-w-screen-2xl px-4 z-10"
         >
           <Certificate />
         </section>
         <section
           id={fieldItems.page.experience.id}
-          className="max-w-screen-2xl mx-4 z-10"
+          className="flex-1 max-w-screen-2xl mx-4 z-10"
         >
           <Experience />
         </section>
         <section
           id={fieldItems.page.education.id}
-          className="max-w-screen-2xl mx-4 z-10"
+          className="flex-1 max-w-screen-2xl mx-4 z-10"
         >
           <Education />
         </section>

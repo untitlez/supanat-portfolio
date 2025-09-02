@@ -28,14 +28,16 @@ export default function Education() {
           className="max-w-screen-sm grid gap-4 bg-base-100 p-8 rounded-3xl border border-base-content/50 shadow-xl lg:hover:shadow-2xl"
         >
           <figure className="relative w-full aspect-video overflow-hidden">
-            <Image
-              src={study.src}
-              alt="Institution Logo"
-              className="object-contain"
-              sizes="50vw"
-              priority
-              fill
-            />
+            {study.src && (
+              <Image
+                src={study.src}
+                alt="Institution Logo"
+                className="object-contain"
+                sizes="50vw"
+                priority
+                fill
+              />
+            )}
           </figure>
           <div>
             <div className="flex flex-wrap-reverse justify-between items-center gap-4">

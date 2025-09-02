@@ -56,6 +56,7 @@ export default function Intro() {
           alt="Image Cover"
           className="spin"
           sizes="100vw"
+          priority={true}
           fill
         />
       </figure>

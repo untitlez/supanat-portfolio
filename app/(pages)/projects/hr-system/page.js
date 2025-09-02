@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Eye } from "lucide-react";
 
-export default function HotelSystemPage() {
+export default function HrSystemPage() {
   return (
     <Dialog>
       <DialogTrigger className="btn flex-1 btn-primary capitalize">

@@ -22,8 +22,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} data-theme="luxury">
         {children}
-        <SpeedInsights />
-        <Analytics />
+        {/* <SpeedInsights />
+        <Analytics /> */}
       </body>
     </html>
   );

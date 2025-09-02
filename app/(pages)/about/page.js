@@ -87,12 +87,10 @@ export default function About() {
         >
           <div className="flex items-end gap-4">
             <h3 className="text-xl lg:text-3xl">Hi there!</h3>
-            <Image
+            <img
               src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif"
               alt="Say Hi"
-              width={48}
-              height={48}
-              className="mb-1"
+              className="size-10 mb-1"
             />
           </div>
           <h3 className="text-xl lg:text-3xl text-primary">
