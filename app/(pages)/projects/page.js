@@ -243,13 +243,13 @@ export default function Projects() {
               ))}
             </div>
           </CardContent>
-          <CardFooter className="flex items-end gap-2">
+          <CardFooter className="flex flex-col sm:flex-row gap-2 ">
             {item.links.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
                 target="_blank"
-                className="btn flex-1 btn-primary capitalize"
+                className="btn flex w-full sm:flex-1 btn-primary capitalize"
               >
                 <link.icon className="size-5" />
                 {link.label}

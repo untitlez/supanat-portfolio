@@ -51,7 +51,7 @@ export default function Skills() {
           key={index}
           className="relative grid place-items-center py-8 border-y border-base-content/50 group cursor-pointer"
         >
-          <div className="absolute inset-0 z-10 grid place-items-center bg-base-100 group-hover:bottom-28 transform duration-700 delay-100">
+          <div className="absolute inset-0 z-10 grid place-items-center bg-base-100 group-hover:bottom-[99%] transform duration-700 delay-100">
             <h2 className="uppercase group-hover:opacity-0 transform duration-300 delay-100">
               {skill.head}
             </h2>
