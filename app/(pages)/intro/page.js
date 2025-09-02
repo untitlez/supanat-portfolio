@@ -25,7 +25,7 @@ export default function Intro() {
             <DecryptedText
               className="text-primary/80 font-normal"
               animateOn="view"
-              text="Frontend Developer"
+              text="Fullstack Developer"
               sequential={true}
             />
           </h2>
