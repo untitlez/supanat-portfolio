@@ -1,3 +1,5 @@
+import { Header } from "@/components/Header";
+
 const experience = [
   {
     job: "BARISTA",
@@ -35,7 +37,9 @@ const experience = [
 
 export default function Experience() {
   return (
-    <div className="min-h-screen content-center text-primary">
+    <div className="lg:min-h-screen text-primary">
+      <Header label="experience" />
+
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical gap-2 md:gap-0 col-span-6 md:scale-90">
         {experience.map((exp, i) => (
           <li key={i}>
@@ -54,8 +58,7 @@ export default function Experience() {
               </svg>
             </div>
             <div
-              className={`md:bg-base-100 py-4 md:p-8 rounded-3xl border-base-content/50 md:border md:shadow-xl 
-                lg:hover:shadow-2xl animate ${exp.position}`}
+              className={`md:bg-base-100 md:border border-base-content/50 rounded-3xl md:shadow-xl hover:shadow-base-content/20 py-4 md:p-8 animate ${exp.position}`}
             >
               <div>
                 <time className="font-mono italic">{exp.time}</time>

@@ -18,6 +18,7 @@
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.12.1",
     "gsap": "^3.12.7",
+    "lucide": "^0.542.0",
     "lucide-react": "^0.525.0",
     "motion": "^12.12.2",
     "next": "^15.3.2",

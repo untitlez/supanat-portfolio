@@ -1,7 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Download } from "lucide-react";
-import { Routes } from "@/lib/routes";
+
+import { profile } from "@/lib/profile";
+
 import DecryptedText from "@/components/DecryptedText";
 
 export default function Intro() {
@@ -13,7 +15,7 @@ export default function Intro() {
           <h1 className="lg:w-2/3">
             <DecryptedText
               animateOn="view"
-              text="SUPANAT CHAISRI"
+              text={profile.fullName}
               sequential={true}
             />
           </h1>
@@ -22,7 +24,7 @@ export default function Intro() {
             <DecryptedText
               className="text-primary/80 font-normal"
               animateOn="view"
-              text="Fullstack Developer"
+              text={profile.position}
               sequential={true}
             />
           </h2>
@@ -31,7 +33,7 @@ export default function Intro() {
         {/* Link  */}
         <div className="flex flex-wrap gap-3">
           <Link
-            href={Routes.link.github}
+            href={profile.contacts.github}
             target="_blank"
             className="btn btn-outline flex-1 lg:flex-none lg:px-8"
           >
@@ -39,7 +41,7 @@ export default function Intro() {
             Github
           </Link>
           <Link
-            href={Routes.link.resume}
+            href={profile.contacts.resume}
             target="_blank"
             className="btn btn-outline flex-1 lg:flex-none lg:px-8"
           >

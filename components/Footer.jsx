@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import { profile } from "@/lib/profile";
+
 import {
   Box,
   Facebook,
@@ -8,42 +11,41 @@ import {
   Phone,
   UserCircle,
 } from "lucide-react";
-import { Routes } from "@/lib/routes";
 
 const contactMe = [
   {
-    name: "Chiang Mai,Thailand",
+    name: profile.contacts.address,
     icon: <MapPin />,
   },
   {
-    name: Routes.link.mail,
+    name: profile.contacts.mail,
     icon: <UserCircle />,
-    link: `mailto:${Routes.link.mail}`,
+    link: `mailto:${profile.contacts.mail}`,
   },
   {
-    name: Routes.link.phone,
+    name: profile.contacts.phone,
     icon: <Phone />,
-    link: `tel:+${Routes.link.phone}`,
+    link: `tel:+${profile.contacts.phone}`,
   },
   {
     name: "Facebook",
     icon: <Facebook />,
-    link: Routes.link.facebook,
+    link: profile.contacts.facebook,
   },
   {
     name: "Instagram",
     icon: <Instagram />,
-    link: Routes.link.instagram,
+    link: profile.contacts.instagram,
   },
   {
     name: "Notion",
     icon: <Box />,
-    link: Routes.link.notion,
+    link: profile.contacts.notion,
   },
   {
     name: "GitHub",
     icon: <Github />,
-    link: Routes.link.github,
+    link: profile.contacts.github,
   },
 ];
 
@@ -62,11 +64,9 @@ export default function Footer() {
             />
           </div>
           <div>
-            <h3 className="text-base-content uppercase">
-              {Routes.name.fullName}
-            </h3>
+            <h3 className="text-base-content uppercase">{profile.fullName}</h3>
             <h4 className="text-base-content/75 capitalize">
-              {Routes.position}
+              {profile.position}
             </h4>
           </div>
         </aside>
@@ -90,7 +90,7 @@ export default function Footer() {
       <aside className="footer footer-center p-2 bg-base-300 capitalize">
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by{" "}
-          {Routes.name.fullName}
+          {profile.fullName}
         </p>
       </aside>
     </footer>

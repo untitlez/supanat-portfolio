@@ -1,5 +1,17 @@
 import Image from "next/image";
-import { ClockFading, Link, Figma, Github, Eye } from "lucide-react";
+
+import { skill } from "@/lib/constant";
+
+import HotelSystemPage from "./hotel-system/page";
+import CoffeeShopPage from "./coffee-shop/page";
+import AdminPage from "./admin/page";
+import HrSystemPage from "./hr-system/page";
+import FindYourCat from "./find-your-cat/page";
+import ToDoList from "./to-do-list/page";
+import WalletAppPage from "./wallet-app/page";
+import ReDesignPage from "./re-design/page";
+import { Header } from "@/components/Header";
+import { StackSkill } from "@/components/StackSkill";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   Card,
@@ -9,16 +21,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { skill } from "@/lib/constant";
-import { StackSkill } from "@/components/StackSkill";
-import HotelSystemPage from "./hotel-system/page";
-import CoffeeShopPage from "./coffee-shop/page";
-import HrSystemPage from "./hr-system/page";
-import FindYourCat from "./find-your-cat/page";
-import ToDoList from "./to-do-list/page";
-import WalletAppPage from "./wallet-app/page";
-import ReDesignPage from "./re-design/page";
-import AdminPage from "./admin/page";
 
 const ProjectsData = [
   {
@@ -172,55 +174,60 @@ const ProjectsData = [
 
 export default function Projects() {
   return (
-    <div className="lg:min-h-screen grid gap-4 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
-      {ProjectsData.map((item, i) => (
-        <Card
-          key={i}
-          className="flex flex-col h-full bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/30 animate group"
-        >
-          <CardHeader>
-            <CardTitle>
-              <div className="mb-2 btn btn-block pointer-events-none bg-base-300">
-                <h3>{item.title}</h3>
-              </div>
-            </CardTitle>
-            <CardDescription>
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <Skeleton className="absolute inset-0 rounded-xl" />
-                {item.src && (
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    className="object-cover shadow-md group-hover:scale-105 animate delay-100"
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    fill
-                  />
+    <div className="lg:min-h-screen">
+      <Header label="projects" />
+      <div className="grid gap-4 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {ProjectsData.map((item, i) => (
+          <Card
+            key={i}
+            className="flex flex-col h-full bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/20 animate group"
+          >
+            <CardHeader>
+              <CardTitle>
+                <div className="mb-2 btn btn-block pointer-events-none bg-base-300">
+                  <h3>{item.title}</h3>
+                </div>
+              </CardTitle>
+              <CardDescription>
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <Skeleton className="absolute inset-0 rounded-xl" />
+                  {item.src && (
+                    <Image
+                      src={item.src}
+                      alt={item.title}
+                      className="object-cover shadow-md group-hover:scale-105 animate delay-100"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      fill
+                    />
+                  )}
+                </div>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="h-full">
+              <div className="h-full flex flex-col">
+                <StackSkill
+                  title={
+                    item.skills.frontend?.title ?? item.skills.design?.title
+                  }
+                  stacks={
+                    item.skills.frontend?.skill ?? item.skills.design?.skill
+                  }
+                />
+                {item.skills.backend && (
+                  <div>
+                    <div className="divider" />
+                    <StackSkill
+                      title={item.skills.backend?.title}
+                      stacks={item.skills.backend?.skill}
+                    />
+                  </div>
                 )}
               </div>
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="h-full">
-            <div className="h-full flex flex-col bg-base-200 border border-base-300/60 rounded-xl p-4 sm:p-6">
-              <StackSkill
-                title={item.skills.frontend?.title ?? item.skills.design?.title}
-                stacks={
-                  item.skills.frontend?.skill ?? item.skills.design?.skill
-                }
-              />
-              {item.skills.backend && (
-                <div>
-                  <div className="divider my-6" />
-                  <StackSkill
-                    title={item.skills.backend?.title}
-                    stacks={item.skills.backend?.skill}
-                  />
-                </div>
-              )}
-            </div>
-          </CardContent>
-          <CardFooter>{item.content}</CardFooter>
-        </Card>
-      ))}
+            </CardContent>
+            <CardFooter>{item.content}</CardFooter>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

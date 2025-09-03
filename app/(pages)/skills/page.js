@@ -1,45 +1,46 @@
+import { skill } from "@/lib/constant";
+
 const skills = [
   {
     //Frontend
     head: "Frontend stack",
     items: [
-      { name: "HTML", icon: "/icon/html.svg" },
-      { name: "CSS", icon: "/icon/css.svg" },
-      { name: "JavaScript", icon: "/icon/javascript.svg" },
-      { name: "Typescript", icon: "/icon/typescript.svg" },
-      { name: "Next.js", icon: "/icon/nextjs.svg" },
-      { name: "React", icon: "/icon/react.svg" },
-      { name: "Vite", icon: "/icon/vite.svg" },
-    ],
-  },
-  {
-    //Tool & Libraries
-    head: "Backend stack",
-    items: [
-      { name: "Next.js", icon: "/icon/nextjs.svg" },
-      { name: "Typescript", icon: "/icon/typescript.svg" },
-      // { name: "Node.js", icon: "/icon/nodejs.svg" },
-      // { name: "Express.js", icon: "/icon/expressjs.svg" },
-      { name: "PostgreSQL", icon: "/icon/postgresql.svg" },
-      { name: "Prisma", icon: "/icon/prisma.svg" },
-      // { name: "MongoDB", icon: "/icon/mongodb.svg" },
-      // { name: "Auth0", icon: "/icon/auth0.svg" },
-      { name: "Zod", icon: "/icon/zod.svg" },
+      skill.html,
+      skill.css,
+      skill.javascript,
+      skill.typescript,
+      skill.nextjs,
+      skill.react,
+      skill.vite,
     ],
   },
   {
     // Backend
+    head: "Backend stack",
+    items: [
+      skill.nodejs,
+      skill.expressjs,
+      skill.nextjs,
+      skill.prisma,
+      skill.postgresql,
+      skill.mongodb,
+    ],
+  },
+  {
+    //Tool & Libraries
     head: "Library & Tools",
     items: [
-      { name: "Tailwind CSS", icon: "/icon/tailwindcss.svg" },
-      { name: "Shadcn UI", icon: "/icon/shadcnui.svg" },
-      { name: "Ant Design", icon: "/icon/antd.svg" },
-      { name: "Daisy UI", icon: "/icon/daisyui.svg" },
-      { name: "Zustand", icon: "/icon/zustand.svg" },
-      { name: "React Hook Form", icon: "/icon/react-hook-form.svg" },
-      { name: "Figma", icon: "/icon/figma.svg" },
-      { name: "Postman", icon: "/icon/postman.svg" },
-      { name: "Vercel", icon: "/icon/vercel.svg" },
+      skill.tailwindCss,
+      skill.shadcnUi,
+      skill.antd,
+      skill.daisyUi,
+      skill.zod,
+      skill.zustand,
+      skill.reactHookForm,
+      skill.postman,
+      skill.git,
+      skill.vercel,
+      skill.figma,
     ],
   },
 ];
@@ -61,10 +62,10 @@ export default function Skills() {
             {skill.items.map((item, i) => (
               <div
                 key={i}
-                className="btn btn-primary btn-sm text-sm lg:btn-md lg:text-base"
+                className="btn btn-primary btn-sm text-sm lg:btn-md lg:text-base pointer-events-none"
               >
-                <img src={item.icon} alt={item.name} className="size-4" />
-                {item.name}
+                <img src={item.icon} alt={item.label} className="size-4" />
+                {item.label}
               </div>
             ))}
           </div>
