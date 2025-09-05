@@ -41,7 +41,7 @@ export default function Education() {
             className="max-w-screen-sm bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/20 lg:p-6 animate"
           >
             <CardContent className="mt-6">
-              <div className="relative w-full overflow-hidden h-[30vh]">
+              <div className="relative w-full overflow-hidden h-[30vh] border shadow rounded-xl bg-white ">
                 {study.src && (
                   <Image
                     src={study.src}

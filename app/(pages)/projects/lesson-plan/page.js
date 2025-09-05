@@ -17,17 +17,17 @@ const stacks = [
   },
   {
     label: "backend",
-    skills: [skill.nextjs],
+    skills: [skill.nodejs, skill.expressjs],
   },
 
   {
     label: "data base",
-    skills: [skill.prisma, skill.postgresql],
+    skills: [skill.mongodb],
   },
 
   {
     label: "authentication",
-    skills: [skill.nextAuth],
+    skills: [skill.jwt],
   },
 ];
 
@@ -37,8 +37,8 @@ const theme = {
     colors: [
       { label: "background", value: "oklch(1 0 0)" },
       { label: "foreground", value: "oklch(0.141 0.005 285.823)" },
-      { label: "primary", value: "oklch(0.645 0.246 16.439)" },
-      { label: "primary-foreground", value: "oklch(0.969 0.015 12.422)" },
+      { label: "primary", value: "oklch(0.795 0.184 86.047)" },
+      { label: "primary-foreground", value: "oklch(0.421 0.095 57.708)" },
       { label: "secondary", value: "oklch(0.967 0.001 286.375)" },
       { label: "secondary-foreground", value: "oklch(0.21 0.006 285.885)" },
       { label: "muted", value: "oklch(0.967 0.001 286.375)" },
@@ -52,8 +52,8 @@ const theme = {
     colors: [
       { label: "background", value: "oklch(0.141 0.005 285.823)" },
       { label: "foreground", value: "oklch(0.985 0 0)" },
-      { label: "primary", value: "oklch(0.645 0.246 16.439)" },
-      { label: "primary-foreground", value: "oklch(0.969 0.015 12.422)" },
+      { label: "primary", value: "oklch(0.795 0.184 86.047)" },
+      { label: "primary-foreground", value: "oklch(0.421 0.095 57.708)" },
       { label: "secondary", value: "oklch(0.274 0.006 286.033)" },
       { label: "secondary-foreground", value: "oklch(0.985 0 0)" },
       { label: "muted", value: "oklch(0.274 0.006 286.033)" },
@@ -63,19 +63,19 @@ const theme = {
   },
 };
 
-export default function HotelSystemPage() {
+export default function LessonPlanPage() {
   return (
     <div className="space-y-24 my-6 max-w-screen-xl">
       {/* Link  */}
       <div className="flex flex-col lg:flex-row gap-4 capitalize border-base-300 border-b-2 pb-6">
-        {projects.hotelSystem.link.github.map((href, i) => (
+        {projects.lessonPlan.link.github.map((href, i) => (
           <Link key={i} href={href} target="_blank" className="btn btn-primary">
             <Github className="size-5" />
-            github
+            github {i + 1}
           </Link>
         ))}
 
-        {projects.hotelSystem.link.demo.map((href, i) => (
+        {projects.lessonPlan.link.demo.map((href, i) => (
           <Link key={i} href={href} target="_blank" className="btn btn-primary">
             <Globe className="size-5" />
             Demo Web
@@ -88,7 +88,7 @@ export default function HotelSystemPage() {
         <div className="basis-1/2 relative overflow-hidden aspect-[2/3] rounded-xl">
           {projects && (
             <Image
-              src={projects.hotelSystem.home.src}
+              src={projects.lessonPlan.home.src}
               alt="projects images"
               className="object-cover"
               sizes="100vw"
@@ -125,10 +125,10 @@ export default function HotelSystemPage() {
       {/* Block 2  */}
       <div className="flex flex-col lg:flex-row-reverse lg:items-center gap-8">
         <div className="basis-1/2 project-card-image">
-          <div className="relative overflow-hidden aspect-[3/2] rounded-2xl">
+          <div className="relative overflow-hidden aspect-video rounded-2xl">
             {projects && (
               <Image
-                src={projects.hotelSystem.dark.src}
+                src={projects.lessonPlan.dark.src}
                 alt="projects images"
                 className="object-cover"
                 sizes="100vw"
@@ -162,11 +162,11 @@ export default function HotelSystemPage() {
 
       {/* Block 3  */}
       <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-        <div className="basis-1/2 aspect-square content-center">
-          <div className="relative overflow-hidden aspect-[3/2] rounded-2xl">
+        <div className="basis-1/2 project-card-image">
+          <div className="relative overflow-hidden aspect-video rounded-2xl">
             {projects && (
               <Image
-                src={projects.hotelSystem.light.src}
+                src={projects.lessonPlan.light.src}
                 alt="projects images"
                 className="object-cover"
                 sizes="100vw"
@@ -206,7 +206,7 @@ export default function HotelSystemPage() {
           <div className="relative overflow-hidden aspect-video rounded-2xl">
             {projects && (
               <Image
-                src={projects.hotelSystem.login.src}
+                src={projects.lessonPlan.print.src}
                 alt="projects images"
                 className="object-cover"
                 sizes="100vw"
@@ -217,26 +217,31 @@ export default function HotelSystemPage() {
         </div>
 
         <div className="basis-1/2 flex flex-col gap-6 lg:gap-12">
-          <h5 className="project-header-reverse">login</h5>
+          <h5 className="project-header-reverse">Export PDF</h5>
           <ul className="list-disc list-inside space-y-2 text-primary leading-relaxed">
-            <li>This project uses NextAuth.js for authentication</li>
             <li>
-              Supporting: Google Provider (OAuth) and Credentials
-              (email/password)
+              Provides users with the ability to generate and download PDF
+              documents from lesson plans or other content.
             </li>
-            <li>Bcrypt-hashed passwords</li>
-            <li>JWT session strategy for scalable and stateless auth</li>
+            <li>
+              Supports client-side preview before exporting, ensuring users can
+              review data before printing or downloading.
+            </li>
+            <li>
+              Handles multi-page layouts, proper margins, and responsive
+              formatting for both A4 and digital-friendly sizes.
+            </li>
           </ul>
         </div>
       </div>
 
       {/* Block 5  */}
       <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-        <div className="basis-1/2 aspect-square content-center">
+        <div className="basis-1/2 project-card-image">
           <div className="relative overflow-hidden aspect-video rounded-2xl">
             {projects && (
               <Image
-                src={projects.hotelSystem.dashboard.src}
+                src={projects.lessonPlan.login.src}
                 alt="projects images"
                 className="object-cover"
                 sizes="100vw"
@@ -247,31 +252,29 @@ export default function HotelSystemPage() {
         </div>
 
         <div className="basis-1/2 flex flex-col gap-6 lg:gap-12">
-          <h5 className="project-header">dashboard</h5>
+          <h5 className="project-header">login</h5>
           <div className="grid gap-4">
             <p className="text-primary">
-              The Dashboard is a secure and authenticated section of the
-              application, built with Next.js App Router. It provides a
-              centralized interface for managing business-critical resources.
+              The Login Page provides an entry point for users who want to
+              access additional features of the application. It is optional for
+              basic usage but unlocks extended functionality once the user is
+              authenticated.
             </p>
             <ul className="list-disc list-inside space-y-2 text-primary leading-relaxed">
               <li>
-                Secure Access - Uses authentication and role-based access
-                control
+                Open access by default users can access core features such as
+                creating a lesson plan without logging in, Ideal for guest users
+                or first-time visitors
               </li>
               <li>
-                Booking Management - View, edit, and manage booking details
+                Authenticated users can access Dashboard with personalized data,
+                Edit and manage lesson plans, subjects, and objectives, View
+                private information tied to their account
               </li>
               <li>
-                Room Management - Create, update, and manage room inventory
-              </li>
-              <li>Member Management - Manage user profiles and permissions</li>
-              <li>
-                Reusable Layout - Consistent UI with shared sidebar and header
-                components
-              </li>
-              <li>
-                Scalable Design - Easy to extend for future modules and features
+                Secure password hashing (bcrypt), Token/session validation for
+                restricted areas, Protection against common web vulnerabilities
+                (SQL Injection, XSS)
               </li>
             </ul>
           </div>
@@ -279,12 +282,13 @@ export default function HotelSystemPage() {
       </div>
 
       {/* Block 6  */}
+
       <div className="flex flex-col lg:flex-row-reverse lg:items-center gap-8">
         <div className="basis-1/2 project-card-image">
           <div className="relative overflow-hidden aspect-video rounded-2xl">
             {projects && (
               <Image
-                src={projects.hotelSystem.profile.src}
+                src={projects.lessonPlan.dashboard.src}
                 alt="projects images"
                 className="object-cover"
                 sizes="100vw"
@@ -295,33 +299,48 @@ export default function HotelSystemPage() {
         </div>
 
         <div className="basis-1/2 flex flex-col gap-6 lg:gap-12">
-          <h5 className="project-header-reverse">profile</h5>
+          <h5 className="project-header-reverse">Dashboard</h5>
           <div className="grid gap-4">
             <p className="text-primary">
-              The Profile Page is the section where users can view and manage
-              their personal information. It is built using Next.js App Router
-              and is part of the authenticated area of the application.
+              The Dashboard serves as the main control center for managing core
+              data. Displays an overview of lesson plans, subjects, units, and
+              objectives for all authenticated users.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-primary leading-relaxed">
-              <li>
-                View Personal Info - Users can see their profile details and
-                account settings
-              </li>
-              <li>
-                Edit Profile - Update personal information like name, contact
-                info, or password
-              </li>
-              <li>
-                Manage Bookings - Quick access to the user's bookings and
-                history
-              </li>
-              <li>
-                Sidebar Navigation - Provides links to profile sections and
-                dashboard pages
-              </li>
-              <li>Secure Access - Only accessible to authenticated users</li>
-            </ul>
           </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+        <div className="basis-1/2 project-card-image">
+          <div className="relative overflow-hidden aspect-video rounded-2xl">
+            {projects && (
+              <Image
+                src={projects.lessonPlan.dashboard2.src}
+                alt="projects images"
+                className="object-cover"
+                sizes="100vw"
+                fill
+              />
+            )}
+          </div>
+        </div>
+
+        <div className="basis-1/2 flex flex-col gap-6 lg:gap-12">
+          <h5 className="project-header">Dashboard</h5>
+          <ul className="list-disc list-inside space-y-2 text-primary leading-relaxed">
+            <li>
+              Signed-in users (members) can view complete data but cannot modify
+              or delete records.
+            </li>
+            <li>
+              Administrators have full permissions to create, edit, and delete
+              lesson plans, subjects, and objectives.
+            </li>
+            <li>
+              Implements JWT/Session authentication and protects against
+              unauthorized access to administrative actions..
+            </li>
+          </ul>
         </div>
       </div>
 

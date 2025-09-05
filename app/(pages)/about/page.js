@@ -51,7 +51,7 @@ export default function About() {
   return (
     <div className="lg:min-h-screen grid lg:grid-cols-2 gap-8 lg:gap-12 place-content-center">
       <motion.div
-        className="w-full grid place-content-center"
+        className="w-full grid sm:place-content-center gap-8"
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -65,12 +65,15 @@ export default function About() {
             cardsData={imageProfile}
           />
         </div>
-        <img
-          src="/profile.jpg"
+        <div className="relative overflow-hidden aspect-video bg-base-200 rounded-3xl sm:hidden">
+        <Image
+          src={profile.image}
           alt="Profile Image"
-          loading="lazy"
-          className="sm:hidden h-[250px] lg:h-full lg:w-3/4 object-cover rounded-3xl shadow-xl border border-base-content/50"
+          className="object-cover"
+          sizes="100vw"
+          fill
         />
+        </div>
       </motion.div>
 
       <motion.div

@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { Eye, Link, Figma, Github, Globe, Lightbulb } from "lucide-react";
 
 import { skill } from "@/lib/constant";
 
+import LessonPlanPage from "./lesson-plan/page";
 import HotelSystemPage from "./hotel-system/page";
 import CoffeeShopPage from "./coffee-shop/page";
 import AdminPage from "./admin/page";
@@ -10,9 +12,11 @@ import FindYourCat from "./find-your-cat/page";
 import ToDoList from "./to-do-list/page";
 import WalletAppPage from "./wallet-app/page";
 import ReDesignPage from "./re-design/page";
+
 import { Header } from "@/components/Header";
 import { StackSkill } from "@/components/StackSkill";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Card,
   CardContent,
@@ -21,11 +25,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const ProjectsData = [
   {
     src: "/cover_photo/otter.jpg",
     title: "Lesson Plan",
+    description: "",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -50,11 +63,30 @@ const ProjectsData = [
         ],
       },
     },
-    content: <HotelSystemPage />,
+    content: <LessonPlanPage />,
+    links: [
+      {
+        label: "server",
+        icon: Github,
+        href: "https://github.com/untitlez/my-server",
+      },
+      {
+        label: "client",
+        icon: Github,
+        href: "https://github.com/untitlez/my-client",
+      },
+      {
+        label: "production",
+        icon: Globe,
+        href: "https://my-client-gamma.vercel.app",
+      },
+    ],
   },
   {
     src: "/cover_photo/lion.jpg",
     title: "Hotel System",
+    description:
+      "Modern & scalable web application for luxury accommodation booking in Australia.Built with Next.js App Router + Prisma ORM + PostgreSQL + Zod + Shadcn UI + Vercel Serverless.",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -74,10 +106,23 @@ const ProjectsData = [
       },
     },
     content: <HotelSystemPage />,
+    links: [
+      {
+        label: "GitHub",
+        icon: Github,
+        href: "https://github.com/untitlez/Hotel-System",
+      },
+      {
+        label: "production",
+        icon: Globe,
+        href: "https://hotel-system-ecru.vercel.app",
+      },
+    ],
   },
   {
     src: "/cover_photo/cat.jpg",
     title: "Admin",
+    description: "",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -91,10 +136,23 @@ const ProjectsData = [
       },
     },
     content: <AdminPage />,
+    links: [
+      {
+        label: "GitHub",
+        icon: Github,
+        href: "https://github.com/untitlez/WebApp-Projects",
+      },
+      {
+        label: "demo web",
+        icon: Lightbulb,
+        href: "https://practice-website-projects.vercel.app/admin",
+      },
+    ],
   },
   {
     src: "/cover_photo/shiba.jpg",
     title: "Coffee Shop",
+    description: "",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -108,10 +166,23 @@ const ProjectsData = [
       },
     },
     content: <CoffeeShopPage />,
+    links: [
+      {
+        label: "GitHub",
+        icon: Github,
+        href: "https://github.com/untitlez/WebApp-Projects",
+      },
+      {
+        label: "demo web",
+        icon: Lightbulb,
+        href: "https://practice-website-projects.vercel.app/shop",
+      },
+    ],
   },
   {
     src: "/cover_photo/penguin.jpg",
     title: "HR System",
+    description: "",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -125,10 +196,23 @@ const ProjectsData = [
       },
     },
     content: <HrSystemPage />,
+    links: [
+      {
+        label: "GitHub",
+        icon: Github,
+        href: "https://github.com/untitlez/HR-Projects",
+      },
+      {
+        label: "demo web",
+        icon: Lightbulb,
+        href: "https://hr-projects-lyart.vercel.app/",
+      },
+    ],
   },
   {
     src: "/cover_photo/dear.jpg",
     title: "Find Your Cat",
+    description: "",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -136,10 +220,12 @@ const ProjectsData = [
       },
     },
     content: <FindYourCat />,
+    links: [{ label: "View", icon: Link, href: "/projects/find-your-cat" }],
   },
   {
     src: "/cover_photo/cow.jpg",
     title: "To-Do-List",
+    description: "",
     skills: {
       frontend: {
         title: "frontend stack",
@@ -147,10 +233,12 @@ const ProjectsData = [
       },
     },
     content: <ToDoList />,
+    links: [{ label: "View", icon: Link, href: "/projects/to-do-list" }],
   },
   {
     src: "/cover_photo/koala.jpg",
     title: "Wallet App",
+    description: "",
     skills: {
       design: {
         title: "design stack",
@@ -158,10 +246,18 @@ const ProjectsData = [
       },
     },
     content: <WalletAppPage />,
+    links: [
+      {
+        label: "Figma",
+        icon: Figma,
+        href: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=1028-2&t=8TXMCEq6EmJGXjQ5-1",
+      },
+    ],
   },
   {
     src: "/cover_photo/koala_junior.jpg",
     title: "Re-Design",
+    description: "",
     skills: {
       design: {
         title: "design stack",
@@ -169,6 +265,13 @@ const ProjectsData = [
       },
     },
     content: <ReDesignPage />,
+    links: [
+      {
+        label: "Figma",
+        icon: Figma,
+        href: "https://www.figma.com/proto/V2ExOe0brOdTwT6pVIJaxf/My-Project?node-id=194-9&t=uSXl9qY1jnfq0c2m-1",
+      },
+    ],
   },
 ];
 
@@ -224,7 +327,36 @@ export default function Projects() {
                 )}
               </div>
             </CardContent>
-            <CardFooter>{item.content}</CardFooter>
+            <CardFooter className="flex flex-col sm:flex-row gap-2 ">
+              {item.links.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href}
+                  target="_blank"
+                  className="btn flex w-full sm:flex-1 btn-primary capitalize"
+                >
+                  <link.icon className="size-5" />
+                  {link.label}
+                </a>
+              ))}
+
+              {/* <Dialog>
+                <DialogTrigger className="btn flex-1 btn-primary capitalize">
+                  <Eye className="size-5" />
+                  see more
+                </DialogTrigger>
+                <DialogContent className="bg-base-100 border-base-content/50">
+                  <DialogHeader>
+                    <DialogTitle className="text-primary capitalize">
+                      {item.title}
+                    </DialogTitle>
+                    <DialogDescription>{item.description}</DialogDescription>
+                    <ScrollArea className="h-[75vh]">{item.content}</ScrollArea>
+                  </DialogHeader>
+                  <ScrollMouseIcon />
+                </DialogContent>
+              </Dialog> */}
+            </CardFooter>
           </Card>
         ))}
       </div>

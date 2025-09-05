@@ -51,7 +51,7 @@ const contactMe = [
 
 export default function Footer() {
   return (
-    <footer className="w-full">
+    <footer className="w-full border-t border-base-content/20">
       <div className="footer sm:footer-horizontal bg-base-200 text-primary justify-items-center gap-20 px-4 lg:px-10 py-20">
         <aside className="flex flex-col items-center gap-4">
           <div className="relative w-full size-24 aspect-square">

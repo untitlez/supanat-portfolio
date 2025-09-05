@@ -119,11 +119,15 @@ export default function Certificate() {
             <CardHeader>
               <Dialog>
                 <DialogTrigger>
-                  <img
-                    src={item.src}
-                    alt={item.name}
-                    className="object-contain rounded-xl hover:scale-105 animate"
-                  />
+                  <div className="relative overflow-hidden h-[30vh] bg-white rounded-xl">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      className="object-contain hover:scale-105 animate"
+                      sizes="50vw"
+                      fill
+                    />
+                  </div>
                 </DialogTrigger>
                 <DialogContent className="bg-base-100 border-base-content/50 max-w-min ">
                   <DialogHeader className="items-center">

@@ -11,11 +11,17 @@ import { tags } from "@/lib/constant";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AuroraBg from "@/components/AuroraBg";
+import { GradientBg } from "@/components/GradientBg";
 
 export default function Home() {
   return (
     <main className="h-screen overflow-hidden grid bg-gradient">
-      <AuroraBg />
+      <div className="hidden lg:block">
+        <AuroraBg />
+      </div>
+      <div className="lg:hidden">
+        <GradientBg />
+      </div>
       <div className="overflow-y-scroll overflow-x-hidden flex flex-col items-center gap-24 lg:gap-40 lg:my-0 z-0">
         <Intro />
         <Navbar />
