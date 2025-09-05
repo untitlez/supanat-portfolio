@@ -1,7 +1,7 @@
-<h1 align="center">Hi there! 👋 I'm SUPANAT CHAISRI</h1>
-<h3 align="center">Fullstack Developer</h3>
+<h1 align="left">Hi there! 👋 I'm SUPANAT CHAISRI</h1>
+<h3 align="left">Fullstack Developer</h3>
 
-- ⚡ **I am passionate about pursuing a career as a Full-Stack Developer. Although I do not hold a formal IT degree, I have been committed to self-learning through online courses, YouTube, and other resources. My journey began with UX/UI Design, then progressed to Frontend, Backend, and ultimately Full-Stack Development. I am continuously learning new languages and tools to be fully prepared for real-world work experience and professional growth.**
+🌱 **I am passionate about pursuing a career as a Full-Stack Developer. Although I do not hold a formal IT degree, I have been committed to self-learning through online courses, YouTube, and other resources. My journey began with UX/UI Design, then progressed to Frontend, Backend, and ultimately Full-Stack Development. I am continuously learning new languages and tools to be fully prepared for real-world work experience and professional growth.**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
