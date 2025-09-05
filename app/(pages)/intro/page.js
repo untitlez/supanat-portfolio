@@ -56,7 +56,7 @@ export default function Intro() {
         <Image
           src="/3D.webp"
           alt="Image Cover"
-          className="spin"
+          className="spin bg-transparent"
           sizes="100vw"
           priority={true}
           fill
