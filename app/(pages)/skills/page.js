@@ -47,7 +47,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="overflow-hidden sm:h-[50vh] flex flex-col justify-center gap">
+    <div className="overflow-hidden sm:min-h-[50vh] flex flex-col justify-center gap">
       {skills.map((skill, index) => (
         <div
           key={index}
