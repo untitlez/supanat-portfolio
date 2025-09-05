@@ -6,35 +6,60 @@ import Certificate from "./(pages)/certificate/page";
 import Experience from "./(pages)/experience/page";
 import Education from "./(pages)/education/page";
 
+import { tags } from "@/lib/constant";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { GradientBg } from "../components/GradientBg";
+import AuroraBg from "@/components/AuroraBg";
+import { GradientBg } from "@/components/GradientBg";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-24 lg:gap-0 lg:my-0 bg-base-200">
-      <GradientBg />
-      <Intro />
-      <Navbar />
-      <section id="about" className="max-w-screen-2xl mx-4 z-10">
-        <About />
-      </section>
-      <section id="skills" className="w-full z-10">
-        <Skills />
-      </section>
-      <section id="projects" className="max-w-screen-2xl px-4 lg:my-40 z-10">
-        <Projects />
-      </section>
-      <section id="certificate" className="max-w-screen-2xl px-4 z-10">
-        <Certificate />
-      </section>
-      <section id="experience" className="max-w-screen-2xl mx-4 z-10">
-        <Experience />
-      </section>
-      <section id="education" className="max-w-screen-2xl mx-4 z-10">
-        <Education />
-      </section>
-      <Footer />
+    <main className="h-screen overflow-hidden grid bg-gradient">
+      <div className="hidden lg:block">
+        <AuroraBg />
+      </div>
+      <div className="lg:hidden">
+        <GradientBg />
+      </div>
+      <div className="overflow-y-scroll overflow-x-hidden flex flex-col items-center gap-24 lg:gap-40 lg:my-0 z-0">
+        <Intro />
+        <Navbar />
+        <section
+          id={tags.page.about.id}
+          className="w-full max-w-screen-2xl px-4"
+        >
+          <About />
+        </section>
+        <section id={tags.page.skills.id} className="w-full">
+          <Skills />
+        </section>
+        <section
+          id={tags.page.projects.id}
+          className="w-full max-w-screen-2xl px-4"
+        >
+          <Projects />
+        </section>
+        <section
+          id={tags.page.certificate.id}
+          className="w-full max-w-screen-2xl px-4"
+        >
+          <Certificate />
+        </section>
+        <section
+          id={tags.page.experience.id}
+          className="w-full max-w-screen-2xl px-4"
+        >
+          <Experience />
+        </section>
+        <section
+          id={tags.page.education.id}
+          className="w-full max-w-screen-2xl px-4"
+        >
+          <Education />
+        </section>
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
+import { profile } from "@/lib/profile";
 import { useScrollInView } from "@/lib/useScrollInView";
+
 import { StackImage } from "@/components/StackImage";
 import RotatingText from "@/components/RotatingText";
 
@@ -49,7 +51,7 @@ export default function About() {
   return (
     <div className="lg:min-h-screen grid lg:grid-cols-2 gap-8 lg:gap-12 place-content-center">
       <motion.div
-        className="w-full grid place-content-center"
+        className="w-full grid sm:place-content-center gap-8"
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -63,12 +65,15 @@ export default function About() {
             cardsData={imageProfile}
           />
         </div>
-        <img
-          src="/profile.jpg"
+        <div className="relative overflow-hidden aspect-video bg-base-200 rounded-3xl sm:hidden">
+        <Image
+          src={profile.image}
           alt="Profile Image"
-          loading="lazy"
-          className="sm:hidden h-[250px] lg:h-full lg:w-3/4 object-cover rounded-3xl shadow-xl border border-base-content/50"
+          className="object-cover"
+          sizes="100vw"
+          fill
         />
+        </div>
       </motion.div>
 
       <motion.div
@@ -87,16 +92,14 @@ export default function About() {
         >
           <div className="flex items-end gap-4">
             <h3 className="text-xl lg:text-3xl">Hi there!</h3>
-            <Image
+            <img
               src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif"
               alt="Say Hi"
-              width={48}
-              height={48}
-              className="mb-1"
+              className="size-10 mb-1"
             />
           </div>
           <h3 className="text-xl lg:text-3xl text-primary">
-            I'm SUPANAT CHAISRI
+            I'm {profile.fullName}
           </h3>
         </motion.div>
 
@@ -108,11 +111,7 @@ export default function About() {
         >
           <h3>About Me</h3>
           <p className="opacity-75 text-balance text-justify">
-            I'm a passionate learner on the path to becoming a Fullstack
-            Developer. I began with UX/UI and frontend development, and now I'm
-            actively building my backend skills. I enjoy working on mini
-            projects to practice and continuously improve. I'm always eager to
-            grow and contribute.
+            {profile.aboutMe}
           </p>
         </motion.div>
 

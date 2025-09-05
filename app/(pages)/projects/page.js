@@ -1,6 +1,22 @@
 import Image from "next/image";
-import { Link, Figma, Github, Globe, Lightbulb } from "lucide-react";
+import { Eye, Link, Figma, Github, Globe, Lightbulb } from "lucide-react";
+
+import { skill } from "@/lib/constant";
+
+import LessonPlanPage from "./lesson-plan/page";
+import HotelSystemPage from "./hotel-system/page";
+import CoffeeShopPage from "./coffee-shop/page";
+import AdminPage from "./admin/page";
+import HrSystemPage from "./hr-system/page";
+import FindYourCat from "./find-your-cat/page";
+import ToDoList from "./to-do-list/page";
+import WalletAppPage from "./wallet-app/page";
+import ReDesignPage from "./re-design/page";
+
+import { Header } from "@/components/Header";
+import { StackSkill } from "@/components/StackSkill";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Card,
   CardContent,
@@ -9,28 +25,45 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const ProjectsData = [
   {
     src: "/cover_photo/otter.jpg",
     title: "Lesson Plan",
-    tools: [
-      "Node",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "Cookie",
-      "Next",
-      "TypeScript",
-      "Zod",
-      "React",
-      "React Hook Form",
-      "Shadcn UI",
-      "Tailwind CSS",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [
+          skill.typescript,
+          skill.nextjs,
+          skill.react,
+          skill.reactHookForm,
+          skill.shadcnUi,
+          skill.zod,
+        ],
+      },
+
+      backend: {
+        title: "backend stack",
+        skill: [
+          skill.javascript,
+          skill.nodejs,
+          skill.expressjs,
+          skill.mongodb,
+          skill.jwt,
+        ],
+      },
+    },
+    content: <LessonPlanPage />,
     links: [
       {
         label: "server",
@@ -52,22 +85,27 @@ const ProjectsData = [
   {
     src: "/cover_photo/lion.jpg",
     title: "Hotel System",
-    tools: [
-      "Next",
-      "Next Auth",
-      "Prisma ORM",
-      "PostgreSQL",
-      "Route API",
-      "TypeScript",
-      "Zod",
-      "React",
-      "React Hook Form",
-      "Shadcn UI",
-      "Tailwind CSS",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
+    description:
+      "Modern & scalable web application for luxury accommodation booking in Australia.Built with Next.js App Router + Prisma ORM + PostgreSQL + Zod + Shadcn UI + Vercel Serverless.",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [
+          skill.typescript,
+          skill.nextjs,
+          skill.react,
+          skill.reactHookForm,
+          skill.shadcnUi,
+          skill.zod,
+        ],
+      },
+
+      backend: {
+        title: "backend stack",
+        skill: [skill.typescript, skill.nextjs, skill.prisma, skill.postgresql],
+      },
+    },
+    content: <HotelSystemPage />,
     links: [
       {
         label: "GitHub",
@@ -84,19 +122,20 @@ const ProjectsData = [
   {
     src: "/cover_photo/cat.jpg",
     title: "Admin",
-    tools: [
-      "Next",
-      "React",
-      "React Hook Form",
-      "CRUD",
-      "Mock API",
-      "Tailwind CSS",
-      "Daisy UI",
-      "Zustand",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [
+          skill.nextjs,
+          skill.react,
+          skill.reactHookForm,
+          skill.zustand,
+          skill.daisyUi,
+        ],
+      },
+    },
+    content: <AdminPage />,
     links: [
       {
         label: "GitHub",
@@ -113,18 +152,20 @@ const ProjectsData = [
   {
     src: "/cover_photo/shiba.jpg",
     title: "Coffee Shop",
-    tools: [
-      "Next",
-      "React",
-      "React Hook Form",
-      "Fetch API",
-      "Tailwind CSS",
-      "Daisy UI",
-      "Zustand",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [
+          skill.nextjs,
+          skill.react,
+          skill.reactHookForm,
+          skill.zustand,
+          skill.daisyUi,
+        ],
+      },
+    },
+    content: <CoffeeShopPage />,
     links: [
       {
         label: "GitHub",
@@ -141,17 +182,20 @@ const ProjectsData = [
   {
     src: "/cover_photo/penguin.jpg",
     title: "HR System",
-    tools: [
-      "Vite",
-      "React",
-      "Ant Design",
-      "Fetch API",
-      "Tailwind CSS",
-      "Zustand",
-      "Axios",
-      "Theme",
-      "Responsive",
-    ],
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [
+          skill.vite,
+          skill.react,
+          skill.reactHookForm,
+          skill.zustand,
+          skill.antd,
+        ],
+      },
+    },
+    content: <HrSystemPage />,
     links: [
       {
         label: "GitHub",
@@ -168,19 +212,40 @@ const ProjectsData = [
   {
     src: "/cover_photo/dear.jpg",
     title: "Find Your Cat",
-    tools: ["Next", "React", "Tailwind CSS", "Daisy UI", "Responsive"],
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [skill.react, skill.daisyUi],
+      },
+    },
+    content: <FindYourCat />,
     links: [{ label: "View", icon: Link, href: "/projects/find-your-cat" }],
   },
   {
     src: "/cover_photo/cow.jpg",
     title: "To-Do-List",
-    tools: ["Next", "React", "Tailwind CSS", "Daisy UI", "Responsive"],
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [skill.react, skill.daisyUi],
+      },
+    },
+    content: <ToDoList />,
     links: [{ label: "View", icon: Link, href: "/projects/to-do-list" }],
   },
   {
     src: "/cover_photo/koala.jpg",
     title: "Wallet App",
-    tools: ["Figma", "Responsive "],
+    description: "",
+    skills: {
+      design: {
+        title: "design stack",
+        skill: [skill.figma],
+      },
+    },
+    content: <WalletAppPage />,
     links: [
       {
         label: "Figma",
@@ -192,7 +257,14 @@ const ProjectsData = [
   {
     src: "/cover_photo/koala_junior.jpg",
     title: "Re-Design",
-    tools: ["Figma", "Responsive "],
+    description: "",
+    skills: {
+      design: {
+        title: "design stack",
+        skill: [skill.figma],
+      },
+    },
+    content: <ReDesignPage />,
     links: [
       {
         label: "Figma",
@@ -205,59 +277,89 @@ const ProjectsData = [
 
 export default function Projects() {
   return (
-    <div className="lg:min-h-screen grid gap-4 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
-      {ProjectsData.map((item, i) => (
-        <Card
-          key={i}
-          className="grid bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/30 animate group"
-        >
-          <CardHeader>
-            <CardTitle>
-              <div className="mb-2 btn btn-block pointer-events-none">
-                <h3>{item.title}</h3>
-              </div>
-            </CardTitle>
-            <CardDescription>
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <Skeleton className="absolute inset-0 rounded-xl" />
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  className="object-cover shadow-md
-                  group-hover:scale-105 animate delay-100"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  fill
-                />
-              </div>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-2">
-              {item.tools.map((tool, i) => (
-                <div
-                  key={i}
-                  className="btn btn-xs btn-outline border-base-content/50 cursor-default"
-                >
-                  {tool}
+    <div className="lg:min-h-screen">
+      <Header label="projects" />
+      <div className="grid gap-4 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {ProjectsData.map((item, i) => (
+          <Card
+            key={i}
+            className="flex flex-col h-full bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/20 animate group"
+          >
+            <CardHeader>
+              <CardTitle>
+                <div className="mb-2 btn btn-block pointer-events-none bg-base-300">
+                  <h3>{item.title}</h3>
                 </div>
+              </CardTitle>
+              <CardDescription>
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <Skeleton className="absolute inset-0 rounded-xl" />
+                  {item.src && (
+                    <Image
+                      src={item.src}
+                      alt={item.title}
+                      className="object-cover shadow-md group-hover:scale-105 animate delay-100"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      fill
+                    />
+                  )}
+                </div>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="h-full">
+              <div className="h-full flex flex-col">
+                <StackSkill
+                  title={
+                    item.skills.frontend?.title ?? item.skills.design?.title
+                  }
+                  stacks={
+                    item.skills.frontend?.skill ?? item.skills.design?.skill
+                  }
+                />
+                {item.skills.backend && (
+                  <div>
+                    <div className="divider" />
+                    <StackSkill
+                      title={item.skills.backend?.title}
+                      stacks={item.skills.backend?.skill}
+                    />
+                  </div>
+                )}
+              </div>
+            </CardContent>
+            <CardFooter className="flex flex-col sm:flex-row gap-2 ">
+              {item.links.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href}
+                  target="_blank"
+                  className="btn flex w-full sm:flex-1 btn-primary capitalize"
+                >
+                  <link.icon className="size-5" />
+                  {link.label}
+                </a>
               ))}
-            </div>
-          </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row gap-2 ">
-            {item.links.map((link, i) => (
-              <a
-                key={i}
-                href={link.href}
-                target="_blank"
-                className="btn flex w-full sm:flex-1 btn-primary capitalize"
-              >
-                <link.icon className="size-5" />
-                {link.label}
-              </a>
-            ))}
-          </CardFooter>
-        </Card>
-      ))}
+
+              {/* <Dialog>
+                <DialogTrigger className="btn flex-1 btn-primary capitalize">
+                  <Eye className="size-5" />
+                  see more
+                </DialogTrigger>
+                <DialogContent className="bg-base-100 border-base-content/50">
+                  <DialogHeader>
+                    <DialogTitle className="text-primary capitalize">
+                      {item.title}
+                    </DialogTitle>
+                    <DialogDescription>{item.description}</DialogDescription>
+                    <ScrollArea className="h-[75vh]">{item.content}</ScrollArea>
+                  </DialogHeader>
+                  <ScrollMouseIcon />
+                </DialogContent>
+              </Dialog> */}
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

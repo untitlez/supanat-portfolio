@@ -1,7 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { FileText } from "lucide-react";
 
+import { Header } from "@/components/Header";
+import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +13,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const certificate = [
   {
@@ -60,15 +72,18 @@ export default function Certificate() {
   }, [count]);
 
   return (
-    <div className="lg:min-h-screen grid place-items-center">
+    <div className="lg:min-h-screen flex flex-col place-items-center">
+      <Header label="certificate" />
+
+      {/* Mobile  */}
       <Carousel
-        className="sm:w-3/4 lg:w-full lg:max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50 shadow-xl"
+        className="w-full lg:hidden max-w-screen-sm bg-base-100 rounded-3xl p-6 border border-base-content/50 shadow-xl"
         setApi={setCount}
       >
         <CarouselContent>
           {certificate.map((item, index) => (
             <CarouselItem key={index}>
-              <div className="aspect- flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center">
                 <img
                   src={item.src}
                   alt={item.name}
@@ -89,10 +104,66 @@ export default function Certificate() {
           ))}
         </div>
         <div className="hidden sm:block">
-          <CarouselPrevious className="border border-base-content" />
-          <CarouselNext className="border border-base-content" />
+          <CarouselPrevious className="bg-base-100 border border-base-content" />
+          <CarouselNext className="bg-base-100 border border-base-content" />
         </div>
       </Carousel>
+
+      {/* Desktop  */}
+      <div className="hidden lg:grid gap-8 grid-cols-3">
+        {certificate.map((item, index) => (
+          <Card
+            key={index}
+            className="content-center bg-base-100 border-base-content/50 rounded-3xl shadow-xl hover:shadow-base-content/20 animate"
+          >
+            <CardHeader>
+              <Dialog>
+                <DialogTrigger>
+                  <div className="relative overflow-hidden h-[30vh] bg-white rounded-xl">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      className="object-contain hover:scale-105 animate"
+                      sizes="50vw"
+                      fill
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="bg-base-100 border-base-content/50 max-w-min ">
+                  <DialogHeader className="items-center">
+                    <DialogTitle className="text-base-content">
+                      {item.course}
+                    </DialogTitle>
+                    <DialogDescription>{item.name}</DialogDescription>
+                  </DialogHeader>
+                  <div className="relative aspect-video h-[50vh]">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      className="object-contain"
+                      sizes="100vw"
+                      fill
+                    />
+                  </div>
+                  <div className="flex justify-center mt-2">
+                    <a
+                      className="btn btn-outline btn-wide capitalize"
+                      href={item.link}
+                      target="_blank"
+                    >
+                      <FileText className="size-5" />
+                      view
+                    </a>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </CardHeader>
+            <CardFooter className="justify-center">
+              {item.course} - {item.name}
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

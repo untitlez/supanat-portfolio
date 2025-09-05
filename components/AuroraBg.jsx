@@ -207,5 +207,5 @@ export default function AuroraBg(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [amplitude]);
 
-  return <div ref={ctnDom} className="w-full h-full" />;
+  return <div ref={ctnDom} className="absolute inset-0 brightness-90" />;
 }
