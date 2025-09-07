@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Eye, Link, Figma, Github, Globe, Lightbulb } from "lucide-react";
+import { Eye, Figma, Github, Globe, Lightbulb } from "lucide-react";
 
 import { skill } from "@/lib/constant";
 
@@ -8,8 +8,6 @@ import HotelSystemPage from "./hotel-system/page";
 import CoffeeShopPage from "./coffee-shop/page";
 import AdminPage from "./admin/page";
 import HrSystemPage from "./hr-system/page";
-import FindYourCat from "./find-your-cat/page";
-import ToDoList from "./to-do-list/page";
 import WalletAppPage from "./wallet-app/page";
 import ReDesignPage from "./re-design/page";
 
@@ -76,7 +74,7 @@ const ProjectsData = [
         href: "https://github.com/untitlez/my-client",
       },
       {
-        label: "production",
+        label: "demo web",
         icon: Globe,
         href: "https://my-client-gamma.vercel.app",
       },
@@ -113,7 +111,7 @@ const ProjectsData = [
         href: "https://github.com/untitlez/Hotel-System",
       },
       {
-        label: "production",
+        label: "demo web",
         icon: Globe,
         href: "https://hotel-system-ecru.vercel.app",
       },
@@ -210,32 +208,6 @@ const ProjectsData = [
     ],
   },
   {
-    src: "/cover_photo/dear.jpg",
-    title: "Find Your Cat",
-    description: "",
-    skills: {
-      frontend: {
-        title: "frontend stack",
-        skill: [skill.react, skill.daisyUi],
-      },
-    },
-    content: <FindYourCat />,
-    links: [{ label: "View", icon: Link, href: "/projects/find-your-cat" }],
-  },
-  {
-    src: "/cover_photo/cow.jpg",
-    title: "To-Do-List",
-    description: "",
-    skills: {
-      frontend: {
-        title: "frontend stack",
-        skill: [skill.react, skill.daisyUi],
-      },
-    },
-    content: <ToDoList />,
-    links: [{ label: "View", icon: Link, href: "/projects/to-do-list" }],
-  },
-  {
     src: "/cover_photo/koala.jpg",
     title: "Wallet App",
     description: "",
@@ -327,7 +299,7 @@ export default function Projects() {
                 )}
               </div>
             </CardContent>
-            <CardFooter className="flex flex-col sm:flex-row gap-2 ">
+            <CardFooter className="flex flex-col lg:flex-row gap-2">
               {item.links.map((link, i) => (
                 <a
                   key={i}
