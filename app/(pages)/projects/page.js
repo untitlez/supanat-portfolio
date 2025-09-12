@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Eye, Figma, Github, Globe, Lightbulb } from "lucide-react";
+import { Eye, Figma, Github, Globe } from "lucide-react";
 
 import { skill } from "@/lib/constant";
 
@@ -45,8 +45,8 @@ const ProjectsData = [
           skill.nextjs,
           skill.react,
           skill.reactHookForm,
-          skill.shadcnUi,
           skill.zod,
+          skill.shadcnUi,
         ],
       },
 
@@ -81,7 +81,7 @@ const ProjectsData = [
     ],
   },
   {
-    src: "/cover_photo/lion.jpg",
+    src: "/cover_photo/penguin.jpg",
     title: "Hotel System",
     description:
       "Modern & scalable web application for luxury accommodation booking in Australia.Built with Next.js App Router + Prisma ORM + PostgreSQL + Zod + Shadcn UI + Vercel Serverless.",
@@ -93,14 +93,19 @@ const ProjectsData = [
           skill.nextjs,
           skill.react,
           skill.reactHookForm,
-          skill.shadcnUi,
           skill.zod,
+          skill.shadcnUi,
         ],
       },
-
       backend: {
         title: "backend stack",
-        skill: [skill.typescript, skill.nextjs, skill.prisma, skill.postgresql],
+        skill: [
+          skill.typescript,
+          skill.nextjs,
+          skill.prisma,
+          skill.postgresql,
+          skill.jwt,
+        ],
       },
     },
     content: <HotelSystemPage />,
@@ -119,34 +124,44 @@ const ProjectsData = [
   },
   {
     src: "/cover_photo/cat.jpg",
-    title: "Admin",
+    title: "HR Project",
     description: "",
     skills: {
       frontend: {
         title: "frontend stack",
+        skill: [skill.vite, skill.react, skill.zustand, skill.antd],
+      },
+      backend: {
+        title: "backend stack",
         skill: [
-          skill.nextjs,
-          skill.react,
-          skill.reactHookForm,
-          skill.zustand,
-          skill.daisyUi,
+          skill.typescript,
+          skill.bun,
+          skill.elysiajs,
+          skill.supabase,
+          skill.jwt,
         ],
       },
     },
-    content: <AdminPage />,
+    content: <HrSystemPage />,
     links: [
       {
-        label: "GitHub",
+        label: "server",
         icon: Github,
-        href: "https://github.com/untitlez/WebApp-Projects",
+        href: "https://github.com/untitlez/HR-Projects-Server",
+      },
+      {
+        label: "client",
+        icon: Github,
+        href: "https://github.com/untitlez/HR-Projects-Client",
       },
       {
         label: "demo web",
-        icon: Lightbulb,
-        href: "https://practice-website-projects.vercel.app/admin",
+        icon: Globe,
+        href: "https://hr-projects-lyart.vercel.app",
       },
     ],
   },
+
   {
     src: "/cover_photo/shiba.jpg",
     title: "Coffee Shop",
@@ -172,38 +187,38 @@ const ProjectsData = [
       },
       {
         label: "demo web",
-        icon: Lightbulb,
+        icon: Globe,
         href: "https://practice-website-projects.vercel.app/shop",
       },
     ],
   },
   {
-    src: "/cover_photo/penguin.jpg",
-    title: "HR System",
+    src: "/cover_photo/lion.jpg",
+    title: "Admin",
     description: "",
     skills: {
       frontend: {
         title: "frontend stack",
         skill: [
-          skill.vite,
+          skill.nextjs,
           skill.react,
           skill.reactHookForm,
           skill.zustand,
-          skill.antd,
+          skill.daisyUi,
         ],
       },
     },
-    content: <HrSystemPage />,
+    content: <AdminPage />,
     links: [
       {
         label: "GitHub",
         icon: Github,
-        href: "https://github.com/untitlez/HR-Projects",
+        href: "https://github.com/untitlez/WebApp-Projects",
       },
       {
         label: "demo web",
-        icon: Lightbulb,
-        href: "https://hr-projects-lyart.vercel.app/",
+        icon: Globe,
+        href: "https://practice-website-projects.vercel.app/admin",
       },
     ],
   },

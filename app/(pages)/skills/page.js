@@ -20,10 +20,13 @@ const skills = [
     items: [
       skill.nodejs,
       skill.expressjs,
+      skill.bun,
+      skill.elysiajs,
       skill.nextjs,
       skill.prisma,
       skill.postgresql,
       skill.mongodb,
+      skill.supabase,
     ],
   },
   {
