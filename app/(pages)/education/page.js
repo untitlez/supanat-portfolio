@@ -32,7 +32,7 @@ const education = [
 export default function Education() {
   return (
     <div className="lg:min-h-screen text-primary">
-      <Header label="experience" />
+      <Header label="education" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-12">
         {education.map((study, i) => (
