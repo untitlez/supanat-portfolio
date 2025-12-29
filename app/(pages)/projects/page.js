@@ -33,6 +33,45 @@ import {
 } from "@/components/ui/dialog";
 
 const ProjectsData = [
+    {
+    src: "/cover_photo/dear.jpg",
+    title: "Go Projects",
+    description: "",
+    skills: {
+      frontend: {
+        title: "frontend stack",
+        skill: [
+          skill.typescript,
+          skill.nextjs,
+          skill.react,
+          skill.reactHookForm,
+          skill.zustand,
+          skill.shadcnUi,
+        ],
+      },
+
+      backend: {
+        title: "backend stack",
+        skill: [
+          skill.go,
+          skill.docker,
+          skill.postgresql,
+        ],
+      },
+    },
+    links: [
+      {
+        label: "github",
+        icon: Github,
+        href: "https://github.com/untitlez/Go-Projects.git",
+      },
+      {
+        label: "demo web",
+        icon: Globe,
+        href: "https://go-projects-tawny.vercel.app",
+      },
+    ],
+  },
   {
     src: "/cover_photo/otter.jpg",
     title: "Lesson Plan",
