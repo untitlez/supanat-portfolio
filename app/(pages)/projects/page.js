@@ -63,7 +63,7 @@ const ProjectsData = [
       {
         label: "github",
         icon: Github,
-        href: "https://github.com/untitlez/Go-Projects.git",
+        href: "https://github.com/untitlez/Go-Projects",
       },
       {
         label: "demo web",
@@ -103,19 +103,14 @@ const ProjectsData = [
     content: <LessonPlanPage />,
     links: [
       {
-        label: "server",
+        label: "github",
         icon: Github,
-        href: "https://github.com/untitlez/my-server",
-      },
-      {
-        label: "client",
-        icon: Github,
-        href: "https://github.com/untitlez/my-client",
+        href: "https://github.com/untitlez/Lesson-Plan",
       },
       {
         label: "demo web",
         icon: Globe,
-        href: "https://my-client-gamma.vercel.app",
+        href: "https://lesson-plan-client.vercel.app",
       },
     ],
   },
