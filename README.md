@@ -7,7 +7,6 @@
 - 🌍  I'm based in Chiang Mai, Thailand
 - ✉️  You can contact me at [supanatt.cs@gmail.com](mailto:supanatt.cs@gmail.com)
 
-
 ## Skills
 
 <p align="left">
@@ -27,7 +26,6 @@
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="36" height="36" alt="Git"/></a>
 <a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="36" height="36" alt="Figma"/></a>
 </p>
-
 
 ## Socials
 
