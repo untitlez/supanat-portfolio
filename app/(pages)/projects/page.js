@@ -145,7 +145,7 @@ const ProjectsData = [
     content: <HotelSystemPage />,
     links: [
       {
-        label: "GitHub",
+        label: "github",
         icon: Github,
         href: "https://github.com/untitlez/Hotel-System",
       },
@@ -158,7 +158,7 @@ const ProjectsData = [
   },
   {
     src: "/cover_photo/cat.jpg",
-    title: "HR Project",
+    title: "HR System",
     description: "",
     skills: {
       frontend: {
@@ -179,19 +179,14 @@ const ProjectsData = [
     content: <HrSystemPage />,
     links: [
       {
-        label: "server",
+        label: "github",
         icon: Github,
-        href: "https://github.com/untitlez/HR-Projects-Server",
-      },
-      {
-        label: "client",
-        icon: Github,
-        href: "https://github.com/untitlez/HR-Projects-Client",
+        href: "https://github.com/untitlez/HR-System",
       },
       {
         label: "demo web",
         icon: Globe,
-        href: "https://hr-projects-lyart.vercel.app",
+        href: "https://hr-system-seven-bay.vercel.app",
       },
     ],
   },
