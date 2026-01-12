@@ -2,7 +2,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { SnowFall } from "@/components/SnowFall";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} data-theme="luxury">
         {children}
-        <SnowFall />
         <SpeedInsights />
         <Analytics />
       </body>

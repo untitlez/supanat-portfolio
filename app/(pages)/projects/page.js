@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Eye, Figma, Github, Globe } from "lucide-react";
+import { Figma, Github, Globe } from "lucide-react";
 
 import { skill } from "@/lib/constant";
 
@@ -14,7 +14,6 @@ import ReDesignPage from "./re-design/page";
 import { Header } from "@/components/Header";
 import { StackSkill } from "@/components/StackSkill";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Card,
   CardContent,
@@ -23,17 +22,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 
 const ProjectsData = [
-    {
+  {
     src: "/cover_photo/dear.jpg",
     title: "Go Projects",
     description: "",
@@ -52,11 +43,7 @@ const ProjectsData = [
 
       backend: {
         title: "backend stack",
-        skill: [
-          skill.go,
-          skill.docker,
-          skill.postgresql,
-        ],
+        skill: [skill.go, skill.docker, skill.postgresql],
       },
     },
     links: [
@@ -355,23 +342,6 @@ export default function Projects() {
                   {link.label}
                 </a>
               ))}
-
-              {/* <Dialog>
-                <DialogTrigger className="btn flex-1 btn-primary capitalize">
-                  <Eye className="size-5" />
-                  see more
-                </DialogTrigger>
-                <DialogContent className="bg-base-100 border-base-content/50">
-                  <DialogHeader>
-                    <DialogTitle className="text-primary capitalize">
-                      {item.title}
-                    </DialogTitle>
-                    <DialogDescription>{item.description}</DialogDescription>
-                    <ScrollArea className="h-[75vh]">{item.content}</ScrollArea>
-                  </DialogHeader>
-                  <ScrollMouseIcon />
-                </DialogContent>
-              </Dialog> */}
             </CardFooter>
           </Card>
         ))}
