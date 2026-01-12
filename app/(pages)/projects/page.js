@@ -3,14 +3,6 @@ import { Figma, Github, Globe } from "lucide-react";
 
 import { skill } from "@/lib/constant";
 
-import LessonPlanPage from "./lesson-plan/page";
-import HotelSystemPage from "./hotel-system/page";
-import CoffeeShopPage from "./coffee-shop/page";
-import AdminPage from "./admin/page";
-import HrSystemPage from "./hr-system/page";
-import WalletAppPage from "./wallet-app/page";
-import ReDesignPage from "./re-design/page";
-
 import { Header } from "@/components/Header";
 import { StackSkill } from "@/components/StackSkill";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -87,7 +79,6 @@ const ProjectsData = [
         ],
       },
     },
-    content: <LessonPlanPage />,
     links: [
       {
         label: "github",
@@ -129,7 +120,6 @@ const ProjectsData = [
         ],
       },
     },
-    content: <HotelSystemPage />,
     links: [
       {
         label: "github",
@@ -163,7 +153,6 @@ const ProjectsData = [
         ],
       },
     },
-    content: <HrSystemPage />,
     links: [
       {
         label: "github",
@@ -194,7 +183,6 @@ const ProjectsData = [
         ],
       },
     },
-    content: <CoffeeShopPage />,
     links: [
       {
         label: "GitHub",
@@ -224,7 +212,6 @@ const ProjectsData = [
         ],
       },
     },
-    content: <AdminPage />,
     links: [
       {
         label: "GitHub",
@@ -248,7 +235,6 @@ const ProjectsData = [
         skill: [skill.figma],
       },
     },
-    content: <WalletAppPage />,
     links: [
       {
         label: "Figma",
@@ -267,7 +253,6 @@ const ProjectsData = [
         skill: [skill.figma],
       },
     },
-    content: <ReDesignPage />,
     links: [
       {
         label: "Figma",
