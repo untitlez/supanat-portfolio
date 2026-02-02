@@ -12,13 +12,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AuroraBg from "@/components/AuroraBg";
 import { GradientBg } from "@/components/GradientBg";
-import { SnowFall } from "@/components/SnowFall";
 
 export default function Home() {
   return (
     <main className="h-screen overflow-hidden grid bg-gradient">
       <div className="hidden lg:block">
-        <SnowFall />
         <AuroraBg />
       </div>
       <div className="lg:hidden">
